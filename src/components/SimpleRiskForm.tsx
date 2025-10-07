@@ -331,18 +331,18 @@ export default function SimpleRiskForm() {
         <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">📊</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Personalized Score</h4>
-            <p className="text-xs text-gray-600">Based on your industry and profile</p>
+            <h4 className="font-semibold text-gray-900 text-sm">Score personnalisé</h4>
+            <p className="text-xs text-gray-600">Selon votre secteur et votre profil</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">🎯</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Exclusive Leads</h4>
-            <p className="text-xs text-gray-600">Pre-qualified insurance partners</p>
+            <h4 className="font-semibold text-gray-900 text-sm">Partenaires qualifiés</h4>
+            <p className="text-xs text-gray-600">Partenaires d’assurance pré‑qualifiés</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">⚡</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Fast Response</h4>
-            <p className="text-xs text-gray-600">Results within 24 hours guaranteed</p>
+            <h4 className="font-semibold text-gray-900 text-sm">Réponse rapide</h4>
+            <p className="text-xs text-gray-600">Résultats sous 24 h garantis</p>
           </div>
         </div>
       </div>

@@ -3,24 +3,24 @@ import Link from 'next/link';
 export default function Guides() {
   const guides = [
     {
-      title: "General Liability vs Property — what's the difference?",
-      description: "Understand the key differences between these essential coverage types and which one your business needs most.",
+      title: "Responsabilité civile vs biens professionnels — quelles différences ?",
+      description: "Comprenez les différences clés entre ces garanties essentielles et laquelle votre entreprise doit prioriser.",
       icon: "🛡️",
-      readTime: "3 min read",
+      readTime: "Lecture 3 min",
       href: "/guides/general-liability-vs-property"
     },
     {
-      title: "How premiums are calculated (5 key factors)",
-      description: "Learn what insurance companies look at when pricing your policy and how to potentially reduce your costs.",
+      title: "Comment les primes sont calculées (5 facteurs clés)",
+      description: "Découvrez ce que les assureurs prennent en compte pour tarifer votre police et comment réduire vos coûts.",
       icon: "💰",
-      readTime: "4 min read",
+      readTime: "Lecture 4 min",
       href: "/guides/premium-calculation"
     },
     {
-      title: "Renewal checklist (what to prepare)",
-      description: "A step-by-step guide to ensure your renewal process goes smoothly and you get the best rates.",
+      title: "Checklist de renouvellement (quoi préparer)",
+      description: "Un guide étape par étape pour un renouvellement fluide et au meilleur tarif.",
       icon: "📋",
-      readTime: "5 min read",
+      readTime: "Lecture 5 min",
       href: "/guides/renewal-checklist"
     }
   ];
@@ -30,10 +30,10 @@ export default function Guides() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-            Business Insurance Guides
+            Guides assurance entreprise
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Clear, practical information to help you make informed decisions about your business insurance needs.
+            Des informations claires et pratiques pour décider sereinement de vos besoins d’assurance.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function Guides() {
                   href={guide.href}
                   className="text-[#1E3A8A] hover:text-blue-800 font-medium text-sm transition-colors"
                 >
-                  Read Guide →
+                  Lire le guide →
                 </Link>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Guides() {
 
         <div className="text-center mt-8">
           <p className="text-sm text-gray-500">
-            More guides available after you request your quote
+            Plus de guides disponibles après votre demande de devis
           </p>
         </div>
       </div>

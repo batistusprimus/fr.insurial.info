@@ -9,9 +9,9 @@ const SUMMIT_LOGOS = [
 
 export default function SummitsLogos() {
   return (
-    <section aria-label="Inspired by key events" className="bg-white">
+    <section aria-label="Inspiré par des événements clés" className="bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <p className="text-center text-sm font-medium text-gray-500">Inspired by key events</p>
+        <p className="text-center text-sm font-medium text-gray-500">Inspiré par des événements clés</p>
         <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 items-center">
           {SUMMIT_LOGOS.map((logo) => (
             <div key={logo.src} className="flex justify-center">
