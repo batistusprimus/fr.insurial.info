@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   keywords: "assurance entreprise, éducation, score de risque, responsabilité civile, accidents du travail, biens commerciaux, auto commerciale, BOP",
   robots: "index, follow",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
   },
   openGraph: {
     title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
