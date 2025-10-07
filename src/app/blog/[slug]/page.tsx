@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPostBySlug, getRelatedArticles } from '@/data/allBlogPosts';
+import { translateCategoryToFr, translateReadTimeToFr } from '@/data/blogI18n';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -35,7 +36,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="text-gray-600 text-sm">
             <span>{formatDate(post.publishedAt)}</span>
             <span className="mx-2">•</span>
-            <span>{post.readTime}</span>
+            <span>{translateReadTimeToFr(post.readTime)}</span>
             <span className="mx-2">•</span>
             <span>Par {post.author}</span>
           </div>

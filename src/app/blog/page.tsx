@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { blogPosts } from '@/data/allBlogPosts';
+import { blogPosts, getPostBySlug } from '@/data/allBlogPosts';
+import { translateCategoryToFr, translateReadTimeToFr } from '@/data/blogI18n';
 
 export const metadata = {
   title: 'Blog - Insurial',
@@ -25,20 +26,22 @@ export default function BlogIndexPage() {
 
       <div className="container mx-auto px-4 max-w-5xl py-12">
         <div className="grid md:grid-cols-2 gap-8">
-          {posts.map(post => (
+          {posts.map(post => {
+            const localized = getPostBySlug(post.slug) || post;
+            return (
             <article key={post.slug} className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="text-sm text-gray-500 mb-2">
                 <span>{formatDate(post.publishedAt)}</span>
                 <span className="mx-2">•</span>
-                <span>{post.readTime}</span>
+                <span>{translateReadTimeToFr(post.readTime)}</span>
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 <Link href={`/blog/${post.slug}`} className="hover:text-[#1E3A8A] transition-colors">
-                  {post.title}
+                  {localized.title}
                 </Link>
               </h2>
-              <div className="text-sm text-[#1E3A8A] font-medium mb-3">{post.category}</div>
-              <p className="text-gray-700 mb-4">{post.excerpt}</p>
+              <div className="text-sm text-[#1E3A8A] font-medium mb-3">{translateCategoryToFr(post.category)}</div>
+              <p className="text-gray-700 mb-4">{localized.excerpt}</p>
               <div className="flex items-center justify-between">
                 <Link href={`/blog/${post.slug}`} className="text-[#1E3A8A] hover:text-blue-800 font-semibold">
                   Lire l’article →
@@ -46,7 +49,7 @@ export default function BlogIndexPage() {
                 <div className="text-sm text-gray-500">Par {post.author}</div>
               </div>
             </article>
-          ))}
+          );})}
         </div>
       </div>
     </div>

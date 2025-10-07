@@ -13,6 +13,8 @@ export interface BlogPost {
 }
 
 // All 30 articles from your provided content
+import { blogTranslationsFr } from './blogTranslationsFr';
+
 export const blogPosts: BlogPost[] = [
   {
     slug: 'understanding-commercial-insurance-2025-guide',
@@ -1603,13 +1605,27 @@ export function getRegularPosts(): BlogPost[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find(post => post.slug === slug);
+  const base = blogPosts.find(post => post.slug === slug);
+  if (!base) return undefined;
+  const override = blogTranslationsFr[slug];
+  if (!override) return base;
+  return {
+    ...base,
+    title: override.title ?? base.title,
+    excerpt: override.excerpt ?? base.excerpt,
+    content: override.content ?? base.content
+  };
 }
 
 export function getRelatedArticles(currentSlug: string, currentCategory: string, limit: number = 3): BlogPost[] {
+  // Apply FR overrides to related items too
   return blogPosts
     .filter(post => post.slug !== currentSlug && post.category === currentCategory)
-    .slice(0, limit);
+    .slice(0, limit)
+    .map(p => {
+      const o = blogTranslationsFr[p.slug];
+      return o ? { ...p, title: o.title ?? p.title, excerpt: o.excerpt ?? p.excerpt, content: o.content ?? p.content } : p;
+    });
 }
 
 export function getPostsByCategory(category: string): BlogPost[] {

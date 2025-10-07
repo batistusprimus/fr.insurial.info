@@ -2,23 +2,23 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote: "Nous avons compris exactement quelle couverture il nous fallait et pourquoi. Le Score de risque a rendu la discussion avec notre courtier plus rapide et plus claire.",
-      author: "Sarah Chen",
-      title: "Operations Manager",
-      company: "TechStart Solutions",
+      author: "Sarah Martin",
+      title: "Responsable des opérations",
+      company: "TechStart Lyon",
       rating: 5
     },
     {
       quote: "Pas de jargon, juste de la clarté. Nous avons utilisé les insights pour prioriser la couverture et éviter la sur‑assurance.",
-      author: "Mike Rodriguez", 
-      title: "Owner",
-      company: "Rodriguez Manufacturing",
+      author: "Michaël Dupont", 
+      title: "Dirigeant",
+      company: "Dupont Fabrication",
       rating: 5
     },
     {
       quote: "Les guides pédagogiques et le Score de risque nous ont donné confiance pour négocier de meilleurs termes.",
-      author: "Jennifer Walsh",
-      title: "CFO", 
-      company: "Walsh Consulting Group",
+      author: "Jennifer Leclerc",
+      title: "Directrice financière", 
+      company: "Leclerc Conseil",
       rating: 5
     }
   ];

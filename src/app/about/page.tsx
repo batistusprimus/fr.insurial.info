@@ -31,16 +31,16 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Notre mission</h2>
           </div>
           
           <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-8 rounded-lg mb-12">
             <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-              "We turn the complexity of business insurance into a simple, transparent, and educational process. 
-              Every business deserves access to the right coverage with clear information and expert guidance."
+              « Nous transformons la complexité de l’assurance entreprise en un processus simple, transparent et pédagogique. 
+              Chaque entreprise mérite un accès aux bonnes garanties, avec une information claire et un accompagnement d’experts. »
             </blockquote>
             <footer className="mt-4 text-right">
-              <cite className="text-sm text-gray-600">— Insurial Team</cite>
+              <cite className="text-sm text-gray-600">— Équipe Insurial</cite>
             </footer>
           </div>
 
@@ -51,9 +51,9 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Education</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Éducation</h3>
               <p className="text-gray-600">
-                Clear resources and practical guides to understand business insurance.
+                Des ressources claires et des guides pratiques pour comprendre l’assurance des entreprises.
               </p>
             </div>
 
@@ -63,9 +63,9 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Simplicity</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Simplicité</h3>
               <p className="text-gray-600">
-                A simplified journey from assessment to quotes thanks to our Risk Score.
+                Un parcours simplifié de l’évaluation au devis grâce à notre Score de risque.
               </p>
             </div>
 
@@ -75,9 +75,9 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Trust</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Confiance</h3>
               <p className="text-gray-600">
-                Exclusive connections with pre‑vetted carriers specialized in your industry.
+                Des mises en relation exclusives avec des assureurs certifiés, spécialisés dans votre secteur.
               </p>
             </div>
           </div>
@@ -89,16 +89,16 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Credibility & Nationwide Reach
+              Crédibilité et couverture nationale
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Insurial serves businesses across all 50 US states with a certified carrier network and recognized risk expertise.
+              Insurial accompagne les entreprises dans les 50 états américains grâce à un réseau d’assureurs certifiés et une expertise reconnue du risque.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Trust Us</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pourquoi nous faire confiance</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -108,9 +108,9 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Nationwide Coverage</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">Couverture nationale</h4>
                     <p className="text-gray-600">
-                      We serve businesses in all 50 US states with both local and national carriers.
+                      Nous accompagnons des entreprises dans les 50 états américains, avec des assureurs locaux et nationaux.
                     </p>
                   </div>
                 </div>
@@ -122,9 +122,9 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Pre‑Vetted Carriers</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">Assureurs présélectionnés</h4>
                     <p className="text-gray-600">
-                      All partner carriers are certified with years of experience and industry specialization.
+                      Tous nos partenaires sont certifiés, avec des années d’expérience et une forte spécialisation sectorielle.
                     </p>
                   </div>
                 </div>
@@ -136,9 +136,9 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Privacy & Security</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">Confidentialité et sécurité</h4>
                     <p className="text-gray-600">
-                      Your data is protected according to the highest security and privacy standards.
+                      Vos données sont protégées selon les standards les plus élevés de sécurité et de confidentialité.
                     </p>
                   </div>
                 </div>
@@ -150,9 +150,9 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Exclusive Leads</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">Mises en relation exclusives</h4>
                     <p className="text-gray-600">
-                      Each connection is exclusive — you aren’t competing with other businesses for the carrier’s attention.
+                      Chaque mise en relation est exclusive — vous n’êtes pas en concurrence avec d’autres entreprises pour l’attention de l’assureur.
                     </p>
                   </div>
                 </div>
@@ -160,27 +160,27 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">By the Numbers</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">En chiffres</h3>
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#1E3A8A] mb-2">50</div>
-                  <div className="text-sm text-gray-600">States Covered</div>
+                  <div className="text-sm text-gray-600">États couverts</div>
                 </div>
                 
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#1E3A8A] mb-2">100%</div>
-                  <div className="text-sm text-gray-600">Exclusive Leads</div>
+                  <div className="text-sm text-gray-600">Mises en relation exclusives</div>
                 </div>
                 
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#1E3A8A] mb-2">24h</div>
-                  <div className="text-sm text-gray-600">Response Time</div>
+                  <div className="text-sm text-gray-600">Temps de réponse</div>
                 </div>
                 
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#1E3A8A] mb-2">$0</div>
-                  <div className="text-sm text-gray-600">Fees for You</div>
+                  <div className="text-sm text-gray-600">Frais pour vous</div>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ export default function AboutPage() {
                   <strong>Insurial</strong> by <strong>BPC Group</strong>
                 </p>
                 <p className="text-center text-xs text-gray-500 mt-1">
-                  Insurance expertise since 2024
+                  Expertise en assurance depuis 2024
                 </p>
               </div>
             </div>
@@ -201,16 +201,16 @@ export default function AboutPage() {
       <section className="py-16 bg-[#1E3A8A]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Your Risk Score?
+              Prêt à obtenir votre Score de risque ?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Discover your coverage needs in under 5 minutes and connect with the right carriers.
+              Découvrez vos besoins de couverture en moins de 5 minutes et connectez‑vous aux bons assureurs.
             </p>
           <Link 
             href="/#score-de-risque" 
             className="bg-white text-[#1E3A8A] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 inline-block"
           >
-            Start My Free Assessment
+            Commencer mon évaluation gratuite
           </Link>
         </div>
       </section>
