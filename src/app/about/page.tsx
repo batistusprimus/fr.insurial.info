@@ -207,7 +207,7 @@ export default function AboutPage() {
               Discover your coverage needs in under 5 minutes and connect with the right carriers.
             </p>
           <Link 
-            href="/#risk-score-form" 
+            href="/#score-de-risque" 
             className="bg-white text-[#1E3A8A] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 inline-block"
           >
             Start My Free Assessment

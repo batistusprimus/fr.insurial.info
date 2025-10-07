@@ -10,9 +10,9 @@ const TECH_LOGOS = [
 
 export default function TechLogos() {
   return (
-    <section aria-label="Built with" className="bg-white">
+    <section aria-label="Conçu avec" className="bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <p className="text-center text-sm font-medium text-gray-500">Built with</p>
+        <p className="text-center text-sm font-medium text-gray-500">Conçu avec</p>
         <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-5 items-center">
           {TECH_LOGOS.map((logo) => (
             <div key={logo.src} className="flex justify-center">

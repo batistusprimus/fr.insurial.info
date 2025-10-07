@@ -19,7 +19,7 @@ export default function BlogIndexPage() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">Blog Insurial</h1>
-          <p className="text-lg text-gray-600">Pédagogie d’abord. Conseils clairs sur l’assurance entreprise, les tendances et la gestion des risques.</p>
+          <p className="text-lg text-gray-600">Des guides concrets et lisibles pour comprendre l’assurance entreprise, les tendances du marché et la gestion des risques.</p>
         </div>
       </section>
 

@@ -8,6 +8,8 @@ interface FormData {
   location: string;
   budget: string;
   timeline: string;
+  // Nouveau: intérêt d'information sur un type d'assurance
+  insuranceInterest?: string;
   
   // Step 2 - Profile  
   companySize: string;
@@ -29,6 +31,7 @@ const initialFormData: FormData = {
   location: '',
   budget: '',
   timeline: '',
+  insuranceInterest: '',
   companySize: '',
   industry: '',
   currentProvider: '',
@@ -192,6 +195,24 @@ export default function LeadForm() {
                   ))}
                 </div>
                 {errors.coverageType && <p className="text-red-600 text-sm mt-1">{errors.coverageType}</p>}
+              </div>
+
+              {/* Insurance Interest (optional label: Obtenir des informations sur) */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Obtenir des informations sur</label>
+                <select
+                  value={formData.insuranceInterest}
+                  onChange={(e) => updateFormData('insuranceInterest', e.target.value)}
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+                >
+                  <option value="">Sélectionnez une option (optionnel)</option>
+                  <option value="rc_pro">Responsabilité Civile Professionnelle (RC Pro)</option>
+                  <option value="multirisque_pro">Multirisque Professionnelle</option>
+                  <option value="flotte_auto">Flotte automobile professionnelle</option>
+                  <option value="accidents_travail">Accidents du travail (AT/MP)</option>
+                  <option value="pack_tpe">Pack TPE / Multirisque Pro complète</option>
+                  <option value="autre">Autre / Je ne sais pas encore</option>
+                </select>
               </div>
 
               <div>

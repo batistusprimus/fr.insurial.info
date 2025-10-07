@@ -74,7 +74,7 @@ export default function BopPage() {
           </div>
 
           <div className="text-center">
-            <a href="#risk-score-form" className="inline-flex items-center justify-center bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition">
+            <a href="#score-de-risque" className="inline-flex items-center justify-center bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition">
               Obtenir mon score de risque gratuit
             </a>
             <p className="text-sm text-gray-500 mt-2">Gratuit • Sans obligation • Conforme RGPD</p>
@@ -82,7 +82,7 @@ export default function BopPage() {
         </div>
       </section>
 
-      <div id="risk-score-form">
+      <div id="score-de-risque">
         <SimpleRiskForm />
       </div>
 

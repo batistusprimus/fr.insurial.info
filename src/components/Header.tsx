@@ -32,7 +32,7 @@ export default function Header() {
               Accueil
             </Link>
             <Link 
-              href="/how-it-works" 
+              href="/comment-ca-marche" 
               className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
             >
               Comment ça marche
@@ -44,7 +44,7 @@ export default function Header() {
               Blog
             </Link>
             <Link 
-              href="/about" 
+              href="/a-propos" 
               className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
             >
               À propos
@@ -62,31 +62,31 @@ export default function Header() {
               <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-2">
                   <Link 
-                    href="/insurance/general-liability" 
+                    href="/assurances/rc-pro" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
                     Responsabilité Civile Professionnelle (RC Pro)
                   </Link>
                   <Link 
-                    href="/insurance/commercial-property" 
+                    href="/assurances/multirisque-professionnelle" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
                     Multirisque Professionnelle
                   </Link>
                   <Link 
-                    href="/insurance/commercial-auto" 
+                    href="/assurances/flotte-automobile" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
                     Flotte automobile professionnelle
                   </Link>
                   <Link 
-                    href="/insurance/workers-compensation" 
+                    href="/assurances/at-mp" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
                     Accidents du travail (AT/MP)
                   </Link>
                   <Link 
-                    href="/insurance/business-owners-policy" 
+                    href="/packs/pack-tpe" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
                     Pack TPE / Multirisque Pro complète
@@ -97,7 +97,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link 
-              href="/#risk-score-form" 
+              href="/#score-de-risque" 
               className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
             >
               Score de risque gratuit
@@ -131,7 +131,7 @@ export default function Header() {
                 Accueil
               </Link>
               <Link 
-                href="/how-it-works" 
+                href="/comment-ca-marche" 
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -145,7 +145,7 @@ export default function Header() {
                 Blog
               </Link>
               <Link 
-                href="/about" 
+                href="/a-propos" 
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -157,45 +157,45 @@ export default function Header() {
                 <p className="text-sm font-semibold text-gray-900 mb-2">Assurances</p>
                 <div className="pl-4 space-y-2">
                   <Link 
-                    href="/insurance/general-liability" 
+                    href="/assurances/rc-pro" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Responsabilité civile générale
+                    Responsabilité Civile Professionnelle (RC Pro)
                   </Link>
                   <Link 
-                    href="/insurance/workers-compensation" 
+                    href="/assurances/multirisque-professionnelle" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Accidents du travail
+                    Multirisque Professionnelle
                   </Link>
                   <Link 
-                    href="/insurance/commercial-property" 
+                    href="/assurances/flotte-automobile" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Biens commerciaux
+                    Flotte automobile professionnelle
                   </Link>
                   <Link 
-                    href="/insurance/commercial-auto" 
+                    href="/assurances/at-mp" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Auto commerciale
+                    Accidents du travail (AT/MP)
                   </Link>
                   <Link 
-                    href="/insurance/business-owners-policy" 
+                    href="/packs/pack-tpe" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Police multirisque entreprise (BOP)
+                    Pack TPE / Multirisque Pro complète
                   </Link>
                 </div>
               </div>
 
               <Link 
-                href="/#risk-score-form" 
+                href="/#score-de-risque" 
                 className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >

@@ -9,6 +9,8 @@ interface FormData {
   phone: string;
   zipCode: string;
   industry: string;
+  // Champ optionnel: type d'assurance que l'utilisateur veut mieux comprendre
+  insuranceInterest: string;
   companySize: string;
   annualRevenue: string;
   gdprConsent: boolean;
@@ -21,6 +23,7 @@ const initialFormData: FormData = {
   phone: '',
   zipCode: '',
   industry: '',
+  insuranceInterest: '',
   companySize: '',
   annualRevenue: '',
   gdprConsent: false,
@@ -109,7 +112,7 @@ export default function SimpleRiskForm() {
   };
 
   return (
-    <section id="risk-score-form" className="py-16 bg-gray-50">
+    <section id="score-de-risque" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -120,7 +123,7 @@ export default function SimpleRiskForm() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg border p-8">
+          <div className="bg-white rounded-xl shadow-lg border p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Business Name */}
             <div>
@@ -223,6 +226,26 @@ export default function SimpleRiskForm() {
               </select>
               {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
             </div>
+
+          {/* Insurance Interest (optional) */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              Obtenir des informations sur
+            </label>
+            <select
+              value={formData.insuranceInterest}
+              onChange={(e) => updateFormData('insuranceInterest', e.target.value)}
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+            >
+              <option value="">Sélectionnez une option</option>
+              <option value="rc_pro">Responsabilité Civile Professionnelle (RC Pro)</option>
+              <option value="multirisque_pro">Multirisque Professionnelle</option>
+              <option value="flotte_auto">Flotte automobile professionnelle</option>
+              <option value="accidents_travail">Accidents du travail (AT/MP)</option>
+              <option value="pack_tpe">Pack TPE / Multirisque Pro complète</option>
+              <option value="autre">Autre / Je ne sais pas encore</option>
+            </select>
+          </div>
 
             {/* Company Size & Annual Revenue - Side by side */}
             <div className="grid md:grid-cols-2 gap-4">

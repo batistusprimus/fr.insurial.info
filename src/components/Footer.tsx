@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link href="/a-propos" className="hover:text-white transition-colors">À propos</Link>
               </li>
               <li>
-                <Link href="/#risk-score-form" className="hover:text-white transition-colors">Score de risque</Link>
+                <Link href="/#score-de-risque" className="hover:text-white transition-colors">Score de risque</Link>
               </li>
             </ul>
           </div>

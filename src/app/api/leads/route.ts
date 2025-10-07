@@ -11,6 +11,8 @@ interface LeadData {
   // Step 2 - Profile  
   companySize: string;
   industry: string;
+  // Nouveau: type d'assurance mentionné dans le formulaire simple
+  insuranceInterest?: string;
   currentProvider: string;
   
   // Step 3 - Contact
