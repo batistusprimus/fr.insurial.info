@@ -7,28 +7,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Is it really free?",
-      answer: "Yes, 100% free and with no obligation. We don’t sell insurance; our goal is education and helping you understand your risk."
+      question: "Est‑ce vraiment gratuit ?",
+      answer: "Oui, 100% gratuit et sans obligation. Nous ne vendons pas d’assurances ; notre objectif est pédagogique et d’aider à comprendre vos risques."
     },
     {
-      question: "How long does it take to get a quote?",
-      answer: "The Risk Score takes under 5 minutes. You can then use the results to discuss coverage with your broker or preferred agent."
+      question: "Combien de temps pour obtenir un devis ?",
+      answer: "Le Score de risque prend moins de 5 minutes. Vous pouvez ensuite utiliser les résultats pour discuter des couvertures avec votre courtier ou agent."
     },
     {
-      question: "Who will contact me?",
-      answer: "No mandatory calls. You'll receive your Risk Score by email with guidance to take next steps at your own pace."
+      question: "Qui va me contacter ?",
+      answer: "Aucun appel obligatoire. Vous recevrez votre Score de risque par email avec des conseils pour avancer à votre rythme."
     },
     {
-      question: "How is my data handled?",
-      answer: "GDPR-compliant and SSL secured. Your information is only shared with selected insurance partners to provide your quote. You can request data deletion anytime by contacting us."
+      question: "Comment mes données sont‑elles traitées ?",
+      answer: "Conforme RGPD et sécurisé SSL. Vos informations sont partagées uniquement avec des partenaires d’assurance sélectionnés pour établir votre devis. Vous pouvez demander la suppression à tout moment."
     },
     {
-      question: "Can I refuse the quote or cancel?",
-      answer: "Absolutely. There’s no obligation. The Risk Score is informational; you decide how to use it."
+      question: "Puis‑je refuser le devis ou annuler ?",
+      answer: "Absolument. Sans obligation. Le Score de risque est informatif ; vous décidez comment l’utiliser."
     },
     {
-      question: "Do you work with all insurance companies?",
-      answer: "We’re independent and focus on education. You can share your Risk Score with any broker or carrier you prefer."
+      question: "Travaillez‑vous avec toutes les compagnies d’assurance ?",
+      answer: "Nous sommes indépendants et axés sur l’éducation. Vous pouvez partager votre Score de risque avec le courtier ou l’assureur de votre choix."
     }
   ];
 
@@ -41,10 +41,10 @@ export default function FAQ() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-            Frequently Asked Questions
+            Foire aux questions
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Common questions about our service and process. Don't see your question? Contact us directly.
+            Questions fréquentes sur notre service et notre processus. Une autre question ? Contactez‑nous.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function FAQ() {
 
         <div className="text-center mt-8">
           <p className="text-gray-600">
-            Still have questions? Contact us at <a href="mailto:hello@insurial.info" className="text-[#1E3A8A] hover:text-blue-800 font-medium">hello@insurial.info</a>
+            D’autres questions ? Écrivez‑nous à <a href="mailto:hello@insurial.info" className="text-[#1E3A8A] hover:text-blue-800 font-medium">hello@insurial.info</a>
           </p>
         </div>
       </div>

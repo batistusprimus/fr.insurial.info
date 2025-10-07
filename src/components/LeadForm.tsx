@@ -58,26 +58,26 @@ export default function LeadForm() {
 
     switch (step) {
       case 1:
-        if (formData.coverageType.length === 0) newErrors.coverageType = 'Please select at least one coverage type';
-        if (!formData.location) newErrors.location = 'Location is required';
-        if (!formData.budget) newErrors.budget = 'Budget range is required';
-        if (!formData.timeline) newErrors.timeline = 'Timeline is required';
+        if (formData.coverageType.length === 0) newErrors.coverageType = 'Veuillez sélectionner au moins un type de couverture';
+        if (!formData.location) newErrors.location = 'La localisation est requise';
+        if (!formData.budget) newErrors.budget = 'La tranche de budget est requise';
+        if (!formData.timeline) newErrors.timeline = 'L’échéance est requise';
         break;
       case 2:
-        if (!formData.companySize) newErrors.companySize = 'Company size is required';
-        if (!formData.industry) newErrors.industry = 'Industry is required';
+        if (!formData.companySize) newErrors.companySize = 'La taille de l’entreprise est requise';
+        if (!formData.industry) newErrors.industry = 'Le secteur d’activité est requis';
         break;
       case 3:
-        if (!formData.fullName) newErrors.fullName = 'Full name is required';
+        if (!formData.fullName) newErrors.fullName = 'Le nom complet est requis';
         if (!formData.workEmail) {
-          newErrors.workEmail = 'Work email is required';
+          newErrors.workEmail = 'L’email professionnel est requis';
         } else if (!formData.workEmail.includes('@') || formData.workEmail.includes('@gmail.') || formData.workEmail.includes('@yahoo.') || formData.workEmail.includes('@hotmail.')) {
-          newErrors.workEmail = 'Please use a professional email (e.g. name@company.com)';
+          newErrors.workEmail = 'Veuillez utiliser un email professionnel (ex. nom@entreprise.com)';
         }
-        if (!formData.phone) newErrors.phone = 'Phone number is required';
+        if (!formData.phone) newErrors.phone = 'Le numéro de téléphone est requis';
         break;
       case 4:
-        if (!formData.gdprConsent) newErrors.gdprConsent = 'You must agree to the privacy policy to continue';
+        if (!formData.gdprConsent) newErrors.gdprConsent = 'Vous devez accepter la politique de confidentialité pour continuer';
         break;
     }
 
@@ -115,7 +115,7 @@ export default function LeadForm() {
         ...utmData,
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString(),
-        source: 'insurial.info',
+        source: 'fr.insurial.info',
       };
 
       const response = await fetch('/api/leads', {
@@ -134,7 +134,7 @@ export default function LeadForm() {
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setErrors({ submit: 'An error occurred. Please try again.' });
+      setErrors({ submit: 'Une erreur est survenue. Merci de réessayer.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -171,15 +171,15 @@ export default function LeadForm() {
             </div>
           </div>
 
-          {/* Step 1: Need */}
+          {/* Étape 1 : Besoin */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">What coverage do you need?</h2>
+              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">De quelle couverture avez‑vous besoin ?</h2>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">Coverage Type *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-3">Type de couverture *</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {['General Liability', 'Property Insurance', 'Professional Liability', 'Cyber Liability', 'Workers Compensation', 'Other'].map((coverage) => (
+                  {['RC Pro (Responsabilité Civile Professionnelle)', 'Multirisque Professionnelle', 'Flotte automobile professionnelle', 'Cyber (Responsabilité cyber)', 'AT/MP (accidents du travail)', 'Protection juridique', 'Autre'].map((coverage) => (
                     <label key={coverage} className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
                       <input
                         type="checkbox"
@@ -195,120 +195,120 @@ export default function LeadForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Location *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Localisation *</label>
                 <select
                   value={formData.location}
                   onChange={(e) => updateFormData('location', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select your location</option>
-                  <option value="US-Northeast">US - Northeast</option>
-                  <option value="US-Southeast">US - Southeast</option>
-                  <option value="US-Midwest">US - Midwest</option>
-                  <option value="US-West">US - West</option>
-                  <option value="EU-UK">EU - United Kingdom</option>
-                  <option value="EU-France">EU - France</option>
-                  <option value="EU-Germany">EU - Germany</option>
-                  <option value="EU-Other">EU - Other</option>
+                  <option value="">Sélectionnez votre localisation</option>
+                  <option value="US-Northeast">États‑Unis - Nord‑Est</option>
+                  <option value="US-Southeast">États‑Unis - Sud‑Est</option>
+                  <option value="US-Midwest">États‑Unis - Midwest</option>
+                  <option value="US-West">États‑Unis - Ouest</option>
+                  <option value="EU-UK">UE - Royaume‑Uni</option>
+                  <option value="EU-France">UE - France</option>
+                  <option value="EU-Germany">UE - Allemagne</option>
+                  <option value="EU-Other">UE - Autre</option>
                 </select>
                 {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Annual Budget Range *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Budget annuel *</label>
                 <select
                   value={formData.budget}
                   onChange={(e) => updateFormData('budget', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select budget range</option>
-                  <option value="<$5K">&lt; $5,000</option>
-                  <option value="$5K-$15K">$5,000 - $15,000</option>
-                  <option value="$15K-$50K">$15,000 - $50,000</option>
-                  <option value="$50K+">$50,000+</option>
+                  <option value="">Sélectionnez une tranche</option>
+                  <option value="<$5K">&lt; 5 000 €</option>
+                  <option value="$5K-$15K">5 000 € - 15 000 €</option>
+                  <option value="$15K-$50K">15 000 € - 50 000 €</option>
+                  <option value="$50K+">50 000 €+</option>
                 </select>
                 {errors.budget && <p className="text-red-600 text-sm mt-1">{errors.budget}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">When do you need coverage? *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Pour quand avez‑vous besoin de la couverture ? *</label>
                 <select
                   value={formData.timeline}
                   onChange={(e) => updateFormData('timeline', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select timeline</option>
-                  <option value="ASAP">As soon as possible</option>
-                  <option value="1-month">Within 1 month</option>
-                  <option value="3-months">Within 3 months</option>
-                  <option value="renewal">At renewal</option>
+                  <option value="">Sélectionnez une échéance</option>
+                  <option value="ASAP">Dès que possible</option>
+                  <option value="1-month">Sous 1 mois</option>
+                  <option value="3-months">Sous 3 mois</option>
+                  <option value="renewal">Au renouvellement</option>
                 </select>
                 {errors.timeline && <p className="text-red-600 text-sm mt-1">{errors.timeline}</p>}
               </div>
             </div>
           )}
 
-          {/* Step 2: Profile */}
+          {/* Étape 2 : Profil */}
           {currentStep === 2 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Tell us about your business</h2>
+              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Parlez‑nous de votre entreprise</h2>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Company Size *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Taille de l’entreprise *</label>
                 <select
                   value={formData.companySize}
                   onChange={(e) => updateFormData('companySize', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select company size</option>
-                  <option value="1-10">1-10 employees</option>
-                  <option value="11-50">11-50 employees</option>
-                  <option value="51-200">51-200 employees</option>
-                  <option value="200+">200+ employees</option>
+                  <option value="">Sélectionnez la taille</option>
+                  <option value="1-10">1-10 salariés</option>
+                  <option value="11-50">11-50 salariés</option>
+                  <option value="51-200">51-200 salariés</option>
+                  <option value="200+">200+ salariés</option>
                 </select>
                 {errors.companySize && <p className="text-red-600 text-sm mt-1">{errors.companySize}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Industry *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Secteur d’activité *</label>
                 <select
                   value={formData.industry}
                   onChange={(e) => updateFormData('industry', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select industry</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Healthcare">Healthcare</option>
+                  <option value="">Sélectionnez un secteur</option>
+                  <option value="Technology">Technologie</option>
+                  <option value="Healthcare">Santé</option>
                   <option value="Finance">Finance</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="Retail">Retail</option>
+                  <option value="Manufacturing">Industrie</option>
+                  <option value="Retail">Commerce</option>
                   <option value="Construction">Construction</option>
-                  <option value="Professional Services">Professional Services</option>
-                  <option value="Other">Other</option>
+                  <option value="Professional Services">Services professionnels</option>
+                  <option value="Other">Autre</option>
                 </select>
                 {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Current Insurance Provider (Optional)</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Assureur actuel (optionnel)</label>
                 <input
                   type="text"
                   value={formData.currentProvider}
                   onChange={(e) => updateFormData('currentProvider', e.target.value)}
-                  placeholder="e.g. State Farm, AXA, Allianz..."
+                  placeholder="ex. State Farm, AXA, Allianz..."
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 />
               </div>
             </div>
           )}
 
-          {/* Step 3: Contact */}
+          {/* Étape 3 : Contact */}
           {currentStep === 3 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Informations de contact</h2>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Nom complet *</label>
                 <input
                   type="text"
                   value={formData.fullName}
@@ -319,55 +319,55 @@ export default function LeadForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Work Email *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email professionnel *</label>
                 <input
                   type="email"
                   value={formData.workEmail}
                   onChange={(e) => updateFormData('workEmail', e.target.value)}
-                  placeholder="name@company.com"
+                  placeholder="nom@entreprise.com"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 />
                 {errors.workEmail && <p className="text-red-600 text-sm mt-1">{errors.workEmail}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Numéro de téléphone *</label>
                 <input
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => updateFormData('phone', e.target.value)}
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+33 6 12 34 56 78"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 />
                 {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Company Website (Optional)</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Site web de l’entreprise (optionnel)</label>
                 <input
                   type="url"
                   value={formData.website}
                   onChange={(e) => updateFormData('website', e.target.value)}
-                  placeholder="https://www.company.com"
+                  placeholder="https://www.entreprise.com"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 />
               </div>
             </div>
           )}
 
-          {/* Step 4: Consent */}
+          {/* Étape 4 : Consentement */}
           {currentStep === 4 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Final Step</h2>
+              <h2 className="text-2xl font-archivo-black text-gray-900 mb-6">Étape finale</h2>
               
               <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Review your request:</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Vérifiez votre demande :</h3>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Coverage: {formData.coverageType.join(', ')}</li>
-                  <li>• Location: {formData.location}</li>
-                  <li>• Budget: {formData.budget}</li>
-                  <li>• Company: {formData.companySize} in {formData.industry}</li>
-                  <li>• Contact: {formData.workEmail}</li>
+                  <li>• Couverture : {formData.coverageType.join(', ')}</li>
+                  <li>• Localisation : {formData.location}</li>
+                  <li>• Budget : {formData.budget}</li>
+                  <li>• Entreprise : {formData.companySize} en {formData.industry}</li>
+                  <li>• Contact : {formData.workEmail}</li>
                 </ul>
               </div>
 
@@ -380,15 +380,15 @@ export default function LeadForm() {
                     className="mt-1 text-[#1E3A8A] focus:ring-[#1E3A8A]"
                   />
                   <span className="text-sm text-gray-600">
-                    I agree to the{' '}
-                    <a href="/privacy" className="text-[#1E3A8A] hover:underline">Privacy Policy</a> and allow{' '}
-                    <strong>Insurial</strong> to process my data to provide a quote. *
+                    J’accepte la{' '}
+                    <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise{' '}
+                    <strong>Insurial</strong> à traiter mes données pour fournir un devis. *
                   </span>
                 </label>
                 {errors.gdprConsent && <p className="text-red-600 text-sm">{errors.gdprConsent}</p>}
 
                 <p className="text-xs text-gray-500">
-                  Free & no obligation • Quote within 24h • GDPR compliant
+                  Gratuit & sans obligation • Devis sous 24h • Conforme RGPD
                 </p>
               </div>
 
@@ -400,14 +400,14 @@ export default function LeadForm() {
             </div>
           )}
 
-          {/* Navigation buttons */}
+          {/* Boutons de navigation */}
           <div className="flex justify-between mt-8 pt-6 border-t">
             {currentStep > 1 && (
               <button
                 onClick={handleBack}
                 className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
               >
-                Back
+                Retour
               </button>
             )}
             
@@ -417,7 +417,7 @@ export default function LeadForm() {
                   onClick={handleNext}
                   className="px-6 py-2 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors"
                 >
-                  Continue
+                  Continuer
                 </button>
               ) : (
                 <button
@@ -425,16 +425,16 @@ export default function LeadForm() {
                   disabled={isSubmitting}
                   className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Get My Free Quote'}
+                  {isSubmitting ? 'Envoi…' : 'Obtenir mon devis gratuit'}
                 </button>
               )}
             </div>
           </div>
         </div>
 
-        {/* Microcopy below form */}
+        {/* Microcopy sous le formulaire */}
         <p className="text-center text-sm text-gray-500 mt-4">
-          Free & no obligation • Quote within 24h • GDPR compliant
+          Gratuit & sans obligation • Devis sous 24h • Conforme RGPD
         </p>
       </div>
     </section>

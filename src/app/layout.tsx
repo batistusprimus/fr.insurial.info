@@ -10,9 +10,9 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const archivoBlack = Archivo_Black({ weight: ["400"], subsets: ["latin"], variable: "--font-archivo-black" });
 
 export const metadata: Metadata = {
-  title: "Insurial – Business Insurance Education + Free Risk Score",
-  description: "Clear, trustworthy education on business insurance for US companies. Get your free Business Insurance Risk Score based on industry, size, location, and revenue.",
-  keywords: "business insurance, education, risk score, general liability, workers compensation, commercial property, commercial auto, BOP",
+  title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
+  description: "Une information claire et fiable sur l’assurance des entreprises. Obtenez votre Score de risque gratuit selon votre secteur, taille, localisation et chiffre d’affaires.",
+  keywords: "assurance entreprise, éducation, score de risque, responsabilité civile, accidents du travail, biens commerciaux, auto commerciale, BOP",
   robots: "index, follow",
   icons: {
     icon: "/favicon.png",
@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Insurial – Business Insurance Education + Free Risk Score",
-    description: "Understand your insurance needs with clear, trustworthy resources. Get your free Business Insurance Risk Score.",
-    url: "https://insurial.info",
+    title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
+    description: "Comprenez vos besoins d’assurance avec des ressources claires et fiables. Obtenez votre Score de risque gratuit.",
+    url: "https://fr.insurial.info",
     siteName: "Insurial",
-    locale: "en_US",
+    locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insurial – Business Insurance Education + Free Risk Score",
-    description: "Get your free Business Insurance Risk Score and understand your insurance needs.",
+    title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
+    description: "Obtenez votre Score de risque gratuit et comprenez vos besoins d’assurance.",
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`${inter.className} ${montserrat.variable} ${archivoBlack.variable}`}>
         <Header />
         {children}

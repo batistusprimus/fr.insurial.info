@@ -7,120 +7,120 @@ export default function DPAPage() {
         <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
           <div className="mb-8">
             <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 text-sm mb-4 inline-block">
-              ← Back to Insurial.info
+              ← Retour à Insurial.info
             </Link>
             <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-              Data Processing Agreement (DPA)
+              Accord de traitement des données (DPA)
             </h1>
             <p className="text-gray-600">
-              Last updated: January 2025
+              Dernière mise à jour : janvier 2025
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none article-content">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">For Business Customers</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Pour les clients professionnels</h2>
               <p className="text-gray-700">
-                This Data Processing Agreement (DPA) applies when your organization acts as a Data Controller 
-                and BPC Group processes personal data on your behalf in connection with Insurial services.
+                Cet accord (DPA) s’applique lorsque votre organisation agit en tant que Responsable de traitement
+                et que BPC Group traite des données personnelles pour votre compte dans le cadre des services Insurial.
               </p>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Definitions</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Définitions</h2>
             <ul className="list-disc pl-6 mb-6">
-              <li><strong>"Controller":</strong> Your organization requesting insurance quotes</li>
-              <li><strong>"Processor":</strong> BPC Group (Insurial operator)</li>
-              <li><strong>"Personal Data":</strong> Employee/customer data included in quote requests</li>
-              <li><strong>"Processing":</strong> Quote facilitation and partner matching</li>
-              <li><strong>"Sub-processor":</strong> Insurance partners and service providers</li>
+              <li><strong>« Responsable » :</strong> Votre organisation demandant des devis</li>
+              <li><strong>« Sous‑traitant » :</strong> BPC Group (opérateur d’Insurial)</li>
+              <li><strong>« Données personnelles » :</strong> Données d’employés/clients incluses dans les demandes</li>
+              <li><strong>« Traitement » :</strong> Mise en relation et facilitation de devis</li>
+              <li><strong>« Sous‑traitant ultérieur » :</strong> Partenaires assureurs et prestataires</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">2. Scope of Processing</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">2. Portée du traitement</h2>
             <p className="mb-4"><strong>Categories of Personal Data:</strong></p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Contact information (names, emails, phone numbers)</li>
-              <li>Business information (company size, industry, location)</li>
-              <li>Insurance requirements and preferences</li>
+              <li>Coordonnées (noms, emails, numéros de téléphone)</li>
+              <li>Informations d’entreprise (taille, secteur, localisation)</li>
+              <li>Besoins et préférences d’assurance</li>
             </ul>
             
-            <p className="mb-4"><strong>Categories of Data Subjects:</strong></p>
+            <p className="mb-4"><strong>Catégories de personnes concernées :</strong></p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Your employees and authorized representatives</li>
-              <li>Your customers (if included in risk assessment)</li>
+              <li>Vos employés et représentants autorisés</li>
+              <li>Vos clients (si inclus dans l’évaluation des risques)</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">3. Processing Instructions</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">3. Instructions de traitement</h2>
             <p className="mb-6">
-              BPC Group will process Personal Data solely for the purpose of providing insurance quote 
-              services as outlined in our Terms of Service, and only according to your documented instructions.
+              BPC Group traitera les Données personnelles uniquement pour fournir les services de devis,
+              conformément aux Conditions d’utilisation et à vos instructions documentées.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">4. Security Measures</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">4. Mesures de sécurité</h2>
             <p className="mb-4">We implement appropriate technical and organizational measures:</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>SSL/TLS encryption for data in transit</li>
-              <li>Encrypted storage for data at rest</li>
-              <li>Access controls and authentication</li>
-              <li>Regular security assessments</li>
-              <li>Staff training on data protection</li>
-              <li>Incident response procedures</li>
+              <li>Chiffrement SSL/TLS en transit</li>
+              <li>Chiffrement au repos</li>
+              <li>Contrôles d’accès et authentification</li>
+              <li>Évaluations de sécurité régulières</li>
+              <li>Formation du personnel à la protection des données</li>
+              <li>Procédures de réponse aux incidents</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">5. Sub-processing</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">5. Sous‑traitance</h2>
             <p className="mb-4">We engage the following categories of sub-processors:</p>
             <ul className="list-disc pl-6 mb-6">
-              <li><strong>Insurance Partners:</strong> To provide quotes (vetted and contractually bound)</li>
-              <li><strong>Cloud Hosting:</strong> Secure data storage and processing infrastructure</li>
-              <li><strong>Email Services:</strong> Quote delivery and communication</li>
+              <li><strong>Partenaires assureurs :</strong> Fourniture de devis (vérifiés et contractuellement engagés)</li>
+              <li><strong>Hébergement cloud :</strong> Stockage et traitement sécurisés</li>
+              <li><strong>Services email :</strong> Envoi de devis et communications</li>
             </ul>
             <p className="mb-6">
-              All sub-processors are subject to equivalent data protection obligations. 
-              We will notify you of any changes to sub-processors with 30 days notice.
+              Les sous‑traitants sont soumis à des obligations de protection équivalentes.
+              Nous vous informerons de toute modification avec un préavis de 30 jours.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">6. Data Subject Rights</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">6. Droits des personnes</h2>
             <p className="mb-6">
-              We will assist you in responding to data subject requests (access, rectification, erasure, etc.) 
-              within 72 hours of receiving your request. We provide tools and processes to facilitate compliance.
+              Nous vous assisterons pour les demandes (accès, rectification, effacement, etc.) sous 72 heures.
+              Des outils et processus facilitent votre conformité.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">7. Data Breach Notification</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">7. Notification de violation</h2>
             <p className="mb-6">
-              We will notify you of any personal data breach within 24 hours of becoming aware, 
-              including details of the breach, affected data, and remediation measures taken.
+              Nous vous notifierons toute violation sous 24 heures après découverte,
+              avec détails, données affectées et mesures correctives.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">8. International Transfers</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">8. Transferts internationaux</h2>
             <p className="mb-6">
-              Data transfers between US and EU are protected by Standard Contractual Clauses (SCCs) 
-              approved by the European Commission. We ensure adequate protection for all cross-border transfers.
+              Les transferts entre les États‑Unis et l’UE sont encadrés par les Clauses Contractuelles Types (CCT)
+              de la Commission européenne. Une protection adéquate est assurée pour tout transfert transfrontalier.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">9. Audit Rights</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">9. Droit d’audit</h2>
             <p className="mb-6">
-              You may request audit information annually. We provide compliance reports and certifications. 
-              On-site audits may be arranged for enterprise customers with reasonable notice.
+              Vous pouvez demander des informations d’audit annuelles. Nous fournissons rapports et certifications.
+              Des audits sur site peuvent être organisés avec un préavis raisonnable.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">10. Data Retention and Deletion</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">10. Conservation et suppression</h2>
             <p className="mb-6">
-              Personal data is retained for 3 years or as instructed by you. Upon termination or your request, 
-              we will delete or return all personal data within 30 days, except where retention is required by law.
+              Les données sont conservées 3 ans ou selon vos instructions. À la fin du service ou sur demande,
+              nous supprimons ou restituons les données sous 30 jours, sauf obligation légale contraire.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact & Execution</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact & exécution</h2>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="mb-4">
-                <strong>To execute this DPA or for questions:</strong>
+                <strong>Pour exécuter ce DPA ou poser des questions :</strong>
               </p>
               <p className="mb-2">
-                <strong>Email:</strong> <a href="mailto:dpa@insurial.info" className="text-[#1E3A8A] hover:underline">dpa@insurial.info</a><br />
-                <strong>Subject:</strong> DPA Request - [Your Company Name]<br />
-                <strong>Response time:</strong> Within 48 hours
+                <strong>Email :</strong> <a href="mailto:dpa@insurial.info" className="text-[#1E3A8A] hover:underline">dpa@insurial.info</a><br />
+                <strong>Objet :</strong> Demande DPA - [Nom de votre entreprise]<br />
+                <strong>Délai de réponse :</strong> sous 48 heures
               </p>
               <p className="text-sm text-gray-600 mt-4">
-                This DPA becomes effective upon your first use of Insurial services or upon signed execution, 
-                whichever occurs first.
+                Ce DPA prend effet dès votre première utilisation des services Insurial ou à la signature,
+                selon la première occurrence.
               </p>
             </div>
           </div>

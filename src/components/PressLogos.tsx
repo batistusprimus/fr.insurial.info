@@ -11,9 +11,9 @@ const LOGOS = [
 
 export default function PressLogos() {
   return (
-    <section aria-label="Industry coverage from" className="bg-white">
+    <section aria-label="Couverture média par" className="bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <p className="text-center text-sm font-medium text-gray-500">Industry coverage from</p>
+        <p className="text-center text-sm font-medium text-gray-500">Couverture médiatique par</p>
         <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 items-center">
           {LOGOS.map((logo) => (
             <div key={logo.src} className="flex justify-center">

@@ -48,7 +48,7 @@ function simpleMarkdownToHtml(md: string): string {
 function estimateReadTime(text: string): string {
   const words = text.split(/\s+/).filter(Boolean).length;
   const minutes = Math.max(4, Math.round(words / 200));
-  return `${minutes} min read`;
+  return `${minutes} min de lecture`;
 }
 
 function inferCategoryFromFilename(name: string): string {

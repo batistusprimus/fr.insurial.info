@@ -7,7 +7,7 @@ export default function PremiumCalculationGuide() {
       <header className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 font-medium">
-            ← Back to Home
+            ← Retour à l’accueil
           </Link>
         </div>
       </header>
@@ -17,122 +17,122 @@ export default function PremiumCalculationGuide() {
         <div className="mb-8">
           <div className="text-4xl mb-4">💰</div>
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">
-            How premiums are calculated (5 key factors)
+            Comment les primes sont calculées (5 facteurs clés)
           </h1>
           <div className="flex items-center gap-4 text-gray-500 text-sm mb-8">
-            <span>4 min read</span>
+            <span>4 min de lecture</span>
             <span>•</span>
-            <span>Business Insurance Guide</span>
+            <span>Guide assurance entreprise</span>
           </div>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Insurance companies use a complex algorithm to determine your premium, but these 5 factors have the biggest impact on your costs.
+            Les assureurs utilisent des algorithmes complexes pour déterminer votre prime, mais ces 5 facteurs ont l’impact le plus fort sur vos coûts.
           </p>
 
           {/* Factor 1 */}
           <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Industry & Business Type</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Secteur & type d’activité</h2>
             <p className="text-gray-700 mb-4">
-              Your industry's risk profile significantly affects pricing. High-risk industries (construction, restaurants) pay more than low-risk ones (consulting, accounting).
+              Le profil de risque de votre secteur affecte fortement la tarification. Les secteurs à risque (construction, restauration) paient plus que les secteurs à faible risque (conseil, comptabilité).
             </p>
             <div className="grid md:grid-cols-2 gap-4 mt-4">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Why it matters:</h4>
-                <p className="text-gray-600">Historical claim data shows some industries file more claims</p>
+                <h4 className="font-semibold text-gray-800 mb-2">Pourquoi c’est important :</h4>
+                <p className="text-gray-600">Les données historiques de sinistres montrent que certains secteurs déclarent davantage</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Tip:</h4>
-                <p className="text-gray-600">Accurately describe your business operations to avoid misclassification</p>
+                <h4 className="font-semibold text-gray-800 mb-2">Conseil :</h4>
+                <p className="text-gray-600">Décrivez précisément vos activités pour éviter une mauvaise classification</p>
               </div>
             </div>
           </div>
 
           {/* Factor 2 */}
           <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Coverage Limits & Deductibles</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Limites de garantie & franchises</h2>
             <p className="text-gray-700 mb-4">
-              Higher coverage limits increase premiums, while higher deductibles decrease them.
+              Des limites de garantie élevées augmentent les primes, tandis que des franchises plus hautes les réduisent.
             </p>
             <div className="space-y-3">
               <div>
-                <h4 className="font-semibold text-gray-800">Coverage limits:</h4>
-                <p className="text-gray-600">How much the insurance company will pay for a claim</p>
+                <h4 className="font-semibold text-gray-800">Limites de garantie :</h4>
+                <p className="text-gray-600">Montant maximal pris en charge par l’assureur pour un sinistre</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800">Deductibles:</h4>
-                <p className="text-gray-600">How much you pay before insurance kicks in</p>
+                <h4 className="font-semibold text-gray-800">Franchises :</h4>
+                <p className="text-gray-600">Part restant à votre charge avant l’intervention de l’assurance</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800">Sweet spot:</h4>
-                <p className="text-gray-600">Balance adequate protection with affordable premiums</p>
+                <h4 className="font-semibold text-gray-800">Point d’équilibre :</h4>
+                <p className="text-gray-600">Équilibrer protection suffisante et prime abordable</p>
               </div>
             </div>
           </div>
 
           {/* Factor 3 */}
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Business Size & Revenue</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Taille & chiffre d’affaires</h2>
             <p className="text-gray-700 mb-4">
-              Larger businesses typically pay higher premiums due to increased exposure.
+              Les entreprises plus grandes paient généralement plus en raison d’une exposition accrue.
             </p>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li><strong>Factors considered:</strong> Annual revenue, number of employees, square footage</li>
-              <li><strong>Why:</strong> More revenue often means more customer interactions and higher claim potential</li>
-              <li><strong>Note:</strong> Some coverage types have minimum premiums regardless of size</li>
+              <li><strong>Facteurs :</strong> CA annuel, effectif, superficie</li>
+              <li><strong>Pourquoi :</strong> Plus de CA = plus d’interactions clients et de potentiel de sinistre</li>
+              <li><strong>Note :</strong> Certaines garanties ont des primes minimales, quelle que soit la taille</li>
             </ul>
           </div>
 
           {/* Factor 4 */}
           <div className="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Location & Territory</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Localisation & territoire</h2>
             <p className="text-gray-700 mb-4">
-              Where your business operates affects your premium due to local factors.
+              Le lieu d’exploitation influe sur la prime via des facteurs locaux.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Urban vs Rural:</h4>
-                <p className="text-gray-600">Cities often have higher rates due to increased litigation</p>
+                <h4 className="font-semibold text-gray-800 mb-2">Urbain vs rural :</h4>
+                <p className="text-gray-600">Les zones urbaines ont souvent des tarifs plus élevés (contentieux accru)</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Natural disasters:</h4>
-                <p className="text-gray-600">Areas prone to hurricanes, earthquakes, or floods cost more</p>
+                <h4 className="font-semibold text-gray-800 mb-2">Catastrophes naturelles :</h4>
+                <p className="text-gray-600">Régions exposées (ouragans, séismes, inondations) = coûts plus élevés</p>
               </div>
               <div className="md:col-span-2">
-                <h4 className="font-semibold text-gray-800 mb-2">Local laws:</h4>
-                <p className="text-gray-600">Some states have higher claim costs due to legal environment</p>
+                <h4 className="font-semibold text-gray-800 mb-2">Cadre légal :</h4>
+                <p className="text-gray-600">Certains territoires présentent des coûts de sinistre plus élevés</p>
               </div>
             </div>
           </div>
 
           {/* Factor 5 */}
           <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Claims History & Risk Management</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Historique de sinistres & gestion des risques</h2>
             <p className="text-gray-700 mb-4">
-              Your track record significantly impacts future premiums.
+              Votre historique impacte fortement les primes futures.
             </p>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li><strong>Claims frequency:</strong> Multiple claims signal higher risk</li>
-              <li><strong>Claims severity:</strong> Large claims hurt more than small ones</li>
-              <li><strong>Risk management:</strong> Safety programs, security systems, and training can reduce rates</li>
-              <li><strong>Credit score:</strong> In many states, business credit affects insurance pricing</li>
+              <li><strong>Fréquence :</strong> Plusieurs sinistres = risque accru</li>
+              <li><strong>Sévérité :</strong> Les gros sinistres pèsent plus que les petits</li>
+              <li><strong>Gestion des risques :</strong> Sécurité, systèmes, formation peuvent réduire les tarifs</li>
+              <li><strong>Score de crédit :</strong> Souvent pris en compte pour la tarification</li>
             </ul>
           </div>
 
           {/* Pro Tips */}
           <div className="bg-[#1E3A8A] text-white rounded-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4">💡 Pro Tips to Reduce Premiums</h2>
+            <h2 className="text-2xl font-bold mb-4">💡 Astuces pour réduire vos primes</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <ul className="space-y-2">
-                <li>• Implement safety training programs</li>
-                <li>• Install security systems</li>
-                <li>• Maintain good credit</li>
+                <li>• Mettre en place des formations sécurité</li>
+                <li>• Installer des systèmes de sécurité</li>
+                <li>• Maintenir un bon crédit</li>
               </ul>
               <ul className="space-y-2">
-                <li>• Shop around annually</li>
-                <li>• Consider bundling multiple policies</li>
-                <li>• Work with an experienced agent</li>
+                <li>• Comparer les offres chaque année</li>
+                <li>• Regrouper plusieurs polices (BOP)</li>
+                <li>• Travailler avec un courtier expérimenté</li>
               </ul>
             </div>
           </div>

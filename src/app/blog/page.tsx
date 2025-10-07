@@ -3,12 +3,12 @@ import { blogPosts } from '@/data/allBlogPosts';
 
 export const metadata = {
   title: 'Blog - Insurial',
-  description: "Clear guides on commercial insurance, trends, and risk management. Get your free Business Insurance Risk Score."
+  description: "Guides clairs sur l’assurance entreprise, les tendances et la gestion des risques. Obtenez votre Score de risque gratuit."
 };
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  return d.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 export default function BlogIndexPage() {
@@ -18,8 +18,8 @@ export default function BlogIndexPage() {
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">Insurial Blog</h1>
-          <p className="text-lg text-gray-600">Education first. Plain‑English guidance on business insurance, trends, and risk management.</p>
+          <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">Blog Insurial</h1>
+          <p className="text-lg text-gray-600">Pédagogie d’abord. Conseils clairs sur l’assurance entreprise, les tendances et la gestion des risques.</p>
         </div>
       </section>
 
@@ -41,9 +41,9 @@ export default function BlogIndexPage() {
               <p className="text-gray-700 mb-4">{post.excerpt}</p>
               <div className="flex items-center justify-between">
                 <Link href={`/blog/${post.slug}`} className="text-[#1E3A8A] hover:text-blue-800 font-semibold">
-                  Read article →
+                  Lire l’article →
                 </Link>
-                <div className="text-sm text-gray-500">By {post.author}</div>
+                <div className="text-sm text-gray-500">Par {post.author}</div>
               </div>
             </article>
           ))}

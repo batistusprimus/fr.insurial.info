@@ -3,8 +3,8 @@ import Link from 'next/link';
 import SummitsLogos from '@/components/SummitsLogos';
 
 export const metadata = {
-  title: "About Insurial - Mission and Credibility",
-  description: "Learn about Insurial’s mission and nationwide expertise connecting US businesses with the right insurance partners.",
+  title: "À propos d’Insurial - Mission et crédibilité",
+  description: "Découvrez la mission d’Insurial et son expertise pour connecter les entreprises avec les bons partenaires.",
 };
 
 export default function AboutPage() {
@@ -15,10 +15,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About <span className="text-[#1E3A8A]">Insurial</span>
+              À propos d’<span className="text-[#1E3A8A]">Insurial</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Our mission is to simplify business insurance for US companies by intelligently connecting needs with the right solutions.
+              Notre mission est de simplifier l’assurance des entreprises en connectant intelligemment les besoins aux bonnes solutions.
             </p>
           </div>
         </div>

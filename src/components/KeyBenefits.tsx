@@ -4,42 +4,42 @@ export default function KeyBenefits() {
   const benefits = [
     {
       icon: "🎯",
-      title: "Personalized Risk Intelligence",
-      description: "Our Risk Score assesses your needs based on industry, size, and location.",
+      title: "Intelligence de risque personnalisée",
+      description: "Notre Score de risque évalue vos besoins selon le secteur, la taille et la localisation.",
       features: [
-        "Data‑informed assessment",
-        "Coverage areas to consider",
-        "Hidden risk identification"
+        "Évaluation fondée sur les données",
+        "Zones de couverture à considérer",
+        "Identification des risques cachés"
       ]
     },
     {
       icon: "📚",
-      title: "Educational Resource Hub",
-      description: "Clear, jargon‑free guides to help you understand business insurance.",
+      title: "Centre de ressources pédagogiques",
+      description: "Des guides clairs et sans jargon pour comprendre l’assurance entreprise.",
       features: [
-        "Guides by insurance type",
-        "Checklists & renewal tips",
-        "Trends and regulatory updates"
+        "Guides par type d’assurance",
+        "Listes de contrôle & conseils de renouvellement",
+        "Tendances et mises à jour réglementaires"
       ]
     },
     {
       icon: "🧭",
-      title: "Independent Guidance",
-      description: "We don’t sell insurance. Use your Risk Score to talk to your broker.",
+      title: "Conseils indépendants",
+      description: "Nous ne vendons pas d’assurances. Utilisez votre Score de risque avec votre courtier.",
       features: [
-        "No sales pressure",
-        "Actionable next steps",
-        "Transparent, educational approach"
+        "Aucune pression commerciale",
+        "Étapes actionnables",
+        "Approche transparente et pédagogique"
       ]
     },
     {
       icon: "⚡",
-      title: "Fast, Simple Experience",
-      description: "From answering a few questions to getting your Risk Score in minutes.",
+      title: "Expérience simple et rapide",
+      description: "Quelques questions pour obtenir votre Score de risque en minutes.",
       features: [
-        "Takes under 5 minutes",
-        "Mobile‑friendly",
-        "GDPR & SSL"
+        "Moins de 5 minutes",
+        "Compatible mobile",
+        "RGPD & SSL"
       ]
     }
   ];
@@ -49,10 +49,10 @@ export default function KeyBenefits() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="text-[#1E3A8A]">Insurial</span>?
+            Pourquoi choisir <span className="text-[#1E3A8A]">Insurial</span> ?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We turn business insurance complexity into a simple and trustworthy learning experience focused on your Risk Score.
+            Nous transformons la complexité de l’assurance entreprise en une expérience pédagogique simple et fiable, centrée sur votre Score de risque.
           </p>
         </div>
 
@@ -92,29 +92,29 @@ export default function KeyBenefits() {
         <div className="text-center mt-12">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Discover Your Business Insurance Risk Score?
+              Prêt à découvrir votre Score de risque assurance entreprise ?
             </h3>
             <p className="text-gray-600 mb-6">
-              Get a personalized assessment of your insurance needs in under 5 minutes.
+              Obtenez une évaluation personnalisée de vos besoins d’assurance en moins de 5 minutes.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="flex items-center text-sm text-gray-600">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                100% Free
+                100% Gratuit
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                No Commitment
+                Sans engagement
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                GDPR Compliant
+                Conforme RGPD
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function ValueProposition() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          {/* Problem */}
+          {/* Problème */}
           <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500">
             <div className="flex items-start mb-4">
               <div className="bg-red-100 rounded-full p-3 mr-4">
@@ -15,7 +15,7 @@ export default function ValueProposition() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">The Problem</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Le problème</h3>
                 <div className="w-16 h-1 bg-red-500 mb-4"></div>
               </div>
             </div>
@@ -24,28 +24,28 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Overwhelming complexity:</strong> Business insurance is a maze of jargon and confusing options
+                  <strong>Complexité écrasante :</strong> l’assurance entreprise est un labyrinthe de jargon et d’options confuses
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Hidden risks:</strong> Without expertise, it’s easy to underestimate coverage needs
+                  <strong>Risques cachés :</strong> sans expertise, on sous‑estime facilement les besoins de couverture
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Wasted time:</strong> Hours spent researching and estimating costs without clarity
+                  <strong>Temps perdu :</strong> des heures de recherche et d’estimation sans clarté
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Hidden costs:</strong> The wrong coverage can cost thousands in uncovered claims
+                  <strong>Coûts cachés :</strong> une mauvaise couverture peut coûter des milliers en sinistres non couverts
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function ValueProposition() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Our Solution</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Notre solution</h3>
                 <div className="w-16 h-1 bg-green-500 mb-4"></div>
               </div>
             </div>
@@ -69,35 +69,35 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Personalized Risk Score:</strong> Assess your insurance needs in minutes with our simple, credible tool
+                  <strong>Score de risque personnalisé :</strong> évaluez vos besoins d’assurance en quelques minutes avec notre outil simple et fiable
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Educational resources:</strong> Clear, jargon-free guides to understand each insurance type
+                  <strong>Ressources pédagogiques :</strong> des guides clairs et sans jargon pour comprendre chaque type d’assurance
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Independent guidance:</strong> Understand what coverage you likely need and why — without sales pressure
+                  <strong>Conseils indépendants :</strong> comprenez quelle couverture il vous faut et pourquoi — sans pression commerciale
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Actionable next steps:</strong> Use your Risk Score to discuss coverage and budgets with your broker
+                  <strong>Étapes clés :</strong> utilisez votre Score de risque pour discuter couverture et budgets avec votre courtier
                 </p>
               </div>
             </div>
             
             <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4">
               <p className="text-sm text-green-800 font-medium text-center">
-                ✓ Free • ✓ No obligation • ✓ GDPR compliant • We don’t sell insurance
+                ✓ Gratuit • ✓ Sans obligation • ✓ Conforme RGPD • Nous ne vendons pas d’assurances
               </p>
             </div>
           </div>

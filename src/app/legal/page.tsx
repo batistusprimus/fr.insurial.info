@@ -7,86 +7,86 @@ export default function LegalMentionsPage() {
         <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
           <div className="mb-8">
             <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 text-sm mb-4 inline-block">
-              ← Back to Insurial.info
+              ← Retour à Insurial.info
             </Link>
             <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-              Legal Information
+              Informations légales
             </h1>
             <p className="text-gray-600">
-              Last updated: September 2025
+              Dernière mise à jour : septembre 2025
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none article-content">
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Publisher</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Éditeur</h2>
             <p className="mb-6">
-              The website <strong>Insurial.info</strong> is published by <strong>BPC Group</strong> (the “Publisher”).
+              Le site <strong>Insurial.info</strong> est édité par <strong>BPC Group</strong> (l’« Éditeur »).
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Service Nature</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Nature du service</h2>
             <p className="mb-6">
-              Insurial.info is an educational platform focused on commercial insurance in the United States. 
-              It provides a free “Business Insurance Risk Score” tool (inputs: industry, size, location, revenue). 
-              Insurial does not sell insurance and does not act as a broker or insurer. No insurance offers are
-              directly provided on the website.
+              Insurial.info est une plateforme éducative dédiée à l’assurance des entreprises. 
+              Elle propose un outil gratuit de « Score de risque » (données : secteur, taille, localisation, chiffre d’affaires). 
+              Insurial ne vend pas d’assurances et n’agit pas en tant que courtier ou assureur. Aucune offre d’assurance
+              n’est proposée directement sur le site.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact</h2>
             <div className="bg-gray-50 p-4 rounded-lg mb-6">
               <p className="mb-2">
-                <strong>General:</strong> <a href="mailto:hello@insurial.info" className="text-[#1E3A8A] hover:underline">hello@insurial.info</a><br />
-                <strong>Privacy:</strong> <a href="mailto:privacy@insurial.info" className="text-[#1E3A8A] hover:underline">privacy@insurial.info</a><br />
-                <strong>Legal:</strong> <a href="mailto:legal@insurial.info" className="text-[#1E3A8A] hover:underline">legal@insurial.info</a>
+                <strong>Général :</strong> <a href="mailto:hello@insurial.info" className="text-[#1E3A8A] hover:underline">hello@insurial.info</a><br />
+                <strong>Vie privée :</strong> <a href="mailto:privacy@insurial.info" className="text-[#1E3A8A] hover:underline">privacy@insurial.info</a><br />
+                <strong>Légal :</strong> <a href="mailto:legal@insurial.info" className="text-[#1E3A8A] hover:underline">legal@insurial.info</a>
               </p>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Correspondence Address</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Adresse de correspondance</h2>
             <p className="mb-6">
-              BPC Group – Correspondence: 38/A Rózsa utca, 1077 Budapest, Hungary.
+              BPC Group – Correspondance : 38/A Rózsa utca, 1077 Budapest, Hongrie.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Hosting</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Hébergement</h2>
             <p className="mb-6">
-              The website is hosted on secure cloud infrastructure. Data is protected with SSL and reasonable security measures.
+              Le site est hébergé sur une infrastructure cloud sécurisée. Les données sont protégées via SSL et des mesures de sécurité appropriées.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Intellectual Property</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Propriété intellectuelle</h2>
             <p className="mb-6">
-              All content (texts, images, graphics, structure, logos) published on Insurial.info is protected by copyright and 
-              intellectual property rights. Any reproduction, representation, modification, publication, transmission, or distortion, 
-              in whole or in part, by any means and on any medium, is prohibited without the Publisher’s prior written consent.
+              L’ensemble des contenus (textes, images, graphismes, structure, logos) publiés sur Insurial.info est protégé par le droit d’auteur 
+              et la propriété intellectuelle. Toute reproduction, représentation, modification, publication, transmission ou altération, totale ou partielle,
+              par tout moyen et sur tout support, est interdite sans l’accord écrit préalable de l’Éditeur.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Liability</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Responsabilité</h2>
             <p className="mb-6">
-              The information available on Insurial.info is provided for educational and informational purposes only. While care is taken 
-              to ensure accuracy, the Publisher cannot guarantee the absence of errors or omissions, nor the continuous timeliness of the content. 
-              Decisions made based on the website’s information are the sole responsibility of users. The website is provided “as is,” 
-              without warranties of completeness or fitness for a particular purpose.
+              Les informations disponibles sur Insurial.info sont fournies à titre informatif et pédagogique. Malgré le soin apporté à leur exactitude,
+              l’Éditeur ne peut garantir l’absence d’erreurs ou d’omissions ni l’actualisation continue des contenus. Les décisions prises sur la base des
+              informations du site relèvent de la seule responsabilité des utilisateurs. Le site est fourni « en l’état », sans garantie d’exhaustivité
+              ni d’adéquation à un usage particulier.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Personal Data</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Données personnelles</h2>
             <p className="mb-6">
-              For details about data processing (purposes, legal basis, recipients, retention, data subject rights, transfers), 
-              please refer to our <Link href="/privacy" className="text-[#1E3A8A] hover:underline">Privacy Policy</Link> and, where applicable, 
-              our <Link href="/dpa" className="text-[#1E3A8A] hover:underline">Data Processing Agreement</Link>.
+              Pour les détails sur le traitement des données (finalités, base légale, destinataires, conservation, droits, transferts),
+              veuillez consulter notre <Link href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</Link> et, le cas échéant,
+              notre <Link href="/dpa" className="text-[#1E3A8A] hover:underline">Accord de traitement des données</Link>.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">External Links</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Liens externes</h2>
             <p className="mb-6">
-              The website may contain links to third-party sites. The Publisher has no control over these external resources and cannot be held 
-              responsible for their content, practices, or any damage that may result from their use.
+              Le site peut contenir des liens vers des sites tiers. L’Éditeur n’a aucun contrôle sur ces ressources externes et ne peut être tenu responsable
+              de leur contenu, de leurs pratiques ou de tout dommage pouvant résulter de leur utilisation.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Governing Law</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Droit applicable</h2>
             <p className="mb-6">
-              This website and this Legal Information are governed by the laws of France for users located in the EU and the laws of the State of Delaware (USA) 
-              for users located in the United States, without prejudice to mandatory consumer protection rules.
+              Ce site et ces Informations légales sont régis par le droit français pour les utilisateurs situés dans l’UE et par le droit de l’État du Delaware (USA)
+              pour les utilisateurs situés aux États‑Unis, sans préjudice des règles impératives de protection des consommateurs.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Updates</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Mises à jour</h2>
             <p className="mb-6">
-              This page may be updated at any time to reflect changes to the website, services, or regulations. The last updated date is shown above.
+              Cette page peut être mise à jour à tout moment pour refléter les évolutions du site, des services ou de la réglementation. La date de mise à jour figure ci‑dessus.
             </p>
           </div>
         </div>

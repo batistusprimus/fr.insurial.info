@@ -18,7 +18,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <img 
               src="/logo.png" 
-              alt="Insurial Logo" 
+              alt="Logo Insurial" 
               className="h-16 md:h-20"
             />
           </Link>
@@ -29,13 +29,13 @@ export default function Header() {
               href="/" 
               className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
             >
-              Home
+              Accueil
             </Link>
             <Link 
               href="/how-it-works" 
               className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
             >
-              How It Works
+              Comment ça marche
             </Link>
             <Link 
               href="/blog" 
@@ -47,13 +47,13 @@ export default function Header() {
               href="/about" 
               className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
             >
-              About
+              À propos
             </Link>
             
             {/* Dropdown Insurance */}
             <div className="relative group">
               <button className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium flex items-center">
-                Learn
+                Assurances
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -65,31 +65,31 @@ export default function Header() {
                     href="/insurance/general-liability" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
-                    General Liability
-                  </Link>
-                  <Link 
-                    href="/insurance/workers-compensation" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
-                  >
-                    Workers’ Compensation
+                    Responsabilité Civile Professionnelle (RC Pro)
                   </Link>
                   <Link 
                     href="/insurance/commercial-property" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
-                    Commercial Property
+                    Multirisque Professionnelle
                   </Link>
                   <Link 
                     href="/insurance/commercial-auto" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
-                    Commercial Auto
+                    Flotte automobile professionnelle
+                  </Link>
+                  <Link 
+                    href="/insurance/workers-compensation" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
+                  >
+                    Accidents du travail (AT/MP)
                   </Link>
                   <Link 
                     href="/insurance/business-owners-policy" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
-                    Business Owner’s Policy (BOP)
+                    Pack TPE / Multirisque Pro complète
                   </Link>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function Header() {
               href="/#risk-score-form" 
               className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
             >
-              Free Risk Score
+              Score de risque gratuit
             </Link>
           </nav>
 
@@ -128,14 +128,14 @@ export default function Header() {
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                Accueil
               </Link>
               <Link 
                 href="/how-it-works" 
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How It Works
+                Comment ça marche
               </Link>
               <Link 
                 href="/blog" 
@@ -149,47 +149,47 @@ export default function Header() {
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                À propos
               </Link>
               
               {/* Insurance Mobile */}
               <div className="border-t border-gray-200 pt-4">
-                <p className="text-sm font-semibold text-gray-900 mb-2">Learn</p>
+                <p className="text-sm font-semibold text-gray-900 mb-2">Assurances</p>
                 <div className="pl-4 space-y-2">
                   <Link 
                     href="/insurance/general-liability" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    General Liability
+                    Responsabilité civile générale
                   </Link>
                   <Link 
                     href="/insurance/workers-compensation" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Workers’ Compensation
+                    Accidents du travail
                   </Link>
                   <Link 
                     href="/insurance/commercial-property" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Commercial Property
+                    Biens commerciaux
                   </Link>
                   <Link 
                     href="/insurance/commercial-auto" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Commercial Auto
+                    Auto commerciale
                   </Link>
                   <Link 
                     href="/insurance/business-owners-policy" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Business Owner’s Policy (BOP)
+                    Police multirisque entreprise (BOP)
                   </Link>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export default function Header() {
                 className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Free Risk Score
+                Score de risque gratuit
               </Link>
             </div>
           </div>

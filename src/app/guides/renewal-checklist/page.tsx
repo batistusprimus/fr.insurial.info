@@ -7,7 +7,7 @@ export default function RenewalChecklistGuide() {
       <header className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 font-medium">
-            ← Back to Home
+            ← Retour à l’accueil
           </Link>
         </div>
       </header>
@@ -17,220 +17,220 @@ export default function RenewalChecklistGuide() {
         <div className="mb-8">
           <div className="text-4xl mb-4">📋</div>
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">
-            Renewal checklist (what to prepare)
+            Check‑list de renouvellement (quoi préparer)
           </h1>
           <div className="flex items-center gap-4 text-gray-500 text-sm mb-8">
-            <span>5 min read</span>
+            <span>5 min de lecture</span>
             <span>•</span>
-            <span>Business Insurance Guide</span>
+            <span>Guide assurance entreprise</span>
           </div>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Preparing for your insurance renewal 60-90 days in advance ensures you get the best rates and coverage. Here's your step-by-step checklist.
+            Préparer votre renouvellement 60‑90 jours à l’avance vous assure les meilleures garanties et tarifs. Voici votre check‑list pas à pas.
           </p>
 
           {/* Step 1 */}
           <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Business Information Update</h2>
-            <p className="text-gray-700 mb-4 font-medium">Start 90 days before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Mise à jour des informations</h2>
+            <p className="text-gray-700 mb-4 font-medium">Commencer 90 jours avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Current annual revenue projections</span>
+                <span>Prévisions de chiffre d’affaires annuel</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Updated employee count and payroll figures</span>
+                <span>Mise à jour effectifs et masse salariale</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>New locations, equipment, or vehicles acquired</span>
+                <span>Nouveaux sites, équipements ou véhicules acquis</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Changes in business operations or services offered</span>
+                <span>Évolutions des activités ou services proposés</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Any planned expansions or major purchases</span>
+                <span>Projets d’expansion ou achats majeurs</span>
               </label>
             </div>
           </div>
 
           {/* Step 2 */}
           <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">📈 Claims Review</h2>
-            <p className="text-gray-700 mb-4 font-medium">Start 60 days before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">📈 Revue des sinistres</h2>
+            <p className="text-gray-700 mb-4 font-medium">Commencer 60 jours avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Review all claims filed in the past year</span>
+                <span>Passer en revue tous les sinistres de l’année</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Gather documentation for any open claims</span>
+                <span>Rassembler la documentation des dossiers ouverts</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Prepare explanations for large or unusual claims</span>
+                <span>Préparer des explications pour sinistres importants/inhabituels</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Document any risk management improvements made</span>
+                <span>Documenter les améliorations de gestion des risques</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>List safety training programs implemented</span>
+                <span>Lister les formations sécurité mises en place</span>
               </label>
             </div>
           </div>
 
           {/* Step 3 */}
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">💼 Financial Documentation</h2>
-            <p className="text-gray-700 mb-4 font-medium">Start 60 days before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">💼 Documents financiers</h2>
+            <p className="text-gray-700 mb-4 font-medium">Commencer 60 jours avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Gather recent financial statements</span>
+                <span>Rassembler les états financiers récents</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Update business valuation for property coverage</span>
+                <span>Mettre à jour l’évaluation pour la garantie Biens</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Review equipment and inventory values</span>
+                <span>Réviser la valeur des équipements et stocks</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Collect receipts for major purchases or improvements</span>
+                <span>Collecter les justificatifs des achats/améliorations majeurs</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Prepare cash flow projections</span>
+                <span>Préparer des prévisions de trésorerie</span>
               </label>
             </div>
           </div>
 
           {/* Step 4 */}
           <div className="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 Coverage Assessment</h2>
-            <p className="text-gray-700 mb-4 font-medium">Start 45 days before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 Évaluation des garanties</h2>
+            <p className="text-gray-700 mb-4 font-medium">Commencer 45 jours avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Review current policy limits and deductibles</span>
+                <span>Revoir limites et franchises actuelles</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Identify any coverage gaps or overlaps</span>
+                <span>Identifier les manques ou doublons de garantie</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Consider new risks that need coverage</span>
+                <span>Considérer les nouveaux risques à couvrir</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Evaluate whether limits need adjustment</span>
+                <span>Évaluer si les limites doivent évoluer</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Review certificate holders and additional insureds</span>
+                <span>Revoir titulaires de certificats et assurés additionnels</span>
               </label>
             </div>
           </div>
 
           {/* Step 5 */}
           <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">🛒 Market Shopping</h2>
-            <p className="text-gray-700 mb-4 font-medium">Start 30 days before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🛒 Mise en concurrence</h2>
+            <p className="text-gray-700 mb-4 font-medium">Commencer 30 jours avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Request quotes from 3-5 insurance companies</span>
+                <span>Demander des devis à 3–5 assureurs</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Compare coverage terms, not just prices</span>
+                <span>Comparer les garanties, pas seulement les prix</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Review insurer financial ratings (A.M. Best, S&P)</span>
+                <span>Vérifier la solidité financière des assureurs (A.M. Best, S&P)</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Check customer service reviews</span>
+                <span>Consulter les avis sur le service client</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Negotiate with current carrier using competitive quotes</span>
+                <span>Négocier avec votre assureur via des devis concurrents</span>
               </label>
             </div>
           </div>
 
           {/* Step 6 */}
           <div className="bg-gray-100 border-l-4 border-gray-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">📝 Final Steps</h2>
-            <p className="text-gray-700 mb-4 font-medium">2 weeks before renewal</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">📝 Étapes finales</h2>
+            <p className="text-gray-700 mb-4 font-medium">2 semaines avant renouvellement</p>
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Review final policy terms carefully</span>
+                <span>Relire attentivement les conditions finales</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Confirm all information is accurate</span>
+                <span>Confirmer l’exactitude des informations</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Understand any coverage changes</span>
+                <span>Comprendre les éventuelles évolutions de garantie</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Set up payment arrangements</span>
+                <span>Mettre en place les modalités de paiement</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Update certificates for clients/vendors</span>
+                <span>Mettre à jour les certificats pour clients/fournisseurs</span>
               </label>
             </div>
           </div>
 
           {/* Warning Signs */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-bold text-yellow-800 mb-4">⚠️ Red Flags to Watch For</h3>
+            <h3 className="text-xl font-bold text-yellow-800 mb-4">⚠️ Signaux d’alerte</h3>
             <ul className="list-disc pl-6 space-y-2 text-yellow-700">
-              <li>Significant premium increases without explanation</li>
-              <li>Reduced coverage limits or added exclusions</li>
-              <li>New deductibles or co-insurance requirements</li>
-              <li>Changes in claims handling procedures</li>
+              <li>Hausse marquée des primes sans explication</li>
+              <li>Baisse des limites ou exclusions ajoutées</li>
+              <li>Nouvelles franchises ou coassurance exigée</li>
+              <li>Changements dans la gestion des sinistres</li>
             </ul>
           </div>
 
           {/* Pro Tips */}
           <div className="bg-[#1E3A8A] text-white rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-bold mb-4">💡 Pro Renewal Tips</h3>
+            <h3 className="text-xl font-bold mb-4">💡 Conseils pro pour le renouvellement</h3>
             <ul className="space-y-2">
-              <li>• Don't wait until the last minute - good options take time</li>
-              <li>• Bundle policies for potential discounts</li>
-              <li>• Consider increasing deductibles to lower premiums</li>
-              <li>• Maintain continuous coverage to avoid penalties</li>
-              <li>• Keep detailed records of all improvements and safety measures</li>
+              <li>• Ne pas attendre la dernière minute — de bonnes options prennent du temps</li>
+              <li>• Regrouper les polices pour des remises potentielles</li>
+              <li>• Envisager d’augmenter les franchises pour baisser la prime</li>
+              <li>• Maintenir une couverture continue pour éviter les pénalités</li>
+              <li>• Tenir des traces détaillées des améliorations et mesures de sécurité</li>
             </ul>
           </div>
 
           {/* Questions */}
           <div className="bg-gray-50 rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Questions to Ask Your Agent</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Questions à poser à votre courtier</h3>
             <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-              <li>What drove any premium changes?</li>
-              <li>Are there new discounts available?</li>
-              <li>How do my claims compare to industry averages?</li>
-              <li>What risk management improvements could reduce costs?</li>
-              <li>Are there emerging risks I should consider covering?</li>
+              <li>Qu’est‑ce qui a fait évoluer la prime ?</li>
+              <li>De nouvelles remises sont‑elles disponibles ?</li>
+              <li>Mes sinistres se comparent comment au secteur ?</li>
+              <li>Quelles améliorations réduiraient les coûts ?</li>
+              <li>Y a‑t‑il des risques émergents à couvrir ?</li>
             </ol>
           </div>
 
@@ -243,17 +243,17 @@ export default function RenewalChecklistGuide() {
 
         {/* CTA */}
         <div className="mt-12 text-center bg-gray-50 rounded-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready for a smooth renewal process?
-          </h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Prêt pour un renouvellement fluide ?
+            </h3>
           <p className="text-gray-600 mb-6">
-            Start your renewal preparation with our comprehensive quote comparison.
+            Lancez votre préparation avec notre comparaison de devis.
           </p>
           <Link 
             href="/"
             className="inline-block bg-[#1E3A8A] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors"
           >
-            Get Started Now
+            Commencer maintenant
           </Link>
         </div>
       </article>

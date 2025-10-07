@@ -7,7 +7,7 @@ export default function GeneralLiabilityVsPropertyGuide() {
       <header className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 font-medium">
-            ← Back to Home
+            ← Retour à l’accueil
           </Link>
         </div>
       </header>
@@ -17,90 +17,90 @@ export default function GeneralLiabilityVsPropertyGuide() {
         <div className="mb-8">
           <div className="text-4xl mb-4">🛡️</div>
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">
-            General Liability vs Property — what's the difference?
+            RC générale vs Biens — quelle différence ?
           </h1>
           <div className="flex items-center gap-4 text-gray-500 text-sm mb-8">
-            <span>3 min read</span>
+            <span>3 min de lecture</span>
             <span>•</span>
-            <span>Business Insurance Guide</span>
+            <span>Guide assurance entreprise</span>
           </div>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Understanding the difference between General Liability and Property Insurance is crucial for protecting your business comprehensively.
+            Comprendre la différence entre RC générale et Assurance Biens est essentiel pour une protection complète.
           </p>
 
           <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">General Liability Insurance</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Responsabilité civile générale</h2>
             <p className="text-gray-700 mb-4">
-              Protects your business against third-party claims for bodily injury, property damage, and personal injury that occur as a result of your business operations.
+              Protège contre les réclamations de tiers (corporel, matériel, atteinte) liées à vos activités.
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">What General Liability Covers:</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce que couvre la RC générale :</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>Customer slips and falls at your business location</li>
-            <li>Damage to client property while providing services</li>
-            <li>Advertising injury claims (copyright infringement, defamation)</li>
-            <li>Legal defense costs and settlements</li>
+            <li>Chute d’un client dans vos locaux</li>
+            <li>Dégât chez un client pendant une prestation</li>
+            <li>Atteinte publicitaire (droits d’auteur, diffamation)</li>
+            <li>Frais de défense et règlements</li>
           </ul>
 
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-            <h4 className="font-semibold text-green-800 mb-2">Real Example:</h4>
+            <h4 className="font-semibold text-green-800 mb-2">Exemple réel :</h4>
             <p className="text-green-700">
-              A customer trips over a cable at your office and breaks their wrist. General liability covers their medical expenses and any legal costs.
+              Un client trébuche sur un câble et se fracture le poignet. La RC générale couvre ses frais médicaux et juridiques.
             </p>
           </div>
 
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Property Insurance</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Assurance des biens</h2>
             <p className="text-gray-700 mb-4">
-              Protects your business's physical assets including buildings, equipment, inventory, and furniture from covered perils like fire, theft, or vandalism.
+              Protège vos actifs matériels (bâtiments, équipements, stocks, mobilier) contre incendie, vol, vandalisme.
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">What Property Insurance Covers:</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce que couvre l’Assurance Biens :</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>Building damage from fire, storms, or vandalism</li>
-            <li>Stolen or damaged equipment and inventory</li>
-            <li>Business interruption (lost income during repairs)</li>
-            <li>Additional expenses to operate from a temporary location</li>
+            <li>Dommages au bâtiment (incendie, tempête, vandalisme)</li>
+            <li>Équipements et stocks volés ou endommagés</li>
+            <li>Perte d’exploitation (revenu perdu pendant les réparations)</li>
+            <li>Frais pour opérer depuis un site temporaire</li>
           </ul>
 
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-            <h4 className="font-semibold text-green-800 mb-2">Real Example:</h4>
+            <h4 className="font-semibold text-green-800 mb-2">Exemple réel :</h4>
             <p className="text-green-700">
-              A fire damages your office, destroying computers and furniture. Property insurance covers replacement costs and lost income while you rebuild.
+              Un incendie endommage vos bureaux et détruit du matériel. L’assurance Biens couvre les remplacements et la perte d’exploitation.
             </p>
           </div>
 
           <div className="bg-gray-50 rounded-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Differences</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Différences clés</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-[#1E3A8A] mb-2">General Liability</h3>
+                <h3 className="font-semibold text-[#1E3A8A] mb-2">RC générale</h3>
                 <ul className="text-gray-700 space-y-1">
-                  <li>• Protects against claims from others</li>
-                  <li>• Covers legal and medical costs for third parties</li>
-                  <li>• Focuses on liability and lawsuits</li>
+                  <li>• Protège contre les réclamations de tiers</li>
+                  <li>• Couvre les frais juridiques et médicaux des tiers</li>
+                  <li>• Axée sur la responsabilité et les litiges</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-orange-600 mb-2">Property Insurance</h3>
+                <h3 className="font-semibold text-orange-600 mb-2">Assurance des biens</h3>
                 <ul className="text-gray-700 space-y-1">
-                  <li>• Protects your own business assets</li>
-                  <li>• Covers physical damage to your property</li>
-                  <li>• Focuses on replacing damaged items</li>
+                  <li>• Protège vos propres actifs</li>
+                  <li>• Couvre les dommages matériels</li>
+                  <li>• Axée sur le remplacement des biens</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="bg-[#1E3A8A] text-white rounded-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4">Which do you need?</h2>
+            <h2 className="text-2xl font-bold mb-4">De quoi avez‑vous besoin ?</h2>
             <p className="text-lg">
-              Most businesses need <strong>both types of coverage</strong> as they protect against different risks that could financially devastate your company.
+              La majorité des entreprises ont besoin des <strong>deux garanties</strong>, qui couvrent des risques différents pouvant être lourds financièrement.
             </p>
           </div>
         </div>
@@ -108,16 +108,16 @@ export default function GeneralLiabilityVsPropertyGuide() {
         {/* CTA */}
         <div className="mt-12 text-center bg-gray-50 rounded-lg p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to protect your business?
+            Prêt à protéger votre entreprise ?
           </h3>
           <p className="text-gray-600 mb-6">
-            Get a personalized quote that includes both General Liability and Property coverage.
+            Obtenez un devis personnalisé incluant RC générale et Assurance Biens.
           </p>
           <Link 
             href="/"
             className="inline-block bg-[#1E3A8A] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors"
           >
-            Get Your Quote
+            Obtenir mon devis
           </Link>
         </div>
       </article>

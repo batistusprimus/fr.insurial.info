@@ -3,8 +3,8 @@ import FAQ from '@/components/FAQ';
 import SimpleRiskForm from '@/components/SimpleRiskForm';
 
 export const metadata = {
-  title: "Business Owner’s Policy (BOP) - Insurial",
-  description: 'Bundle general liability and property into one cost-effective policy for small and mid-sized businesses.'
+  title: "Pack TPE / Multirisque Professionnelle complète - Insurial",
+  description: 'Regroupez RC Pro, Multirisque Pro (Biens), Perte d’exploitation et Protection juridique dans une offre complète pour TPE/PME.'
 };
 
 export default function BopPage() {
@@ -12,72 +12,72 @@ export default function BopPage() {
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-purple-50 to-indigo-100 py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Business Owner’s Policy (BOP)</h1>
-          <p className="text-xl text-gray-600">An all‑in‑one package combining General Liability and Commercial Property—often at a lower cost than buying standalone policies.</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pack TPE / Multirisque Pro complète</h1>
+          <p className="text-xl text-gray-600">Un pack tout‑en‑un combinant RC Pro, Multirisque Pro (Biens), Perte d’exploitation et Protection juridique — souvent plus économique que des polices séparées.</p>
         </div>
       </section>
       
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl space-y-12">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why choose a BOP?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Pourquoi choisir un Pack TPE ?</h2>
             <p className="text-gray-700 leading-relaxed">
-              BOPs are designed for small and mid‑sized businesses that need solid foundational protection: General Liability + Commercial Property. They can include extensions like Business Interruption and industry‑specific endorsements.
+              Ce pack s’adresse aux TPE/PME qui veulent une protection de base solide : RC Pro + Multirisque Pro (Biens). Il peut inclure la Perte d’exploitation, la Protection juridique et des avenants spécifiques à votre secteur.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">What a BOP typically includes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Ce qu’inclut généralement le Pack</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>General Liability (bodily injury, property damage, advertising injury)</li>
-                <li>Commercial Property (buildings, equipment, inventory)</li>
-                <li>Business Interruption (subject to limits/conditions)</li>
-                <li>Industry‑specific endorsements</li>
+                <li>RC Pro (corporel, matériel, atteinte publicitaire)</li>
+                <li>Multirisque Pro (bâtiments, équipements, stocks)</li>
+                <li>Perte d’exploitation (selon limites/conditions)</li>
+                <li>Protection juridique, avenants spécifiques secteur</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Common limits and exclusions</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Limites et exclusions courantes</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Commercial auto not included → separate auto policy</li>
-                <li>Workplace injuries → separate Workers’ Comp policy</li>
-                <li>Professional errors → separate E&O policy</li>
-                <li>Certain CAT perils (flood/earthquake) often excluded</li>
+                <li>Auto commerciale non incluse → police auto séparée</li>
+                <li>Blessures au travail → police Accidents du travail séparée</li>
+                <li>Erreurs professionnelles → police RC Pro/E&O séparée</li>
+                <li>Certains aléas (inondation/séisme) souvent exclus</li>
               </ul>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Best fit</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Idéale pour</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Retail, restaurants, local services</li>
-                <li>Light construction and maintenance firms</li>
-                <li>Growing startups and SMBs with contract requirements</li>
-                <li>Companies seeking simplicity and cost efficiency</li>
+                <li>Commerce, restauration, services de proximité</li>
+                <li>Petites entreprises de construction/maintenance</li>
+                <li>Startups et PME avec exigences contractuelles</li>
+                <li>Entreprises recherchant simplicité et efficacité coût</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost factors</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Facteurs de coût</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>GL exposure and insured property values</li>
-                <li>Location and physical protections</li>
-                <li>Loss history and deductibles</li>
-                <li>Additional endorsements added to the BOP</li>
+                <li>Exposition RC générale et valeurs assurées</li>
+                <li>Localisation et protections physiques</li>
+                <li>Historique de sinistres et franchises</li>
+                <li>Avenants additionnels inclus dans la BOP</li>
               </ul>
             </div>
           </div>
 
           <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Budget tip</h3>
-            <p className="text-gray-700">If you need both GL and Property, a BOP is often cheaper than buying separately. Always compare limits and deductibles.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Astuce budget</h3>
+            <p className="text-gray-700">Si vous avez besoin de la RC générale et des Biens, une BOP est souvent plus économique que deux polices séparées. Comparez toujours limites et franchises.</p>
           </div>
 
           <div className="text-center">
             <a href="#risk-score-form" className="inline-flex items-center justify-center bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition">
-              Get My Free Risk Score
+              Obtenir mon score de risque gratuit
             </a>
-            <p className="text-sm text-gray-500 mt-2">Free • No obligation • GDPR compliant</p>
+            <p className="text-sm text-gray-500 mt-2">Gratuit • Sans obligation • Conforme RGPD</p>
           </div>
         </div>
       </section>

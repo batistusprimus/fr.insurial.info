@@ -2,20 +2,20 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "1",
-      title: "Get Your Risk Score",
-      description: "Answer a few questions (industry, size, ZIP, revenue). Takes under 5 minutes.",
+      title: "Obtenez votre Score de risque",
+      description: "Répondez à quelques questions (secteur, taille, code postal, chiffre d’affaires). Moins de 5 minutes.",
       icon: "📊"
     },
     {
       number: "2", 
-      title: "Receive Guidance",
-      description: "We send your Risk Score with plain‑English guidance and relevant resources.",
+      title: "Recevez des conseils",
+      description: "Nous vous envoyons votre Score de risque avec des conseils clairs et des ressources utiles.",
       icon: "🔍"
     },
     {
       number: "3",
-      title: "Take Action",
-      description: "Use your insights to discuss coverage and budgets with your broker or preferred agent.",
+      title: "Passez à l’action",
+      description: "Utilisez vos insights pour discuter des couvertures et budgets avec votre courtier ou agent.",
       icon: "🎯"
     }
   ];
@@ -25,10 +25,10 @@ export default function HowItWorks() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-            How It Works
+            Comment ça marche
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A simple, transparent process designed to get you the right coverage quickly.
+            Un processus simple et transparent pour obtenir rapidement la bonne couverture.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 inline-block">
             <p className="text-sm text-[#1E3A8A] font-medium">
-              ✓ Free • No obligation • GDPR compliant
+              ✓ Gratuit • Sans obligation • Conforme RGPD
             </p>
           </div>
         </div>

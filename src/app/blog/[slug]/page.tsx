@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  return d.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-sm text-gray-500 mb-3">
-            <Link href="/blog" className="hover:text-[#1E3A8A]">← Back to blog</Link>
+            <Link href="/blog" className="hover:text-[#1E3A8A]">← Retour au blog</Link>
           </div>
           <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-3">{post.title}</h1>
           <div className="text-gray-600 text-sm">
@@ -37,7 +37,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <span className="mx-2">•</span>
             <span>{post.readTime}</span>
             <span className="mx-2">•</span>
-            <span>By {post.author}</span>
+            <span>Par {post.author}</span>
           </div>
         </div>
       </section>
@@ -50,14 +50,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         />
 
         <div className="mt-12 p-6 rounded-xl border bg-blue-50 border-blue-200">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">Want a quick risk snapshot?</h3>
-          <p className="text-gray-700 mb-4">Get your free Business Insurance Risk Score in minutes. No obligation.</p>
-          <Link href="/#risk-score-form" className="inline-block bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">Get my free Risk Score</Link>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Envie d’un aperçu rapide du risque ?</h3>
+          <p className="text-gray-700 mb-4">Obtenez votre Score de risque en quelques minutes. Sans obligation.</p>
+          <Link href="/#risk-score-form" className="inline-block bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">Obtenir mon score gratuit</Link>
         </div>
 
         {related.length > 0 && (
           <div className="mt-12">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Further reading</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Pour aller plus loin</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {related.map(r => (
                 <div key={r.slug} className="border rounded-xl p-4 hover:shadow-sm transition-shadow">

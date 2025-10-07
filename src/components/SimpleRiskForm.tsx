@@ -42,19 +42,19 @@ export default function SimpleRiskForm() {
   const validateForm = (): boolean => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.businessName.trim()) newErrors.businessName = "Business name is required";
-    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
+    if (!formData.businessName.trim()) newErrors.businessName = "Le nom de l’entreprise est requis";
+    if (!formData.fullName.trim()) newErrors.fullName = "Le nom complet est requis";
     if (!formData.workEmail) {
-      newErrors.workEmail = "Work email is required";
+      newErrors.workEmail = "L’email professionnel est requis";
     } else if (!formData.workEmail.includes('@') || formData.workEmail.includes('@gmail.') || formData.workEmail.includes('@yahoo.') || formData.workEmail.includes('@hotmail.')) {
-      newErrors.workEmail = "Please use a professional email (e.g., name@company.com)";
+      newErrors.workEmail = "Merci d’utiliser un email professionnel (ex. nom@entreprise.com)";
     }
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!formData.zipCode.trim()) newErrors.zipCode = "ZIP code is required";
-    if (!formData.industry) newErrors.industry = "Industry is required";
-    if (!formData.companySize) newErrors.companySize = "Company size is required";
-    if (!formData.annualRevenue) newErrors.annualRevenue = "Annual revenue is required";
-    if (!formData.gdprConsent) newErrors.gdprConsent = "You must agree to the privacy policy to continue";
+    if (!formData.phone.trim()) newErrors.phone = "Le numéro de téléphone est requis";
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Le code postal est requis";
+    if (!formData.industry) newErrors.industry = "Le secteur d’activité est requis";
+    if (!formData.companySize) newErrors.companySize = "La taille de l’entreprise est requise";
+    if (!formData.annualRevenue) newErrors.annualRevenue = "Le chiffre d’affaires annuel est requis";
+    if (!formData.gdprConsent) newErrors.gdprConsent = "Vous devez accepter la politique de confidentialité pour continuer";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -82,7 +82,7 @@ export default function SimpleRiskForm() {
         ...utmData,
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString(),
-        source: 'insurial.info',
+        source: 'fr.insurial.info',
         formType: 'simple_risk_score'
       };
 
@@ -102,7 +102,7 @@ export default function SimpleRiskForm() {
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setErrors({ submit: 'An error occurred. Please try again.' });
+      setErrors({ submit: 'Une erreur est survenue. Merci de réessayer.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -113,10 +113,10 @@ export default function SimpleRiskForm() {
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get Your <span className="text-[#1E3A8A]">Free Business Insurance Risk Score</span>
+            Obtenez votre <span className="text-[#1E3A8A]">Score de risque assurance entreprise gratuit</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Answer a few quick questions to assess your insurance needs and get plain‑English guidance.
+            Répondez à quelques questions pour évaluer vos besoins d’assurance et recevoir des conseils clairs.
           </p>
         </div>
 
@@ -125,13 +125,13 @@ export default function SimpleRiskForm() {
             {/* Business Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                1. Business name *
+                1. Nom de l’entreprise *
               </label>
               <input
                 type="text"
                 value={formData.businessName}
                 onChange={(e) => updateFormData('businessName', e.target.value)}
-                placeholder="e.g., Acme Inc."
+                placeholder="ex. Acme SAS"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               />
               {errors.businessName && <p className="text-red-600 text-sm mt-1">{errors.businessName}</p>}
@@ -140,13 +140,13 @@ export default function SimpleRiskForm() {
             {/* Full Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                2. Full name *
+                2. Nom complet *
               </label>
               <input
                 type="text"
                 value={formData.fullName}
                 onChange={(e) => updateFormData('fullName', e.target.value)}
-                placeholder="e.g., John Doe"
+                placeholder="ex. Jean Dupont"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               />
               {errors.fullName && <p className="text-red-600 text-sm mt-1">{errors.fullName}</p>}
@@ -155,13 +155,13 @@ export default function SimpleRiskForm() {
             {/* Work Email */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                3. Work email *
+                3. Email professionnel *
               </label>
               <input
                 type="email"
                 value={formData.workEmail}
                 onChange={(e) => updateFormData('workEmail', e.target.value)}
-                placeholder="name@company.com"
+                placeholder="nom@entreprise.com"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               />
               {errors.workEmail && <p className="text-red-600 text-sm mt-1">{errors.workEmail}</p>}
@@ -170,13 +170,13 @@ export default function SimpleRiskForm() {
             {/* Phone */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                4. Phone number *
+                4. Numéro de téléphone *
               </label>
               <input
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => updateFormData('phone', e.target.value)}
-                placeholder="+1 (555) 123-4567"
+                placeholder="+33 6 12 34 56 78"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               />
               {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
@@ -185,13 +185,13 @@ export default function SimpleRiskForm() {
             {/* ZIP Code */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                5. ZIP code (HQ) *
+                5. Code postal (siège) *
               </label>
               <input
                 type="text"
                 value={formData.zipCode}
                 onChange={(e) => updateFormData('zipCode', e.target.value)}
-                placeholder="e.g., 10001 (New York)"
+                placeholder="ex. 75002 (Paris)"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               />
               {errors.zipCode && <p className="text-red-600 text-sm mt-1">{errors.zipCode}</p>}
@@ -200,26 +200,26 @@ export default function SimpleRiskForm() {
             {/* Industry */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                6. Industry *
+                6. Secteur d’activité *
               </label>
               <select
                 value={formData.industry}
                 onChange={(e) => updateFormData('industry', e.target.value)}
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
               >
-                <option value="">Select your industry</option>
-                <option value="Technology">Technology</option>
-                <option value="Healthcare">Healthcare</option>
+                <option value="">Sélectionnez votre secteur</option>
+                <option value="Technology">Technologie</option>
+                <option value="Healthcare">Santé</option>
                 <option value="Finance">Finance</option>
-                <option value="Manufacturing">Manufacturing</option>
-                <option value="Retail">Retail</option>
+                <option value="Manufacturing">Industrie</option>
+                <option value="Retail">Commerce</option>
                 <option value="Construction">Construction</option>
-                <option value="Professional Services">Professional Services</option>
-                <option value="Restaurant">Restaurant</option>
-                <option value="Real Estate">Real Estate</option>
-                <option value="Education">Education</option>
-                <option value="Transportation">Transportation</option>
-                <option value="Other">Other</option>
+                <option value="Professional Services">Services professionnels</option>
+                <option value="Restaurant">Restauration</option>
+                <option value="Real Estate">Immobilier</option>
+                <option value="Education">Éducation</option>
+                <option value="Transportation">Transport</option>
+                <option value="Other">Autre</option>
               </select>
               {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
             </div>
@@ -228,38 +228,38 @@ export default function SimpleRiskForm() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  7a. Company size *
+                  7a. Taille de l’entreprise *
                 </label>
                 <select
                   value={formData.companySize}
                   onChange={(e) => updateFormData('companySize', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Number of employees</option>
-                  <option value="1">Sole proprietor</option>
-                  <option value="2-10">2-10 employees</option>
-                  <option value="11-50">11-50 employees</option>
-                  <option value="51-200">51-200 employees</option>
-                  <option value="200+">200+ employees</option>
+                  <option value="">Nombre de salariés</option>
+                  <option value="1">Entrepreneur individuel</option>
+                  <option value="2-10">2-10 salariés</option>
+                  <option value="11-50">11-50 salariés</option>
+                  <option value="51-200">51-200 salariés</option>
+                  <option value="200+">200+ salariés</option>
                 </select>
                 {errors.companySize && <p className="text-red-600 text-sm mt-1">{errors.companySize}</p>}
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  7b. Annual revenue *
+                  7b. Chiffre d’affaires annuel *
                 </label>
                 <select
                   value={formData.annualRevenue}
                   onChange={(e) => updateFormData('annualRevenue', e.target.value)}
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 >
-                  <option value="">Select range</option>
-                  <option value="<$50K">&lt; $50,000</option>
-                  <option value="$50K-$250K">$50,000 - $250,000</option>
-                  <option value="$250K-$1M">$250,000 - $1M</option>
-                  <option value="$1M-$5M">$1M - $5M</option>
-                  <option value="$5M+">$5M+</option>
+                  <option value="">Sélectionnez une tranche</option>
+                  <option value="<$50K">&lt; 50 000 €</option>
+                  <option value="$50K-$250K">50 000 € - 250 000 €</option>
+                  <option value="$250K-$1M">250 000 € - 1 M€</option>
+                  <option value="$1M-$5M">1 M€ - 5 M€</option>
+                  <option value="$5M+">5 M€+</option>
                 </select>
                 {errors.annualRevenue && <p className="text-red-600 text-sm mt-1">{errors.annualRevenue}</p>}
               </div>
@@ -275,9 +275,9 @@ export default function SimpleRiskForm() {
                   className="mt-1 text-[#1E3A8A] focus:ring-[#1E3A8A]"
                 />
                 <span className="text-sm text-gray-700">
-                  I agree to the{' '}
-                  <a href="/privacy" className="text-[#1E3A8A] hover:underline">Privacy Policy</a> and allow{' '}
-                  <strong>Insurial</strong> to process my data to generate my Risk Score and send educational resources. *
+                  J’accepte la{' '}
+                  <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise{' '}
+                  <strong>Insurial</strong> à traiter mes données pour générer mon Score de risque et m’envoyer des ressources pédagogiques. *
                 </span>
               </label>
               {errors.gdprConsent && <p className="text-red-600 text-sm mt-1">{errors.gdprConsent}</p>}
@@ -295,11 +295,11 @@ export default function SimpleRiskForm() {
               disabled={isSubmitting}
               className="w-full bg-[#1E3A8A] text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-800 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
             >
-              {isSubmitting ? 'Submitting...' : 'Get My Free Risk Score'}
+              {isSubmitting ? 'Envoi…' : 'Obtenir mon score de risque gratuit'}
             </button>
 
             <p className="text-center text-sm text-gray-500">
-              🔒 Free & no obligation • GDPR compliant • You control how your data is used
+              🔒 Gratuit & sans obligation • Conforme RGPD • Vous contrôlez l’usage de vos données
             </p>
           </form>
         </div>

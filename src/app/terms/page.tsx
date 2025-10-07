@@ -7,101 +7,105 @@ export default function TermsPage() {
         <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
           <div className="mb-8">
             <Link href="/" className="text-[#1E3A8A] hover:text-blue-800 text-sm mb-4 inline-block">
-              ← Back to Insurial.info
+              ← Retour à Insurial.info
             </Link>
             <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-              Terms of Service
+              Conditions d’utilisation
             </h1>
             <p className="text-gray-600">
-              Last updated: January 2025
+              Dernière mise à jour : janvier 2025
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none article-content">
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Agreement to Terms</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Acceptation des conditions</h2>
             <p className="mb-6">
-              By accessing and using Insurial.info ("the Service"), you agree to be bound by these Terms of Service 
-              and our Privacy Policy. The Service is operated by <strong>BPC Group</strong> ("we," "us," or "our").
+              En accédant à Insurial.info (le « Service ») et en l’utilisant, vous acceptez d’être lié par les présentes
+              Conditions d’utilisation ainsi que par notre Politique de confidentialité. Le Service est exploité par
+              <strong> BPC Group</strong> (« nous », « notre »).
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Description of Service</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Description du Service</h2>
             <p className="mb-6">
-              Insurial provides a free quote request service that connects businesses with pre-vetted insurance partners. 
-              We facilitate the quote process but do not directly provide insurance coverage or act as an insurance broker.
+              Insurial fournit un service gratuit de demande de devis qui met en relation les entreprises avec des
+              partenaires assureurs pré‑sélectionnés. Nous facilitons le processus de devis, sans fournir directement
+              une couverture d’assurance ni agir en tant que courtier.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">User Obligations</h2>
-            <p className="mb-4">When using our Service, you agree to:</p>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Obligations de l’utilisateur</h2>
+            <p className="mb-4">En utilisant notre Service, vous vous engagez à :</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Provide accurate and complete information in quote requests</li>
-              <li>Use a legitimate business email address</li>
-              <li>Not submit false, misleading, or fraudulent information</li>
-              <li>Comply with all applicable laws and regulations</li>
-              <li>Not attempt to circumvent our security measures</li>
+              <li>Fournir des informations exactes et complètes dans les demandes de devis</li>
+              <li>Utiliser une adresse email professionnelle légitime</li>
+              <li>Ne pas soumettre d’informations fausses, trompeuses ou frauduleuses</li>
+              <li>Respecter l’ensemble des lois et réglementations applicables</li>
+              <li>Ne pas tenter de contourner nos mesures de sécurité</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Our Service Commitments</h2>
-            <p className="mb-4">We commit to:</p>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Nos engagements</h2>
+            <p className="mb-4">Nous nous engageons à :</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Deliver quotes within 24 hours during business days</li>
-              <li>Connect you only with pre-vetted insurance partners</li>
-              <li>Protect your data according to our Privacy Policy</li>
-              <li>Provide free service with no obligation to purchase</li>
+              <li>Fournir des devis sous 24 heures (jours ouvrés)</li>
+              <li>Vous mettre en relation uniquement avec des partenaires assureurs vérifiés</li>
+              <li>Protéger vos données conformément à notre Politique de confidentialité</li>
+              <li>Offrir un service gratuit sans obligation d’achat</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Disclaimers</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Avertissements</h2>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-              <p className="mb-4"><strong>Important:</strong></p>
+              <p className="mb-4"><strong>Important :</strong></p>
               <ul className="list-disc pl-6">
-                <li>We do not guarantee quote availability or specific pricing</li>
-                <li>Insurance partners make independent underwriting decisions</li>
-                <li>Quote delivery times may vary during high-volume periods</li>
-                <li>We are not responsible for partner actions or decisions</li>
-                <li>The Service is provided "as is" without warranties</li>
+                <li>Nous ne garantissons ni la disponibilité des devis ni des tarifs spécifiques</li>
+                <li>Les partenaires d’assurance prennent des décisions de souscription indépendantes</li>
+                <li>Les délais de remise de devis peuvent varier en période de forte demande</li>
+                <li>Nous ne sommes pas responsables des actions ou décisions des partenaires</li>
+                <li>Le Service est fourni « en l’état » sans garantie</li>
               </ul>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Limitation de responsabilité</h2>
             <p className="mb-6">
-              To the maximum extent permitted by law, BPC Group shall not be liable for any indirect, 
-              incidental, special, or consequential damages arising from your use of the Service. 
-              Our total liability is limited to €100 or the equivalent in your local currency.
+              Dans la limite autorisée par la loi, BPC Group ne saurait être tenu responsable de tout dommage indirect,
+              accessoire, spécial ou consécutif résultant de l’utilisation du Service. Notre responsabilité totale est
+              limitée à 100 € ou l’équivalent dans votre devise locale.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Data Processing</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Traitement des données</h2>
             <p className="mb-6">
-              By using our Service, you consent to the processing of your data as described in our 
-              <Link href="/privacy" className="text-[#1E3A8A] hover:underline">Privacy Policy</Link>. 
-              For business customers, a separate <Link href="/dpa" className="text-[#1E3A8A] hover:underline">Data Processing Agreement</Link> is available.
+              En utilisant notre Service, vous consentez au traitement de vos données tel que décrit dans notre
+              <Link href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</Link>.
+              Pour les clients professionnels, un <Link href="/dpa" className="text-[#1E3A8A] hover:underline">Contrat de traitement des données (DPA)</Link>
+              est disponible.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Termination</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Résiliation</h2>
             <p className="mb-6">
-              You may stop using our Service at any time. We may suspend or terminate access for violations 
-              of these Terms. Upon termination, these Terms remain in effect for completed transactions.
+              Vous pouvez cesser d’utiliser le Service à tout moment. Nous pouvons suspendre ou résilier l’accès en cas
+              de violation des présentes Conditions. Après résiliation, ces Conditions restent applicables pour les
+              opérations déjà réalisées.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Governing Law</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Droit applicable</h2>
             <p className="mb-6">
-              These Terms are governed by the laws of France for EU users and Delaware for US users, 
-              without regard to conflict of law principles.
+              Les présentes Conditions sont régies par le droit français pour les utilisateurs de l’UE et par le droit
+              du Delaware pour les utilisateurs américains, sans égard aux règles de conflit de lois.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Changes to Terms</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Modifications</h2>
             <p className="mb-6">
-              We may update these Terms periodically. Continued use of the Service after changes 
-              constitutes acceptance of the new Terms.
+              Nous pouvons mettre à jour ces Conditions périodiquement. La poursuite de l’utilisation du Service après
+              modification vaut acceptation des nouvelles Conditions.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Information</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact</h2>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="mb-2">
                 <strong>BPC Group</strong><br />
-                <strong>Email:</strong> <a href="mailto:legal@insurial.info" className="text-[#1E3A8A] hover:underline">legal@insurial.info</a><br />
-                <strong>Response time:</strong> Within 48 hours
+                <strong>Email :</strong> <a href="mailto:legal@insurial.info" className="text-[#1E3A8A] hover:underline">legal@insurial.info</a><br />
+                <strong>Délai de réponse :</strong> sous 48 heures
               </p>
               <p className="text-sm text-gray-600 mt-4">
-                For urgent matters or disputes, please contact us directly via email.
+                Pour toute urgence ou litige, contactez‑nous directement par email.
               </p>
             </div>
           </div>
