@@ -41,7 +41,7 @@ export default function InsuranceTemplate({
             ].map((option) => (
               <button
                 key={option.key}
-                onClick={() => router.push('/#diagnostic')}
+                onClick={() => router.push('/diagnostic')}
                 className={
                   'text-sm md:text-base rounded-lg border px-4 py-3 transition-colors bg-white text-gray-800 border-gray-300 hover:border-[#1E3A8A]'
                 }
