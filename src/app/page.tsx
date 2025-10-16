@@ -1,6 +1,4 @@
 'use client';
-
-import { useRef } from 'react';
 import Hero from '@/components/Hero';
 import ValueProposition from '@/components/ValueProposition';
 import KeyBenefits from '@/components/KeyBenefits';

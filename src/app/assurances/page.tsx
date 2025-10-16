@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 export default function AssurancesIndexPage() {
   const items = [
     { title: 'RC Professionnelle', href: '/assurances/rc-pro', description: 'Responsabilité civile professionnelle' },

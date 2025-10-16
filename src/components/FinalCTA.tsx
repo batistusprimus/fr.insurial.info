@@ -1,7 +1,7 @@
 'use client';
 
 interface FinalCTAProps {
-  onScrollToForm: () => void;
+  onScrollToForm?: () => void;
 }
 
 export default function FinalCTA({ onScrollToForm }: FinalCTAProps) {

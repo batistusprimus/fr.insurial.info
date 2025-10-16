@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPostBySlug, getRelatedArticles } from '@/data/allBlogPosts';
-import { translateCategoryToFr, translateReadTimeToFr } from '@/data/blogI18n';
+import { translateReadTimeToFr } from '@/data/blogI18n';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
