@@ -14,13 +14,13 @@ export default function ThankYouPage() {
 
           {/* Main Message */}
           <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-            Merci ! Votre demande de diagnostic est bien reçue.
+            Merci ! Votre questionnaire a bien été reçu.
           </h1>
           
           <p className="text-lg text-gray-600 mb-8">
             Vous allez recevoir un email de confirmation sous peu.
             <br />
-            <strong className="text-[#1E3A8A]">Votre diagnostic assurance entreprise sera envoyé sous quelques jours.</strong>
+            <strong className="text-[#1E3A8A]">Vous serez contacté sous 24h si vous avez accepté la mise en relation.</strong>
           </p>
 
           {/* Next Steps */}
@@ -29,11 +29,11 @@ export default function ThankYouPage() {
             <div className="text-left space-y-3 text-sm text-gray-600">
               <div className="flex items-start">
                 <span className="bg-[#1E3A8A] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 font-semibold">1</span>
-                <span>Nous examinons vos informations pour établir votre diagnostic</span>
+                <span>Nous vérifions vos informations et préparons la mise en relation</span>
               </div>
               <div className="flex items-start">
                 <span className="bg-[#1E3A8A] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 font-semibold">2</span>
-                <span>Vous recevrez votre diagnostic avec des conseils et des ressources pédagogiques</span>
+                <span>Des partenaires (courtiers, assureurs) peuvent vous contacter avec des propositions adaptées</span>
               </div>
               <div className="flex items-start">
                 <span className="bg-[#1E3A8A] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 font-semibold">3</span>

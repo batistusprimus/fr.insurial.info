@@ -12,13 +12,13 @@ export default function Hero({ onScrollToForm }: HeroProps) {
           
           {/* H1 Principal */}
           <h1 className="font-archivo-black text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 leading-tight">
-            Comprendre et anticiper les risques professionnels de votre entreprise.
+            Comprenez les risques professionnels de votre entreprise.
           </h1>
           
           {/* Sous-titre avec USPs */}
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Guides, explications et évaluations gratuites pour dirigeants, indépendants et TPE/PME.
-            Identifiez les protections essentielles pour sécuriser votre activité — sans jargon ni démarche commerciale.
+            Guides, explications et outils d’auto‑évaluation gratuits pour dirigeants, indépendants et TPE/PME.
+            Découvrez les protections courantes pour votre secteur — sans jargon ni démarche commerciale.
           </p>
 
           {/* CTAs */}
@@ -33,7 +33,7 @@ export default function Hero({ onScrollToForm }: HeroProps) {
               onClick={onScrollToForm}
               className="border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200"
             >
-              Faire mon diagnostic
+              Commencer mon questionnaire
             </button>
           </div>
 

@@ -12,11 +12,11 @@ export default function FAQ() {
     },
     {
       question: "Combien de temps pour obtenir un devis ?",
-      answer: "Le diagnostic prend moins de 5 minutes. Vous pouvez ensuite utiliser les résultats pour discuter des couvertures avec votre courtier ou agent."
+      answer: "Le questionnaire prend moins de 5 minutes. Vous pouvez ensuite utiliser vos réponses pour discuter des couvertures avec votre courtier ou agent."
     },
     {
       question: "Qui va me contacter ?",
-      answer: "Aucun appel obligatoire. Vous recevrez votre diagnostic par email avec des conseils pour avancer à votre rythme."
+      answer: "Aucun appel obligatoire. Vous recevrez un récapitulatif et, si vous l’avez accepté, des partenaires (courtiers, assureurs) pourront vous contacter."
     },
     {
       question: "Comment mes données sont‑elles traitées ?",
@@ -24,11 +24,11 @@ export default function FAQ() {
     },
     {
       question: "Puis‑je refuser le devis ou annuler ?",
-      answer: "Absolument. Sans obligation. Le diagnostic est informatif ; vous décidez comment l’utiliser."
+      answer: "Absolument. Sans obligation. Le questionnaire est informatif ; vous décidez comment l’utiliser."
     },
     {
       question: "Travaillez‑vous avec toutes les compagnies d’assurance ?",
-      answer: "Nous sommes indépendants et axés sur l’éducation. Vous pouvez partager votre diagnostic avec le courtier ou l’assureur de votre choix."
+      answer: "Nous sommes indépendants et axés sur l’éducation. Vous pouvez partager le résumé de votre questionnaire avec le courtier ou l’assureur de votre choix."
     }
   ];
 

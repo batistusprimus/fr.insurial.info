@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Qui sommes‑nous</h2>
             <p className="mb-6">
               Insurial est opéré par <strong>BPC Group</strong>, responsable de traitement engagé pour la protection de votre vie privée.
-              Nous fournissons un service de demande de devis d’assurance aux PME/ETI en Europe et aux États‑Unis.
+              Nous fournissons un service d’information et de mise en relation avec des professionnels de l’assurance aux PME/ETI en Europe et aux États‑Unis. Nous ne sommes pas courtiers et ne fournissons pas de conseil personnalisé.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Données collectées</h2>
@@ -36,8 +36,9 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Utilisation de vos données</h2>
             <p className="mb-4">Nous traitons vos données pour :</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Fournir des devis personnalisés sous 24h</li>
-              <li>Vous mettre en relation avec des partenaires assureurs adaptés</li>
+              <li>Vous fournir des informations générales adaptées à votre profil</li>
+              <li>Vous mettre en relation avec des partenaires professionnels (courtiers, assureurs) qui pourront vous proposer des devis</li>
+              <li>Transmettre vos coordonnées à nos partenaires pour qu’ils vous contactent</li>
               <li>Communiquer sur votre demande et assurer le suivi</li>
               <li>Améliorer nos services et performances du site</li>
               <li>Respecter nos obligations légales</li>
@@ -46,12 +47,12 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Partage de données</h2>
             <p className="mb-4">Nous partageons vos informations uniquement avec :</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Des partenaires assureurs vérifiés pour fournir vos devis</li>
-              <li>Des prestataires aidant à l’opération de la plateforme (hébergement, email, analytics)</li>
+              <li>Des courtiers en assurance et compagnies d’assurance partenaires, afin qu’ils puissent vous contacter pour vous proposer des offres adaptées à votre profil</li>
+              <li>Des prestataires techniques aidant à l’opération de la plateforme (hébergement, email, analytics)</li>
               <li>Les autorités compétentes si la loi l’exige</li>
             </ul>
             <p className="mb-6">
-              <strong>Nous ne vendons jamais vos données.</strong> Tous les partenaires s’engagent contractuellement à protéger vos informations.
+              Nous transmettons vos données uniquement aux partenaires pour lesquels vous avez donné votre consentement explicite. Lors du premier contact, ces partenaires vous informeront que vos coordonnées proviennent d’Insurial.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Durée de conservation</h2>

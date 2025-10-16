@@ -400,16 +400,18 @@ export default function LeadForm() {
                     onChange={(e) => updateFormData('gdprConsent', e.target.checked)}
                     className="mt-1 text-[#1E3A8A] focus:ring-[#1E3A8A]"
                   />
-                  <span className="text-sm text-gray-600">
-                    J’accepte la{' '}
-                    <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise{' '}
-                    <strong>Insurial</strong> à traiter mes données pour fournir un devis. *
-                  </span>
+                <span className="text-sm text-gray-600">
+                  J’accepte la{' '}
+                  <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise <strong>Insurial</strong> à :
+                  <br />• Traiter mes données pour me fournir des informations adaptées à mon profil
+                  <br />• Transmettre mes coordonnées à des partenaires (courtiers, assureurs) pour qu’ils me contactent avec des propositions commerciales
+                  <br />• M’envoyer des ressources pédagogiques par email *
+                </span>
                 </label>
                 {errors.gdprConsent && <p className="text-red-600 text-sm">{errors.gdprConsent}</p>}
 
                 <p className="text-xs text-gray-500">
-                  Gratuit & sans obligation • Devis sous 24h • Conforme RGPD
+                  Gratuit & sans obligation • Mise en relation sous 24h • Conforme RGPD
                 </p>
               </div>
 

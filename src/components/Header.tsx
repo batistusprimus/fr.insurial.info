@@ -104,10 +104,10 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link 
-              href="/diagnostic" 
+              href="/questionnaire" 
               className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
             >
-              Faire mon diagnostic
+              Commencer mon questionnaire
             </Link>
           </nav>
 
@@ -209,11 +209,11 @@ export default function Header() {
               </div>
 
               <Link 
-                href="/diagnostic" 
+                href="/questionnaire" 
                 className="bg-[#1E3A8A] hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Faire mon diagnostic
+                Commencer mon questionnaire
               </Link>
             </div>
           </div>

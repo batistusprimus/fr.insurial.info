@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'À propos - Insurial',
-  description: "Notre mission : rendre l’assurance entreprise compréhensible et actionnable pour tous. Diagnostic gratuit, sans obligation.",
+  description: "Notre mission : rendre l’assurance entreprise compréhensible et actionnable pour tous. Questionnaire gratuit, sans obligation.",
 };
 
 export default function AboutPage() {
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Notre mission</h2>
             <p className="text-gray-700 leading-relaxed">
-              Rendre simple ce qui est complexe. Nous produisons des guides clairs et proposons un diagnostic gratuit pour vous aider à identifier vos priorités de couverture, sans démarche commerciale ni pression.
+              Rendre simple ce qui est complexe. Nous produisons des guides clairs et proposons un questionnaire gratuit pour vous aider à identifier vos priorités de couverture, sans démarche commerciale ni pression.
             </p>
           </div>
         </section>

@@ -4,12 +4,12 @@ export default function KeyBenefits() {
   const benefits = [
     {
       icon: "🎯",
-      title: "Intelligence de risque personnalisée",
-      description: "Notre diagnostic évalue vos besoins selon le secteur, la taille et la localisation.",
+      title: "Évaluation personnalisée",
+      description: "Notre questionnaire vous aide à identifier vos besoins selon votre secteur, taille et localisation.",
       features: [
-        "Évaluation fondée sur les données",
-        "Zones de couverture à considérer",
-        "Identification des risques cachés"
+        "Auto‑évaluation guidée par des données sectorielles",
+        "Zones de couverture courantes pour votre profil",
+        "Sensibilisation aux risques courants de votre secteur"
       ]
     },
     {
@@ -18,14 +18,14 @@ export default function KeyBenefits() {
       description: "Des guides clairs et sans jargon pour comprendre l’assurance entreprise.",
       features: [
         "Guides par type d’assurance",
-        "Listes de contrôle & conseils de renouvellement",
+        "Listes de contrôle & informations de renouvellement",
         "Tendances et mises à jour réglementaires"
       ]
     },
     {
       icon: "🧭",
-      title: "Conseils indépendants",
-      description: "Nous ne vendons pas d’assurances. Utilisez votre diagnostic avec votre courtier.",
+      title: "Informations indépendantes",
+      description: "Nous ne vendons pas d’assurances. Utilisez votre évaluation avec les professionnels qui vous contacteront.",
       features: [
         "Aucune pression commerciale",
         "Étapes actionnables",
@@ -35,7 +35,7 @@ export default function KeyBenefits() {
     {
       icon: "⚡",
       title: "Expérience simple et rapide",
-      description: "Quelques questions pour obtenir votre diagnostic en minutes.",
+      description: "Quelques questions pour compléter votre questionnaire en minutes.",
       features: [
         "Moins de 5 minutes",
         "Compatible mobile",
@@ -91,12 +91,12 @@ export default function KeyBenefits() {
 
         <div className="text-center mt-12">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Prêt à obtenir votre diagnostic assurance entreprise ?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Obtenez une évaluation personnalisée de vos besoins d’assurance en moins de 5 minutes.
-            </p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Prêt à compléter votre questionnaire assurance entreprise ?
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Identifiez vos besoins d’assurance en moins de 5 minutes.
+          </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="flex items-center text-sm text-gray-600">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">

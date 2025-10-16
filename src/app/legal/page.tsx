@@ -25,11 +25,12 @@ export default function LegalMentionsPage() {
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Nature du service</h2>
             <p className="mb-6">
-              Insurial.info est une plateforme éducative dédiée à l’assurance des entreprises. 
-              Elle propose un outil gratuit de « diagnostic » (données : secteur, taille, localisation, chiffre d’affaires). 
-              Insurial ne vend pas d’assurances et n’agit pas en tant que courtier ou assureur. Aucune offre d’assurance
-              n’est proposée directement sur le site.
+              Insurial.info est une plateforme d’information et de mise en relation dédiée à l’assurance des entreprises. Elle propose un questionnaire gratuit permettant aux utilisateurs d’identifier leurs besoins et d’être mis en relation avec des professionnels de l’assurance.
             </p>
+            <p className="mb-6">
+              Insurial n’est pas un intermédiaire en assurance au sens du Code des Assurances et ne fournit aucun conseil personnalisé ni recommandation de contrat. Notre rôle se limite à fournir des informations générales et à mettre en relation les entreprises avec des courtiers et assureurs partenaires.
+            </p>
+            <p className="mb-6">Aucune offre d’assurance n’est proposée directement sur le site.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact</h2>
             <div className="bg-gray-50 p-4 rounded-lg mb-6">

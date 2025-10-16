@@ -61,7 +61,7 @@ export default function SimpleRiskForm() {
     if (!formData.annualRevenue) newErrors.annualRevenue = "Le chiffre d’affaires annuel est requis";
     if (!formData.isCurrentlyInsured) newErrors.isCurrentlyInsured = "Merci d’indiquer si vous êtes déjà assuré";
     if (formData.isCurrentlyInsured === 'oui' && !formData.currentInsurer.trim()) newErrors.currentInsurer = "Nom de l’assureur requis";
-    if (!formData.gdprConsent) newErrors.gdprConsent = "Vous devez accepter la politique de confidentialité pour continuer";
+    if (!formData.gdprConsent) newErrors.gdprConsent = "Vous devez accepter le consentement ci‑dessous pour continuer";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -90,7 +90,7 @@ export default function SimpleRiskForm() {
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString(),
         source: 'fr.insurial.info',
-        formType: 'diagnostic_form_v1'
+        formType: 'questionnaire_form_v1'
       };
 
       const response = await fetch('/api/leads', {
@@ -116,14 +116,14 @@ export default function SimpleRiskForm() {
   };
 
   return (
-    <section id="diagnostic" className="py-16 bg-gray-50">
+    <section id="questionnaire" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Obtenez votre <span className="text-[#1E3A8A]">diagnostic gratuit</span>
+            Complétez votre <span className="text-[#1E3A8A]">questionnaire gratuit</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Répondez à quelques questions pour évaluer vos besoins de couverture et recevoir des conseils clairs.
+            Répondez à quelques questions pour identifier vos besoins de couverture et recevoir des informations adaptées à votre profil.
           </p>
         </div>
 
@@ -310,8 +310,10 @@ export default function SimpleRiskForm() {
                 />
                 <span className="text-sm text-gray-700">
                   J’accepte la{' '}
-                  <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise{' '}
-                  <strong>Insurial</strong> à traiter mes données pour établir mon diagnostic et m’envoyer des ressources pédagogiques. *
+                  <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise <strong>Insurial</strong> à :
+                  <br />• Traiter mes données pour me fournir des informations adaptées à mon profil
+                  <br />• Transmettre mes coordonnées à des partenaires (courtiers, assureurs) pour qu’ils me contactent avec des propositions commerciales
+                  <br />• M’envoyer des ressources pédagogiques par email *
                 </span>
               </label>
               {errors.gdprConsent && <p className="text-red-600 text-sm mt-1">{errors.gdprConsent}</p>}
@@ -329,7 +331,7 @@ export default function SimpleRiskForm() {
               disabled={isSubmitting}
               className="w-full bg-[#1E3A8A] text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-800 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
             >
-              {isSubmitting ? 'Envoi…' : 'Faire mon diagnostic'}
+              {isSubmitting ? 'Envoi…' : 'Envoyer mon questionnaire'}
             </button>
 
             <p className="text-center text-sm text-gray-500">
@@ -342,7 +344,7 @@ export default function SimpleRiskForm() {
         <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">📊</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Diagnostic personnalisé</h4>
+            <h4 className="font-semibold text-gray-900 text-sm">Questionnaire adapté</h4>
             <p className="text-xs text-gray-600">Selon votre secteur et votre profil</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
@@ -352,8 +354,8 @@ export default function SimpleRiskForm() {
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">⚡</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Réponse rapide</h4>
-            <p className="text-xs text-gray-600">Résultats sous 24 h garantis</p>
+            <h4 className="font-semibold text-gray-900 text-sm">Mise en relation rapide</h4>
+            <p className="text-xs text-gray-600">Contact sous 24 h garanti</p>
           </div>
         </div>
       </div>

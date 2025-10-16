@@ -4,7 +4,7 @@ import { translateCategoryToFr, translateReadTimeToFr } from '@/data/blogI18n';
 
 export const metadata = {
   title: 'Blog - Insurial',
-  description: "Guides clairs sur l’assurance entreprise, les tendances et la gestion des risques. Obtenez votre diagnostic gratuit."
+  description: "Guides clairs sur l’assurance entreprise, les tendances et la gestion des risques. Complétez votre questionnaire gratuit."
 };
 
 function formatDate(dateStr: string): string {

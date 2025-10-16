@@ -2,20 +2,20 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "1",
-      title: "Obtenez votre diagnostic",
+      title: "Complétez votre questionnaire",
       description: "Répondez à quelques questions (secteur, taille, code postal, chiffre d’affaires). Moins de 5 minutes.",
       icon: "📊"
     },
     {
       number: "2", 
-      title: "Recevez des conseils",
-      description: "Nous vous envoyons votre diagnostic avec des conseils clairs et des ressources utiles.",
+      title: "Recevez des informations",
+      description: "Vous recevez un récapitulatif éducatif et, si vous l’avez accepté, une mise en relation.",
       icon: "🔍"
     },
     {
       number: "3",
       title: "Passez à l’action",
-      description: "Utilisez vos insights pour discuter des couvertures et budgets avec votre courtier ou agent.",
+      description: "Discutez des options avec des professionnels qui vous contacteront si vous avez consenti.",
       icon: "🎯"
     }
   ];

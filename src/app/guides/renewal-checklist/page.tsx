@@ -212,7 +212,7 @@ export default function RenewalChecklistGuide() {
 
           {/* Pro Tips */}
           <div className="bg-[#1E3A8A] text-white rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-bold mb-4">💡 Conseils pro pour le renouvellement</h3>
+            <h3 className="text-xl font-bold mb-4">💡 Informations pratiques pour le renouvellement</h3>
             <ul className="space-y-2">
               <li>• Ne pas attendre la dernière minute — de bonnes options prennent du temps</li>
               <li>• Regrouper les polices pour des remises potentielles</li>

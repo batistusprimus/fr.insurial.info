@@ -80,7 +80,7 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Diagnostic personnalisé :</strong> évaluez vos besoins d’assurance en quelques minutes avec un outil simple et fiable
+                  <strong>Questionnaire personnalisé :</strong> identifiez vous‑même vos besoins d’assurance en quelques minutes avec un outil simple et pédagogique
                 </p>
               </div>
               
@@ -94,14 +94,14 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Conseils indépendants :</strong> comprenez quelle couverture il vous faut et pourquoi — sans pression commerciale
+                  <strong>Informations indépendantes :</strong> découvrez quelles couvertures existent pour votre profil et pourquoi — sans pression commerciale
                 </p>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Étapes concrètes :</strong> utilisez votre diagnostic pour discuter couverture et budgets avec votre courtier
+                  <strong>Étapes concrètes :</strong> utilisez votre évaluation pour discuter couverture et budgets avec les professionnels qui vous contacteront
                 </p>
               </div>
             </div>

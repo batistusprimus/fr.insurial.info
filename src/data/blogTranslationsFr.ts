@@ -135,7 +135,7 @@ export const blogTranslationsFr: Record<string, BlogFrOverride> = {
         <li>Surveillance de la vigilance et de la distraction</li>
       </ul>
 
-      <h2>Conseils de mise en œuvre</h2>
+      <h2>Informations de mise en œuvre</h2>
       <ul>
         <li>Former les conducteurs et fixer des KPIs sécurité</li>
         <li>Revoir régulièrement les données et coacher</li>

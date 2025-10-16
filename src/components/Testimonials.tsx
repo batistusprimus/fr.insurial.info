@@ -1,14 +1,14 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Nous avons compris exactement quelle couverture il nous fallait et pourquoi.",
+      quote: "Grâce aux informations fournies, nous avons mieux compris nos options et les courtiers nous ont bien conseillés.",
       author: "Sarah Martin",
       title: "Responsable des opérations",
       company: "TechStart Lyon",
       rating: 5
     },
     {
-      quote: "Pas de jargon, juste de la clarté. Nous avons priorisé nos couvertures grâce au Score.",
+      quote: "Pas de jargon, juste de la clarté. Le questionnaire nous a aidés à identifier nos priorités avant de parler aux courtiers.",
       author: "Michaël Dupont", 
       title: "Dirigeant",
       company: "Dupont Fabrication",
@@ -24,7 +24,7 @@ export default function Testimonials() {
   ];
 
   const stats = [
-    { number: "1 247", label: "Scores de risque générés le mois dernier" },
+    { number: "1 247", label: "Questionnaires complétés le mois dernier" },
     { number: "5 min", label: "Temps moyen pour compléter" },
     { number: "94%", label: "Taux de satisfaction" },
     { number: "100%", label: "Guides rédigés en langage clair" }

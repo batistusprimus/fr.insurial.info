@@ -13,10 +13,10 @@ export default function AssurancesIndexPage() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-archivo-black text-gray-900 mb-4">
-            Faites votre diagnostic de couverture
+            Complétez votre questionnaire de couverture
           </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Sélectionnez la catégorie qui correspond à votre activité pour comprendre les garanties essentielles et obtenir votre diagnostic gratuit en 2 minutes.
+            Sélectionnez la catégorie qui correspond à votre activité pour comprendre les garanties essentielles et compléter votre questionnaire en 2 minutes.
           </p>
         </div>
 

@@ -28,7 +28,7 @@ export default function InsuranceTemplate({
             Protection {riskName} adaptée à votre activité
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-            Avant de commencer, précisez votre situation. Cela permet d’adapter votre diagnostic à votre profil professionnel.
+            Avant de commencer, précisez votre situation. Cela permet d’adapter votre questionnaire à votre profil professionnel.
           </p>
 
           {/* Bloc sélection démographique */}
@@ -41,7 +41,7 @@ export default function InsuranceTemplate({
             ].map((option) => (
               <button
                 key={option.key}
-                onClick={() => router.push('/diagnostic')}
+                onClick={() => router.push('/questionnaire')}
                 className={
                   'text-sm md:text-base rounded-lg border px-4 py-3 transition-colors bg-white text-gray-800 border-gray-300 hover:border-[#1E3A8A]'
                 }
