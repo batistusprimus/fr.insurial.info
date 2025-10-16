@@ -9,6 +9,7 @@ interface FormData {
   phone: string;
   zipCode: string;
   industry: string;
+  annualRevenue: string; // CA annuel
   isCurrentlyInsured: string; // 'oui' | 'non'
   currentInsurer: string; // optionnel
   currentPremium: string; // optionnel
@@ -23,6 +24,7 @@ const initialFormData: FormData = {
   phone: '',
   zipCode: '',
   industry: '',
+  annualRevenue: '',
   isCurrentlyInsured: '',
   currentInsurer: '',
   currentPremium: '',
@@ -56,6 +58,7 @@ export default function SimpleRiskForm() {
     if (!formData.phone.trim()) newErrors.phone = "Le numéro de téléphone est requis";
     if (!formData.zipCode.trim()) newErrors.zipCode = "Le code postal est requis";
     if (!formData.industry) newErrors.industry = "Le secteur d’activité est requis";
+    if (!formData.annualRevenue) newErrors.annualRevenue = "Le chiffre d’affaires annuel est requis";
     if (!formData.isCurrentlyInsured) newErrors.isCurrentlyInsured = "Merci d’indiquer si vous êtes déjà assuré";
     if (formData.isCurrentlyInsured === 'oui' && !formData.currentInsurer.trim()) newErrors.currentInsurer = "Nom de l’assureur requis";
     if (!formData.gdprConsent) newErrors.gdprConsent = "Vous devez accepter la politique de confidentialité pour continuer";
@@ -228,10 +231,28 @@ export default function SimpleRiskForm() {
               {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
             </div>
 
+          {/* Chiffre d'affaires annuel */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">7. Chiffre d’affaires annuel (HT) *</label>
+            <select
+              value={formData.annualRevenue}
+              onChange={(e) => updateFormData('annualRevenue', e.target.value)}
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+            >
+              <option value="">Sélectionnez une tranche</option>
+              <option value="<100k">Moins de 100 000 €</option>
+              <option value="100k-500k">100 000 € – 500 000 €</option>
+              <option value="500k-1m">500 000 € – 1 M€</option>
+              <option value="1m-5m">1 M€ – 5 M€</option>
+              <option value=">5m">Plus de 5 M€</option>
+            </select>
+            {errors.annualRevenue && <p className="text-red-600 text-sm mt-1">{errors.annualRevenue}</p>}
+          </div>
+
           {/* Assurance actuelle et contexte */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">7. Êtes‑vous déjà assuré ? *</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">8. Êtes‑vous déjà assuré ? *</label>
               <select
                 value={formData.isCurrentlyInsured}
                 onChange={(e) => updateFormData('isCurrentlyInsured', e.target.value)}
@@ -245,7 +266,7 @@ export default function SimpleRiskForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">8. Chez qui ? {formData.isCurrentlyInsured === 'oui' ? '*' : '(optionnel)'} </label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">9. Chez qui ? {formData.isCurrentlyInsured === 'oui' ? '*' : '(optionnel)'} </label>
               <input
                 type="text"
                 value={formData.currentInsurer}
@@ -258,7 +279,7 @@ export default function SimpleRiskForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">9. Combien cela vous coûte par an ? (optionnel)</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">10. Combien cela vous coûte par an ? (optionnel)</label>
             <input
               type="text"
               value={formData.currentPremium}
@@ -269,7 +290,7 @@ export default function SimpleRiskForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">10. Notes / contexte (optionnel)</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">11. Notes / contexte (optionnel)</label>
             <textarea
               value={formData.notes}
               onChange={(e) => updateFormData('notes', e.target.value)}
@@ -277,47 +298,6 @@ export default function SimpleRiskForm() {
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900 min-h-[100px]"
             />
           </div>
-
-            {/* Company Size & Annual Revenue - Side by side */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  7a. Taille de l’entreprise *
-                </label>
-                <select
-                  value={formData.companySize}
-                  onChange={(e) => updateFormData('companySize', e.target.value)}
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-                >
-                  <option value="">Nombre de salariés</option>
-                  <option value="1">Entrepreneur individuel</option>
-                  <option value="2-10">2-10 salariés</option>
-                  <option value="11-50">11-50 salariés</option>
-                  <option value="51-200">51-200 salariés</option>
-                  <option value="200+">200+ salariés</option>
-                </select>
-                {errors.companySize && <p className="text-red-600 text-sm mt-1">{errors.companySize}</p>}
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  7b. Chiffre d’affaires annuel *
-                </label>
-                <select
-                  value={formData.annualRevenue}
-                  onChange={(e) => updateFormData('annualRevenue', e.target.value)}
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-                >
-                  <option value="">Sélectionnez une tranche</option>
-                  <option value="<$50K">&lt; 50 000 €</option>
-                  <option value="$50K-$250K">50 000 € - 250 000 €</option>
-                  <option value="$250K-$1M">250 000 € - 1 M€</option>
-                  <option value="$1M-$5M">1 M€ - 5 M€</option>
-                  <option value="$5M+">5 M€+</option>
-                </select>
-                {errors.annualRevenue && <p className="text-red-600 text-sm mt-1">{errors.annualRevenue}</p>}
-              </div>
-            </div>
 
             {/* GDPR Consent */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
