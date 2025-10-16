@@ -62,6 +62,13 @@ export default function Header() {
               <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-2">
                   <Link 
+                    href="/assurances" 
+                    className="block px-4 py-2 text-sm text-gray-900 font-semibold hover:bg-gray-50 hover:text-[#1E3A8A]"
+                  >
+                    Toutes les assurances
+                  </Link>
+                  <div className="h-px bg-gray-100 my-1" />
+                  <Link 
                     href="/assurances/rc-pro" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
@@ -156,6 +163,13 @@ export default function Header() {
               <div className="border-t border-gray-200 pt-4">
                 <p className="text-sm font-semibold text-gray-900 mb-2">Assurances</p>
                 <div className="pl-4 space-y-2">
+                  <Link 
+                    href="/assurances" 
+                    className="block text-sm text-gray-900 font-semibold hover:text-[#1E3A8A]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Toutes les assurances
+                  </Link>
                   <Link 
                     href="/assurances/rc-pro" 
                     className="block text-sm text-gray-700 hover:text-[#1E3A8A]"

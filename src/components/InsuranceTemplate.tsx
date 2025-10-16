@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import SimpleRiskForm from '@/components/SimpleRiskForm';
+import { useRouter } from 'next/navigation';
 
 interface InsuranceTemplateProps {
   riskName: string;
@@ -18,7 +17,7 @@ export default function InsuranceTemplate({
   examples,
   faqs,
 }: InsuranceTemplateProps) {
-  const [companyProfile, setCompanyProfile] = useState<string>('');
+  const router = useRouter();
 
   return (
     <main className="min-h-screen bg-white">
@@ -42,12 +41,10 @@ export default function InsuranceTemplate({
             ].map((option) => (
               <button
                 key={option.key}
-                onClick={() => setCompanyProfile(option.key)}
-                className={`text-sm md:text-base rounded-lg border px-4 py-3 transition-colors ${
-                  companyProfile === option.key
-                    ? 'bg-[#1E3A8A] text-white border-[#1E3A8A]'
-                    : 'bg-white text-gray-800 border-gray-300 hover:border-[#1E3A8A]'
-                }`}
+                onClick={() => router.push('/#diagnostic')}
+                className={
+                  'text-sm md:text-base rounded-lg border px-4 py-3 transition-colors bg-white text-gray-800 border-gray-300 hover:border-[#1E3A8A]'
+                }
               >
                 {option.label}
               </button>
@@ -76,16 +73,7 @@ export default function InsuranceTemplate({
         </div>
       </section>
 
-      {/* 4️⃣ Formulaire / Diagnostic */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Obtenez votre diagnostic {riskName} gratuit</h3>
-            <p className="text-gray-700 text-lg">Obtenez votre diagnostic de couverture en 2 minutes.</p>
-          </div>
-          <SimpleRiskForm />
-        </div>
-      </section>
+      {/* 4️⃣ Redirection après sélection du profil (le formulaire est accessible depuis la page d’accueil) */}
 
       {/* FAQ contextuelle (optionnelle) */}
       {faqs && faqs.length > 0 && (
