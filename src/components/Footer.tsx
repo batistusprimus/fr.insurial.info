@@ -11,7 +11,7 @@ export default function Footer() {
               Insurial
             </h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Des conseils clairs et fiables sur l’assurance entreprise et votre Score de risque gratuit.
+              Des conseils clairs et fiables sur l’assurance entreprise et votre diagnostic gratuit.
               Nous ne vendons pas d’assurances. Gratuit, sans obligation, conforme RGPD.
             </p>
             <div className="flex items-center space-x-4 text-sm">
@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link href="/a-propos" className="hover:text-white transition-colors">À propos</Link>
               </li>
               <li>
-                <Link href="/#score-de-risque" className="hover:text-white transition-colors">Score de risque</Link>
+                <Link href="/#diagnostic" className="hover:text-white transition-colors">Diagnostic</Link>
               </li>
             </ul>
           </div>

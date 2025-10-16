@@ -4,7 +4,18 @@ export default function ValueProposition() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Une approche pédagogique et indépendante de l’assurance professionnelle.
+          </h2>
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+            Insurial aide les entreprises à mieux comprendre leurs besoins en matière d’assurance.
+            Notre mission : rendre simples et accessibles des notions complexes, pour permettre aux dirigeants de prendre des décisions éclairées.
+            Nous ne vendons pas d’assurances. Nous aidons à comprendre les risques, les obligations légales et les solutions existantes sur le marché.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* Problème */}
           <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500">
@@ -60,7 +71,7 @@ export default function ValueProposition() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Notre solution</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Notre approche</h3>
                 <div className="w-16 h-1 bg-green-500 mb-4"></div>
               </div>
             </div>
@@ -69,7 +80,7 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Score de risque personnalisé :</strong> évaluez vos besoins d’assurance en quelques minutes avec notre outil simple et fiable
+                  <strong>Diagnostic personnalisé :</strong> évaluez vos besoins d’assurance en quelques minutes avec un outil simple et fiable
                 </p>
               </div>
               
@@ -90,7 +101,7 @@ export default function ValueProposition() {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <strong>Étapes clés :</strong> utilisez votre Score de risque pour discuter couverture et budgets avec votre courtier
+                  <strong>Étapes concrètes :</strong> utilisez votre diagnostic pour discuter couverture et budgets avec votre courtier
                 </p>
               </div>
             </div>

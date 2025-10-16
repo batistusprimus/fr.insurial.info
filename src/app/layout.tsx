@@ -10,18 +10,18 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const archivoBlack = Archivo_Black({ weight: ["400"], subsets: ["latin"], variable: "--font-archivo-black" });
 
 export const metadata: Metadata = {
-  title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
-  description: "Une information claire et fiable sur l’assurance des entreprises. Obtenez votre Score de risque gratuit selon votre secteur, taille, localisation et chiffre d’affaires.",
-  keywords: "assurance entreprise, éducation, score de risque, responsabilité civile, accidents du travail, biens commerciaux, auto commerciale, BOP",
+  title: "Insurial – Éducation à l’assurance entreprise + diagnostic gratuit",
+  description: "Une information claire et fiable sur l’assurance des entreprises. Obtenez votre diagnostic gratuit selon votre secteur, taille, localisation et chiffre d’affaires.",
+  keywords: "assurance entreprise, éducation, diagnostic, responsabilité civile, accidents du travail, biens commerciaux, auto commerciale, BOP",
   robots: "index, follow",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
-    description: "Comprenez vos besoins d’assurance avec des ressources claires et fiables. Obtenez votre Score de risque gratuit.",
+    title: "Insurial – Éducation à l’assurance entreprise + diagnostic gratuit",
+    description: "Comprenez vos besoins d’assurance avec des ressources claires et fiables. Obtenez votre diagnostic gratuit.",
     url: "https://fr.insurial.info",
     siteName: "Insurial",
     locale: "fr_FR",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insurial – Éducation à l’assurance entreprise + Score de risque gratuit",
-    description: "Obtenez votre Score de risque gratuit et comprenez vos besoins d’assurance.",
+    title: "Insurial – Éducation à l’assurance entreprise + diagnostic gratuit",
+    description: "Obtenez votre diagnostic gratuit et comprenez vos besoins d’assurance.",
   },
 };
 

@@ -51,9 +51,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         />
 
         <div className="mt-12 p-6 rounded-xl border bg-blue-50 border-blue-200">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">Envie d’un aperçu rapide du risque ?</h3>
-          <p className="text-gray-700 mb-4">Obtenez votre Score de risque en quelques minutes. Sans obligation.</p>
-          <Link href="/#score-de-risque" className="inline-block bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">Obtenir mon score gratuit</Link>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Envie d’un aperçu rapide ?</h3>
+          <p className="text-gray-700 mb-4">Obtenez votre diagnostic en quelques minutes. Sans obligation.</p>
+          <Link href="/#diagnostic" className="inline-block bg-[#1E3A8A] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">Faire mon diagnostic</Link>
         </div>
 
         {related.length > 0 && (

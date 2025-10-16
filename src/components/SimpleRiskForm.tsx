@@ -112,14 +112,14 @@ export default function SimpleRiskForm() {
   };
 
   return (
-    <section id="score-de-risque" className="py-16 bg-gray-50">
+    <section id="diagnostic" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Obtenez votre <span className="text-[#1E3A8A]">Score de risque assurance entreprise gratuit</span>
+            Obtenez votre <span className="text-[#1E3A8A]">diagnostic gratuit</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Répondez à quelques questions pour évaluer vos besoins d’assurance et recevoir des conseils clairs.
+            Répondez à quelques questions pour évaluer vos besoins de couverture et recevoir des conseils clairs.
           </p>
         </div>
 
@@ -300,7 +300,7 @@ export default function SimpleRiskForm() {
                 <span className="text-sm text-gray-700">
                   J’accepte la{' '}
                   <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise{' '}
-                  <strong>Insurial</strong> à traiter mes données pour générer mon Score de risque et m’envoyer des ressources pédagogiques. *
+                  <strong>Insurial</strong> à traiter mes données pour établir mon diagnostic et m’envoyer des ressources pédagogiques. *
                 </span>
               </label>
               {errors.gdprConsent && <p className="text-red-600 text-sm mt-1">{errors.gdprConsent}</p>}
@@ -318,7 +318,7 @@ export default function SimpleRiskForm() {
               disabled={isSubmitting}
               className="w-full bg-[#1E3A8A] text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-800 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
             >
-              {isSubmitting ? 'Envoi…' : 'Obtenir mon score de risque gratuit'}
+              {isSubmitting ? 'Envoi…' : 'Faire mon diagnostic'}
             </button>
 
             <p className="text-center text-sm text-gray-500">

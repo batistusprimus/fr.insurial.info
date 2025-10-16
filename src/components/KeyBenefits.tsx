@@ -5,7 +5,7 @@ export default function KeyBenefits() {
     {
       icon: "🎯",
       title: "Intelligence de risque personnalisée",
-      description: "Notre Score de risque évalue vos besoins selon le secteur, la taille et la localisation.",
+      description: "Notre diagnostic évalue vos besoins selon le secteur, la taille et la localisation.",
       features: [
         "Évaluation fondée sur les données",
         "Zones de couverture à considérer",
@@ -25,7 +25,7 @@ export default function KeyBenefits() {
     {
       icon: "🧭",
       title: "Conseils indépendants",
-      description: "Nous ne vendons pas d’assurances. Utilisez votre Score de risque avec votre courtier.",
+      description: "Nous ne vendons pas d’assurances. Utilisez votre diagnostic avec votre courtier.",
       features: [
         "Aucune pression commerciale",
         "Étapes actionnables",
@@ -35,7 +35,7 @@ export default function KeyBenefits() {
     {
       icon: "⚡",
       title: "Expérience simple et rapide",
-      description: "Quelques questions pour obtenir votre Score de risque en minutes.",
+      description: "Quelques questions pour obtenir votre diagnostic en minutes.",
       features: [
         "Moins de 5 minutes",
         "Compatible mobile",
@@ -52,7 +52,7 @@ export default function KeyBenefits() {
             Pourquoi choisir <span className="text-[#1E3A8A]">Insurial</span> ?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Nous transformons la complexité de l’assurance entreprise en une expérience pédagogique simple et fiable, centrée sur votre Score de risque.
+            Nous transformons la complexité de l’assurance en une expérience pédagogique claire et fiable.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function KeyBenefits() {
         <div className="text-center mt-12">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Prêt à découvrir votre Score de risque assurance entreprise ?
+              Prêt à obtenir votre diagnostic assurance entreprise ?
             </h3>
             <p className="text-gray-600 mb-6">
               Obtenez une évaluation personnalisée de vos besoins d’assurance en moins de 5 minutes.

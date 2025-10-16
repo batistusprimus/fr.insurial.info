@@ -9,20 +9,19 @@ export default function FinalCTA({ onScrollToForm }: FinalCTAProps) {
     <section className="py-16 bg-gradient-to-r from-[#1E3A8A] to-blue-700 text-white">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl font-archivo-black mb-4">
-          Prêt à découvrir votre Score de risque assurance entreprise ?
+          Identifiez les protections adaptées à votre besoin professionnel.
         </h2>
         <p className="text-xl mb-8 text-blue-100">
-          Comprenez vos besoins de couverture avec des conseils clairs et fiables.
-          <br />
-          <span className="font-semibold">Gratuit • Sans obligation • Conforme RGPD</span>
+          Choisissez le type de risque que vous souhaitez couvrir (responsabilité, locaux, flotte, etc.).
+          Chaque page vous permet de comprendre les enjeux et d’obtenir une évaluation gratuite.
         </p>
-        
-        <button
-          onClick={onScrollToForm}
-          className="bg-white text-[#1E3A8A] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl mb-6"
+
+        <a
+          href="/assurances"
+          className="inline-block bg-white text-[#1E3A8A] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl mb-6"
         >
-          Obtenir mon score de risque gratuit
-        </button>
+          Choisir un besoin à couvrir
+        </a>
         
         <div className="flex items-center justify-center space-x-6 text-sm text-blue-200">
           <span className="flex items-center">

@@ -1,21 +1,21 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Nous avons compris exactement quelle couverture il nous fallait et pourquoi. Le Score de risque a rendu la discussion avec notre courtier plus rapide et plus claire.",
+      quote: "Nous avons compris exactement quelle couverture il nous fallait et pourquoi.",
       author: "Sarah Martin",
       title: "Responsable des opérations",
       company: "TechStart Lyon",
       rating: 5
     },
     {
-      quote: "Pas de jargon, juste de la clarté. Nous avons utilisé les insights pour prioriser la couverture et éviter la sur‑assurance.",
+      quote: "Pas de jargon, juste de la clarté. Nous avons priorisé nos couvertures grâce au Score.",
       author: "Michaël Dupont", 
       title: "Dirigeant",
       company: "Dupont Fabrication",
       rating: 5
     },
     {
-      quote: "Les guides pédagogiques et le Score de risque nous ont donné confiance pour négocier de meilleurs termes.",
+      quote: "Les guides pédagogiques nous ont donné confiance pour négocier de meilleurs termes.",
       author: "Jennifer Leclerc",
       title: "Directrice financière", 
       company: "Leclerc Conseil",
@@ -39,7 +39,7 @@ export default function Testimonials() {
             Plébiscité par les entreprises en croissance
           </h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Rejoignez des centaines d’entreprises qui ont simplifié leurs démarches d’assurance avec Insurial.
+            Rejoignez des centaines d’entreprises qui ont simplifié leur compréhension des assurances avec Insurial.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

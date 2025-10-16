@@ -2,14 +2,14 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "1",
-      title: "Obtenez votre Score de risque",
+      title: "Obtenez votre diagnostic",
       description: "Répondez à quelques questions (secteur, taille, code postal, chiffre d’affaires). Moins de 5 minutes.",
       icon: "📊"
     },
     {
       number: "2", 
       title: "Recevez des conseils",
-      description: "Nous vous envoyons votre Score de risque avec des conseils clairs et des ressources utiles.",
+      description: "Nous vous envoyons votre diagnostic avec des conseils clairs et des ressources utiles.",
       icon: "🔍"
     },
     {
