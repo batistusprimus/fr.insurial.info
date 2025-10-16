@@ -9,10 +9,10 @@ interface FormData {
   phone: string;
   zipCode: string;
   industry: string;
-  // Champ optionnel: type d'assurance que l'utilisateur veut mieux comprendre
-  insuranceInterest: string;
-  companySize: string;
-  annualRevenue: string;
+  isCurrentlyInsured: string; // 'oui' | 'non'
+  currentInsurer: string; // optionnel
+  currentPremium: string; // optionnel
+  notes: string; // optionnel
   gdprConsent: boolean;
 }
 
@@ -23,9 +23,10 @@ const initialFormData: FormData = {
   phone: '',
   zipCode: '',
   industry: '',
-  insuranceInterest: '',
-  companySize: '',
-  annualRevenue: '',
+  isCurrentlyInsured: '',
+  currentInsurer: '',
+  currentPremium: '',
+  notes: '',
   gdprConsent: false,
 };
 
@@ -55,8 +56,8 @@ export default function SimpleRiskForm() {
     if (!formData.phone.trim()) newErrors.phone = "Le numéro de téléphone est requis";
     if (!formData.zipCode.trim()) newErrors.zipCode = "Le code postal est requis";
     if (!formData.industry) newErrors.industry = "Le secteur d’activité est requis";
-    if (!formData.companySize) newErrors.companySize = "La taille de l’entreprise est requise";
-    if (!formData.annualRevenue) newErrors.annualRevenue = "Le chiffre d’affaires annuel est requis";
+    if (!formData.isCurrentlyInsured) newErrors.isCurrentlyInsured = "Merci d’indiquer si vous êtes déjà assuré";
+    if (formData.isCurrentlyInsured === 'oui' && !formData.currentInsurer.trim()) newErrors.currentInsurer = "Nom de l’assureur requis";
     if (!formData.gdprConsent) newErrors.gdprConsent = "Vous devez accepter la politique de confidentialité pour continuer";
 
     setErrors(newErrors);
@@ -86,7 +87,7 @@ export default function SimpleRiskForm() {
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString(),
         source: 'fr.insurial.info',
-        formType: 'simple_risk_score'
+        formType: 'diagnostic_form_v1'
       };
 
       const response = await fetch('/api/leads', {
@@ -227,24 +228,54 @@ export default function SimpleRiskForm() {
               {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
             </div>
 
-          {/* Insurance Interest (optional) */}
+          {/* Assurance actuelle et contexte */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">7. Êtes‑vous déjà assuré ? *</label>
+              <select
+                value={formData.isCurrentlyInsured}
+                onChange={(e) => updateFormData('isCurrentlyInsured', e.target.value)}
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+              >
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+              </select>
+              {errors.isCurrentlyInsured && <p className="text-red-600 text-sm mt-1">{errors.isCurrentlyInsured}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">8. Chez qui ? {formData.isCurrentlyInsured === 'oui' ? '*' : '(optionnel)'} </label>
+              <input
+                type="text"
+                value={formData.currentInsurer}
+                onChange={(e) => updateFormData('currentInsurer', e.target.value)}
+                placeholder="Nom de l’assureur actuel"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+              />
+              {errors.currentInsurer && <p className="text-red-600 text-sm mt-1">{errors.currentInsurer}</p>}
+            </div>
+          </div>
+
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
-              Obtenir des informations sur
-            </label>
-            <select
-              value={formData.insuranceInterest}
-              onChange={(e) => updateFormData('insuranceInterest', e.target.value)}
+            <label className="block text-sm font-semibold text-gray-700 mb-2">9. Combien cela vous coûte par an ? (optionnel)</label>
+            <input
+              type="text"
+              value={formData.currentPremium}
+              onChange={(e) => updateFormData('currentPremium', e.target.value)}
+              placeholder="ex. 1 200 € / an"
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-            >
-              <option value="">Sélectionnez une option</option>
-              <option value="rc_pro">Responsabilité Civile Professionnelle (RC Pro)</option>
-              <option value="multirisque_pro">Multirisque Professionnelle</option>
-              <option value="flotte_auto">Flotte automobile professionnelle</option>
-              <option value="accidents_travail">Accidents du travail (AT/MP)</option>
-              <option value="pack_tpe">Pack TPE / Multirisque Pro complète</option>
-              <option value="autre">Autre / Je ne sais pas encore</option>
-            </select>
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">10. Notes / contexte (optionnel)</label>
+            <textarea
+              value={formData.notes}
+              onChange={(e) => updateFormData('notes', e.target.value)}
+              placeholder="Objectifs, échéance de renouvellement, sinistres récents, etc."
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900 min-h-[100px]"
+            />
           </div>
 
             {/* Company Size & Annual Revenue - Side by side */}
@@ -331,7 +362,7 @@ export default function SimpleRiskForm() {
         <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="text-2xl mb-2">📊</div>
-            <h4 className="font-semibold text-gray-900 text-sm">Score personnalisé</h4>
+            <h4 className="font-semibold text-gray-900 text-sm">Diagnostic personnalisé</h4>
             <p className="text-xs text-gray-600">Selon votre secteur et votre profil</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">

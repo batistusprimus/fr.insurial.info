@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   keywords: "assurance entreprise, éducation, diagnostic, responsabilité civile, accidents du travail, biens commerciaux, auto commerciale, BOP",
   robots: "index, follow",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/icon.png",
   },
   openGraph: {
