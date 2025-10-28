@@ -49,12 +49,6 @@ export default function Header() {
             >
               À propos
             </Link>
-            <Link 
-              href="/assurances/cyber" 
-              className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
-            >
-              @cyber/
-            </Link>
             
             {/* Dropdown Insurance */}
             <div className="relative group">
@@ -74,6 +68,13 @@ export default function Header() {
                     Toutes les assurances
                   </Link>
                   <div className="h-px bg-gray-100 my-1" />
+                  <Link 
+                    href="/assurances/cyber" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
+                  >
+                    Cyber
+                  </Link>
+                  
                   <Link 
                     href="/assurances/rc-pro" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
@@ -165,13 +166,13 @@ export default function Header() {
                 À propos
               </Link>
               <Link 
-                href="/assurances/cyber" 
+                href="/a-propos" 
                 className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                @cyber/
+                À propos
               </Link>
-              
+
               {/* Insurance Mobile */}
               <div className="border-t border-gray-200 pt-4">
                 <p className="text-sm font-semibold text-gray-900 mb-2">Assurances</p>
@@ -182,6 +183,13 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Toutes les assurances
+                  </Link>
+                  <Link 
+                    href="/assurances/cyber" 
+                    className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Cyber
                   </Link>
                   <Link 
                     href="/assurances/rc-pro" 

@@ -1,5 +1,6 @@
 import CyberMultiStepForm from '@/components/CyberMultiStepForm';
 import PressLogos from '@/components/PressLogos';
+import { Icons } from '@/components/Icons';
 import Image from 'next/image';
 
 export default function CyberRisksPage() {
@@ -92,17 +93,17 @@ export default function CyberRisksPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
-              <div className="text-3xl mb-3">🚨</div>
+              <div className="text-red-600 mb-3"><Icons.Alert className="w-10 h-10" /></div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Ransomware en hausse</h3>
               <p className="text-gray-700">Un chiffrement de vos données peut arrêter votre activité du jour au lendemain et générer des pertes massives.</p>
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
-              <div className="text-3xl mb-3">💸</div>
+              <div className="text-orange-600 mb-3"><Icons.Currency className="w-10 h-10" /></div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Coûts cachés</h3>
               <p className="text-gray-700">Au-delà de la rançon: notification CNIL, forensics, restauration, perte de CA, réputation entachée...</p>
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
-              <div className="text-3xl mb-3">⚖️</div>
+              <div className="text-yellow-600 mb-3"><Icons.Scale className="w-10 h-10" /></div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Obligations RGPD</h3>
               <p className="text-gray-700">72h pour notifier la CNIL en cas de violation de données. Les sanctions peuvent atteindre 4% du CA.</p>
             </div>
@@ -121,15 +122,15 @@ export default function CyberRisksPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: '🆘', t: 'Assistance d\'urgence 24/7', d: 'Cellule de crise dédiée dès la détection de l\'incident: forensics, confinement immédiat, plan de remédiation.' },
-              { icon: '💰', t: 'Pertes d\'exploitation', d: 'Indemnisation du manque à gagner pendant l\'arrêt d\'activité (selon franchise et plafond contractuel).' },
-              { icon: '⚖️', t: 'Défense juridique & RC', d: 'Prise en charge des frais juridiques, gestion des réclamations de tiers lésés par la faille.' },
-              { icon: '📋', t: 'Conformité RGPD', d: 'Accompagnement notification CNIL sous 72h, information des personnes concernées, suivi réglementaire.' },
-              { icon: '🔐', t: 'Restauration des systèmes', d: 'Réinstallation, récupération de données, remise en service des infrastructures critiques.' },
-              { icon: '🎯', t: 'Fraude & phishing', d: 'Couverture de certains scénarios de fraude au président, transferts frauduleux, compromission email.' },
+              { Icon: Icons.Support, color: 'text-blue-600', t: 'Assistance d\'urgence 24/7', d: 'Cellule de crise dédiée dès la détection de l\'incident: forensics, confinement immédiat, plan de remédiation.' },
+              { Icon: Icons.Currency, color: 'text-green-600', t: 'Pertes d\'exploitation', d: 'Indemnisation du manque à gagner pendant l\'arrêt d\'activité (selon franchise et plafond contractuel).' },
+              { Icon: Icons.Scale, color: 'text-purple-600', t: 'Défense juridique & RC', d: 'Prise en charge des frais juridiques, gestion des réclamations de tiers lésés par la faille.' },
+              { Icon: Icons.Clipboard, color: 'text-indigo-600', t: 'Conformité RGPD', d: 'Accompagnement notification CNIL sous 72h, information des personnes concernées, suivi réglementaire.' },
+              { Icon: Icons.RefreshCw, color: 'text-cyan-600', t: 'Restauration des systèmes', d: 'Réinstallation, récupération de données, remise en service des infrastructures critiques.' },
+              { Icon: Icons.ShieldCheck, color: 'text-red-600', t: 'Fraude & phishing', d: 'Couverture de certains scénarios de fraude au président, transferts frauduleux, compromission email.' },
             ].map((card) => (
               <div key={card.t} className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-white">
-                <div className="text-3xl mb-3">{card.icon}</div>
+                <div className={`${card.color} mb-3`}><card.Icon className="w-10 h-10" /></div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.t}</h3>
                 <p className="text-gray-700">{card.d}</p>
               </div>

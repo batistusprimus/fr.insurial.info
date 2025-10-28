@@ -39,6 +39,61 @@ interface LeadData {
   hasIncidentResponsePlan?: string;
   currentCoverageCyber?: string;
 
+  // Champs spécifiques RC Pro
+  mainActivity?: string;
+  clientTypes?: string[];
+  hasContractsRequiringRCPro?: string;
+  averageContractValue?: string;
+  handlesClientData?: string;
+  providesAdvice?: string;
+  workOnClientPremises?: string;
+  hasSubcontractors?: string;
+  hasCurrentRCPro?: string;
+  currentCoverage?: string;
+  priorClaims?: string;
+  claimDetails?: string;
+
+  // Champs spécifiques Multirisque
+  hasPhysicalPremises?: string;
+  premisesType?: string;
+  premisesSize?: string;
+  valueOfEquipment?: string;
+  hasInventory?: string;
+  inventoryValue?: string;
+  operatingHours?: string;
+  receivesPublic?: string;
+  hasHighValueEquipment?: string;
+  hasDangerousActivities?: string;
+  hasCurrentMultirisque?: string;
+  wantsLossOfEarnings?: string;
+
+  // Champs spécifiques AT/MP
+  numberOfEmployees?: string;
+  activityType?: string;
+  hasManualWork?: string;
+  hasHeavyMachinery?: string;
+  hasChemicalProducts?: string;
+  workEnvironment?: string[];
+  hasDUERP?: string;
+  hasWorkAccidentTraining?: string;
+  providesProtectiveEquipment?: string;
+  hasOccupationalHealthService?: string;
+  priorWorkAccidents?: string;
+  accidentDetails?: string;
+  hasCurrentATMP?: string;
+
+  // Champs spécifiques Flotte Auto
+  numberOfVehicles?: string;
+  vehicleTypes?: string[];
+  vehicleUsage?: string;
+  averageVehicleAge?: string;
+  numberOfDrivers?: string;
+  driverProfile?: string;
+  youngestDriverAge?: string;
+  hasDriverTraining?: string;
+  hasCurrentFleetInsurance?: string;
+  currentCoverageLevel?: string;
+
   // UTM & tracking
   utm_source?: string;
   utm_medium?: string;
