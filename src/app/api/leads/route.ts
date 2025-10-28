@@ -94,6 +94,30 @@ interface LeadData {
   hasCurrentFleetInsurance?: string;
   currentCoverageLevel?: string;
 
+  // Champs spécifiques Pack TPE
+  needsRCPro?: string;
+  needsMultirisque?: string;
+  needsCyber?: string;
+  needsFlotte?: string;
+  otherNeeds?: string;
+  renewalDate?: string;
+  currentBudget?: string;
+
+  // Champs spécifiques Assurance-crédit
+  salesType?: string[];
+  averageInvoiceValue?: string;
+  paymentTerms?: string;
+  topClientsConcentration?: string;
+  annualCreditVolume?: string;
+  hasExportSales?: string;
+  exportCountries?: string;
+  hasPoliticalRiskExposure?: string;
+  facesLatePayments?: string;
+  hasCurrentCreditInsurance?: string;
+  currentCoverageRate?: string;
+  priorBadDebts?: string;
+  badDebtDetails?: string;
+
   // UTM & tracking
   utm_source?: string;
   utm_medium?: string;

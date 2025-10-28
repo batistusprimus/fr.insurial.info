@@ -14,17 +14,17 @@ export default function MultirisqueProPage() {
                 Multirisque Professionnelle
               </span>
               <h1 className="mt-4 font-archivo-black text-3xl md:text-5xl text-gray-900 leading-tight">
-                Protégez vos locaux, équipements et continuité d\'activité
+                Protégez vos locaux, équipements et continuité d'activité
               </h1>
               <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
                 Incendie, dégât des eaux, vol, catastrophe naturelle... Un sinistre peut paralyser votre entreprise. Découvrez la multirisque adaptée à votre situation.
               </p>
               
               <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Locaux & équipements</strong> protégés</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Stocks & marchandises</strong> couverts</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Perte d\'exploitation</strong> optionnelle</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Assistance 24/7</strong> incluse</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Locaux & équipements</strong>{' '}protégés</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Stocks & marchandises</strong>{' '}couverts</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Perte d'exploitation</strong>{' '}optionnelle</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Assistance 24/7</strong>{' '}incluse</li>
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -36,7 +36,7 @@ export default function MultirisqueProPage() {
                 <strong>100% gratuit • Sans engagement • Réponse sous 24h</strong><br />
                 Insurial met en relation des entreprises avec des courtiers et assureurs spécialisés. Nous ne sommes pas assureur. Pour en savoir plus:
                 {' '}<a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>,
-                {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d\'utilisation</a>
+                {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d'utilisation</a>
                 {' '}et <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function MultirisqueProPage() {
 
       <PressLogos />
 
-      {/* Pourquoi c\'est essentiel */}
+      {/* Pourquoi c'est essentiel */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-10">
@@ -88,12 +88,12 @@ export default function MultirisqueProPage() {
             <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
               <div className="text-orange-600 mb-3"><Icons.Currency className="w-10 h-10" /></div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Coûts cachés</h3>
-              <p className="text-gray-700">Réparations, remplacement du matériel, relogement temporaire, perte de CA pendant l\'arrêt...</p>
+              <p className="text-gray-700">Réparations, remplacement du matériel, relogement temporaire, perte de CA pendant l'arrêt...</p>
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
               <div className="text-yellow-600 mb-3"><Icons.Pause className="w-10 h-10" /></div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Interruption d\'activité</h3>
-              <p className="text-gray-700">Sans garantie perte d\'exploitation, vous continuez à payer charges et salaires même à l\'arrêt.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Interruption d'activité</h3>
+              <p className="text-gray-700">Sans garantie perte d'exploitation, vous continuez à payer charges et salaires même à l'arrêt.</p>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function MultirisqueProPage() {
               { Icon: Icons.Water, color: 'text-blue-600', t: 'Dégâts des eaux', d: 'Fuite, rupture de canalisation, inondation: prise en charge des dommages et remise en état.' },
               { Icon: Icons.Wind, color: 'text-cyan-600', t: 'Catastrophes naturelles', d: 'Tempête, grêle, inondation reconnue par arrêté Cat-Nat (franchise légale applicable).' },
               { Icon: Icons.Bell, color: 'text-orange-600', t: 'Vol & vandalisme', d: 'Remplacement du matériel volé, réparation des dégradations et des accès forcés.' },
-              { Icon: Icons.Currency, color: 'text-green-600', t: 'Perte d\'exploitation', d: 'Indemnisation des frais fixes et de la marge manquée pendant l\'arrêt (option, souvent essentielle).' },
+              { Icon: Icons.Currency, color: 'text-green-600', t: 'Perte d'exploitation', d: 'Indemnisation des frais fixes et de la marge manquée pendant l'arrêt (option, souvent essentielle).' },
               { Icon: Icons.Lightning, color: 'text-yellow-600', t: 'Dommages électriques', d: 'Surtension, foudre, court-circuit endommageant le matériel informatique et électronique.' },
             ].map((card) => (
               <div key={card.t} className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-white">
@@ -171,8 +171,8 @@ export default function MultirisqueProPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { quote: "Un dégât des eaux a endommagé notre stock. Heureusement, on avait souscrit via le courtier recommandé par Insurial. Indemnisation rapide, on a pu rebondir.", author: "Marc D.", title: "Gérant", company: "Commerce Lyon" },
-              { quote: "Le questionnaire nous a fait réaliser qu\'on sous-évaluait nos équipements. Le courtier nous a aidés à ajuster les plafonds. Rassurant.", author: "Sophie L.", title: "Dirigeante", company: "Atelier de production" },
-              { quote: "Service gratuit et efficace. Mise en relation rapide avec un courtier qui a comparé 3 offres multirisque. On a souscrit avec perte d\'exploitation.", author: "Paul M.", title: "Responsable", company: "Restaurant Paris" },
+              { quote: "Le questionnaire nous a fait réaliser qu'on sous-évaluait nos équipements. Le courtier nous a aidés à ajuster les plafonds. Rassurant.", author: "Sophie L.", title: "Dirigeante", company: "Atelier de production" },
+              { quote: "Service gratuit et efficace. Mise en relation rapide avec un courtier qui a comparé 3 offres multirisque. On a souscrit avec perte d'exploitation.", author: "Paul M.", title: "Responsable", company: "Restaurant Paris" },
             ].map((t, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-xl border">
                 <div className="flex mb-3">
@@ -199,12 +199,12 @@ export default function MultirisqueProPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C\'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation.' },
-              { q: 'Perte d\'exploitation: incluse ou option ?', a: 'Souvent en option. Elle indemnise les frais fixes et la marge manquée pendant l\'interruption. Un courtier évaluera vos besoins.' },
+              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation.' },
+              { q: 'Perte d'exploitation: incluse ou option ?', a: 'Souvent en option. Elle indemnise les frais fixes et la marge manquée pendant l'interruption. Un courtier évaluera vos besoins.' },
               { q: 'Quels biens sont couverts ?', a: 'Locaux, aménagements, matériel, marchandises selon les options et plafonds établis. Le courtier adaptera selon votre profil.' },
-              { q: 'Catastrophe naturelle: comment ça marche ?', a: 'Couvert si arrêté de catastrophe naturelle. Une franchise légale s\'applique (fixée par l\'État).' },
+              { q: 'Catastrophe naturelle: comment ça marche ?', a: 'Couvert si arrêté de catastrophe naturelle. Une franchise légale s'applique (fixée par l'État).' },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier vous contacte sous 24-48h pour échanger sur votre situation.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d\'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>
@@ -233,11 +233,11 @@ export default function MultirisqueProPage() {
 
       <footer className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl text-center text-sm text-gray-600 space-y-2">
-          <p>Insurial est un service d\'information et de mise en relation. Nous ne sommes pas courtier ni assureur. Aucun démarchage commercial.</p>
+          <p>Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier ni assureur. Aucun démarchage commercial.</p>
           <p>
             <a href="/legal" className="underline text-gray-700 hover:text-gray-900">Mentions légales</a>
             {' '}•{' '}
-            <a href="/terms" className="underline text-gray-700 hover:text-gray-900">Conditions d\'utilisation</a>
+            <a href="/terms" className="underline text-gray-700 hover:text-gray-900">Conditions d'utilisation</a>
             {' '}•{' '}
             <a href="/privacy" className="underline text-gray-700 hover:text-gray-900">Politique de confidentialité</a>
           </p>

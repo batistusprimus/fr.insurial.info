@@ -14,17 +14,17 @@ export default function PackTPEPage() {
                 Pack TPE Complet
               </span>
               <h1 className="mt-4 font-archivo-black text-3xl md:text-5xl text-gray-900 leading-tight">
-                L\'assurance complète TPE en un seul pack
+                L'assurance complète TPE en un seul pack
               </h1>
               <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
                 RC Pro, Multirisque, Cyber, Protection juridique... Toutes les garanties essentielles réunies. Gestion simplifiée, couverture optimale, tarif négocié.
               </p>
               
               <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>RC Pro</strong> incluse</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Multirisque</strong> locaux & biens</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Options modulables</strong> (cyber, flotte)</li>
-                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Gestion centralisée</strong> facilitée</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>RC Pro</strong>{' '}incluse</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Multirisque</strong>{' '}locaux & biens</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Options modulables</strong>{' '}(cyber, flotte)</li>
+                <li className="flex items-center"><span className="mr-2 text-blue-700 text-lg">✓</span> <strong>Gestion centralisée</strong>{' '}facilitée</li>
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -36,7 +36,7 @@ export default function PackTPEPage() {
                 <strong>100% gratuit • Sans engagement • Réponse sous 24h</strong><br />
                 Insurial met en relation des entreprises avec des courtiers et assureurs spécialisés. Nous ne sommes pas assureur. Pour en savoir plus:
                 {' '}<a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>,
-                {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d\'utilisation</a>
+                {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d'utilisation</a>
                 {' '}et <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function PackTPEPage() {
 
       <PressLogos />
 
-      {/* Pourquoi c\'est essentiel */}
+      {/* Pourquoi c'est essentiel */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-10">
@@ -83,7 +83,7 @@ export default function PackTPEPage() {
             <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
               <div className="text-red-600 mb-3"><Icons.Exclamation className="w-10 h-10" /></div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Trous de couverture</h3>
-              <p className="text-gray-700">Avec des contrats séparés, risque de chevauchements ou d\'oublis de garanties. Un pack assure la cohérence.</p>
+              <p className="text-gray-700">Avec des contrats séparés, risque de chevauchements ou d'oublis de garanties. Un pack assure la cohérence.</p>
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
               <div className="text-orange-600 mb-3"><Icons.Currency className="w-10 h-10" /></div>
@@ -105,14 +105,14 @@ export default function PackTPEPage() {
           <div className="text-center mb-10">
             <h2 id="garanties" className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Les garanties courantes du Pack TPE</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Voici les protections typiques d\'un pack complet. Les contrats varient selon les professionnels — un courtier pourra vous conseiller sur mesure.
+              Voici les protections typiques d'un pack complet. Les contrats varient selon les professionnels — un courtier pourra vous conseiller sur mesure.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Icons.Shield, color: 'text-blue-600', t: 'RC Professionnelle', d: 'Protection contre les erreurs, omissions et dommages causés à des tiers dans votre activité.' },
               { Icon: Icons.Building, color: 'text-green-600', t: 'Multirisque locaux', d: 'Incendie, dégâts des eaux, vol, catastrophe naturelle sur vos locaux et équipements.' },
-              { Icon: Icons.Currency, color: 'text-purple-600', t: 'Perte d\'exploitation', d: 'Indemnisation des frais fixes et marge manquée pendant l\'interruption d\'activité.' },
+              { Icon: Icons.Currency, color: 'text-purple-600', t: 'Perte d'exploitation', d: 'Indemnisation des frais fixes et marge manquée pendant l'interruption d'activité.' },
               { Icon: Icons.Lock, color: 'text-indigo-600', t: 'Cyber (option)', d: 'Ransomware, fuite de données, assistance 24/7, notification CNIL et restauration systèmes.' },
               { Icon: Icons.Scale, color: 'text-cyan-600', t: 'Protection juridique', d: 'Accompagnement et défense en cas de litige commercial, fiscal ou social.' },
               { Icon: Icons.BadgeCheck, color: 'text-red-600', t: 'Assistance & services', d: 'Hotline juridique, assistance en cas de sinistre, conseils prévention.' },
@@ -171,7 +171,7 @@ export default function PackTPEPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { quote: "Avant, je jonglais entre 3 assureurs différents. Le pack TPE recommandé par le courtier a tout simplifié. Une seule facture, une seule gestion.", author: "Antoine M.", title: "Gérant", company: "Boulangerie artisanale" },
-              { quote: "Le questionnaire nous a fait réaliser qu\'on avait des trous de couverture. Le courtier a composé un pack cohérent avec RC Pro + Multirisque + Cyber.", author: "Julie R.", title: "Fondatrice", company: "Agence de communication" },
+              { quote: "Le questionnaire nous a fait réaliser qu'on avait des trous de couverture. Le courtier a composé un pack cohérent avec RC Pro + Multirisque + Cyber.", author: "Julie R.", title: "Fondatrice", company: "Agence de communication" },
               { quote: "Service gratuit et efficace. Mise en relation rapide avec un courtier spécialiste TPE. Pack souscrit en 48h avec une économie de 15% vs mes contrats précédents.", author: "Karim B.", title: "Artisan", company: "Plomberie-chauffage" },
             ].map((t, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-xl border">
@@ -199,12 +199,12 @@ export default function PackTPEPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C\'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers.' },
-              { q: 'Pack TPE: que contient-il ?', a: 'Un socle de garanties essentielles (RC Pro, Multirisque, Pertes d\'exploitation), modulables selon votre activité. Un courtier composera le pack adapté.' },
+              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers.' },
+              { q: 'Pack TPE: que contient-il ?', a: 'Un socle de garanties essentielles (RC Pro, Multirisque, Pertes d'exploitation), modulables selon votre activité. Un courtier composera le pack adapté.' },
               { q: 'Peut-on ajouter des options ?', a: 'Oui: cyber, flotte, protection juridique, bris de machine... Le courtier adapte selon vos besoins.' },
               { q: 'Avantage vs contrats séparés ?', a: 'Gestion simplifiée (un seul interlocuteur, une échéance), cohérence des garanties et tarif négocié groupé.' },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier spécialisé TPE vous contacte sous 24-48h pour composer votre pack.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d\'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>
@@ -233,11 +233,11 @@ export default function PackTPEPage() {
 
       <footer className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl text-center text-sm text-gray-600 space-y-2">
-          <p>Insurial est un service d\'information et de mise en relation. Nous ne sommes pas courtier ni assureur. Aucun démarchage commercial.</p>
+          <p>Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier ni assureur. Aucun démarchage commercial.</p>
           <p>
             <a href="/legal" className="underline text-gray-700 hover:text-gray-900">Mentions légales</a>
             {' '}•{' '}
-            <a href="/terms" className="underline text-gray-700 hover:text-gray-900">Conditions d\'utilisation</a>
+            <a href="/terms" className="underline text-gray-700 hover:text-gray-900">Conditions d'utilisation</a>
             {' '}•{' '}
             <a href="/privacy" className="underline text-gray-700 hover:text-gray-900">Politique de confidentialité</a>
           </p>

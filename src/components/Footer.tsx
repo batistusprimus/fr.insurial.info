@@ -66,6 +66,12 @@ export default function Footer() {
                 <Link href="/assurances/at-mp" className="hover:text-white transition-colors">Accidents du travail (AT/MP)</Link>
               </li>
               <li>
+                <Link href="/assurances/assurance-credit" className="hover:text-white transition-colors">Assurance-crédit</Link>
+              </li>
+              <li>
+                <Link href="/assurances/cyber" className="hover:text-white transition-colors">Cyber Risques</Link>
+              </li>
+              <li>
                 <Link href="/packs/pack-tpe" className="hover:text-white transition-colors">Pack TPE / Multirisque Pro complète</Link>
               </li>
             </ul>

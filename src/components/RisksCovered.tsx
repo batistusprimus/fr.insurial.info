@@ -5,11 +5,12 @@ import Link from 'next/link';
 export default function RisksCovered() {
   const items = [
     { id: 1, title: 'RC Professionnelle', href: '/assurances/rc-pro', emoji: 'shield', description: 'Responsabilité civile professionnelle' },
-    { id: 2, title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', emoji: 'building', description: 'Locaux, biens et pertes d’exploitation' },
+    { id: 2, title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', emoji: 'building', description: 'Locaux, biens et pertes d'exploitation' },
     { id: 3, title: 'Flotte Automobile', href: '/assurances/flotte-automobile', emoji: 'truck', description: 'Véhicules professionnels et utilitaires' },
     { id: 4, title: 'Accidents du Travail', href: '/assurances/at-mp', emoji: 'bandage', description: 'AT/MP et prévention des risques' },
-    { id: 5, title: 'Pack TPE (Assurance Complète)', href: '/packs/pack-tpe', emoji: 'box', description: 'Couverture complète adaptée aux TPE' },
-    { id: 6, title: 'Cyber Risques', href: '/assurances/cyber', emoji: 'laptop', description: 'Cyberattaques, ransomware et data breach' }
+    { id: 5, title: 'Assurance-crédit', href: '/assurances/assurance-credit', emoji: 'credit', description: 'Protection contre les impayés et risque export' },
+    { id: 6, title: 'Cyber Risques', href: '/assurances/cyber', emoji: 'laptop', description: 'Cyberattaques, ransomware et data breach' },
+    { id: 7, title: 'Pack TPE (Assurance Complète)', href: '/packs/pack-tpe', emoji: 'box', description: 'Couverture complète adaptée aux TPE' }
   ];
 
   return (
@@ -87,6 +88,13 @@ function renderIcon(name: string) {
         <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <rect x="3" y="4" width="18" height="12" rx="2" />
           <path d="M2 20h20" />
+        </svg>
+      );
+    case 'credit':
+      return (
+        <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <rect x="1" y="4" width="22" height="16" rx="2" />
+          <path d="M1 10h22" />
         </svg>
       );
     default:
