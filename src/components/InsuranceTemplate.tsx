@@ -1,109 +1,47 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 interface InsuranceTemplateProps {
   riskName: string;
-  pedagogyTitle?: string;
-  pedagogyParagraph: string;
-  examples: string[];
-  faqs?: { question: string; answer: string }[];
 }
 
-export default function InsuranceTemplate({
-  riskName,
-  pedagogyTitle = 'Pourquoi cette couverture est essentielle',
-  pedagogyParagraph,
-  examples,
-  faqs,
-}: InsuranceTemplateProps) {
-  const router = useRouter();
-
+export default function InsuranceTemplate({ riskName }: InsuranceTemplateProps) {
   return (
     <main className="min-h-screen bg-white">
-      {/* 1️⃣ Hero */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h1 className="font-archivo-black text-3xl md:text-5xl text-gray-900 mb-6 leading-tight">
-            Protection {riskName} adaptée à votre activité
+          <div className="mb-6 flex justify-center">
+            <Image src="/logo.png" alt="Insurial" width={140} height={40} />
+          </div>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+            {riskName} — informations générales
+          </span>
+          <h1 className="mt-4 font-archivo-black text-3xl md:text-5xl text-gray-900 leading-tight">
+            Informations factuelles et questionnaire de mise en relation
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-            Avant de commencer, précisez votre situation. Cela permet d’adapter votre questionnaire à votre profil professionnel.
+          <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            Contenu indicatif et non exhaustif. Aucun conseil personnalisé n’est fourni.
           </p>
-
-          {/* Bloc sélection démographique */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            {[
-              { key: 'independant', label: 'Indépendant / Profession libérale' },
-              { key: 'tpe', label: 'TPE (1 à 9 salariés)' },
-              { key: 'pme', label: 'PME (10 à 250 salariés)' },
-              { key: 'autre', label: 'Autre / Startup' },
-            ].map((option) => (
-              <button
-                key={option.key}
-                onClick={() => router.push('/questionnaire')}
-                className={
-                  'text-sm md:text-base rounded-lg border px-4 py-3 transition-colors bg-white text-gray-800 border-gray-300 hover:border-[#1E3A8A]'
-                }
-              >
-                {option.label}
-              </button>
-            ))}
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <a href="/questionnaire" className="px-6 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors font-semibold">Accéder au questionnaire</a>
+            <a href="#informations" className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg hover:bg-white/60 transition-colors">Voir les informations</a>
           </div>
-
-          <p className="mt-6 text-xs text-gray-600 max-w-3xl mx-auto">
-            Insurial est un service d’information et de mise en relation. Nous ne sommes pas assureur ni courtier et ne fournissons pas de conseil personnalisé.
-            Pour en savoir plus, consultez nos
-            {' '}<a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>,
-            {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d’utilisation</a>
-            {' '}et notre <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
+          <p className="mt-3 text-xs text-gray-600 max-w-2xl mx-auto">
+            Insurial est un service d’information et de mise en relation. Nous ne sommes pas assureur ni courtier.
           </p>
         </div>
       </section>
 
-      {/* 2️⃣ Section pédagogique */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{pedagogyTitle}</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">{pedagogyParagraph}</p>
-        </div>
-      </section>
-
-      {/* 3️⃣ Exemples concrets */}
-      <section className="py-14 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Exemples concrets de situations couvertes</h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            {examples.map((ex, idx) => (
-              <li key={idx}>{ex}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* 4️⃣ Redirection après sélection du profil (le formulaire est accessible depuis la page d’accueil) */}
-
-      {/* FAQ contextuelle (optionnelle) */}
-      {faqs && faqs.length > 0 && (
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Questions fréquentes</h3>
-              <p className="text-gray-600">Réponses courtes et concrètes pour avancer en confiance.</p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((item, idx) => (
-                <div key={idx} className="border border-gray-200 rounded-lg">
-                  <div className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">{item.question}</div>
-                  <div className="px-6 py-4 text-gray-700">{item.answer}</div>
-                </div>
-              ))}
-            </div>
+      <section id="informations" className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Informations générales</h2>
+          <p className="text-gray-600 mb-8">Les éléments ci-dessous sont fournis à titre indicatif et peuvent varier selon les contrats proposés par des professionnels tiers.</p>
+          <div className="space-y-3 text-gray-800">
+            <p>Pour {riskName}, les garanties, exclusions et plafonds dépendent des contrats présentés par des professionnels indépendants.</p>
+            <p>Les informations présentées n’ont pas de valeur contractuelle.</p>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
-      {/* 5️⃣ Footer */}
       <footer className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl text-center text-sm text-gray-600 space-y-1">
           <p>Insurial est une plateforme d’information indépendante.</p>
