@@ -100,6 +100,12 @@ export default function Header() {
                     Accidents du travail (AT/MP)
                   </Link>
                   <Link 
+                    href="/assurances/assurance-credit" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
+                  >
+                    Assurance-crédit
+                  </Link>
+                  <Link 
                     href="/packs/pack-tpe" 
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]"
                   >
@@ -218,6 +224,13 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Accidents du travail (AT/MP)
+                  </Link>
+                  <Link 
+                    href="/assurances/assurance-credit" 
+                    className="block text-sm text-gray-700 hover:text-[#1E3A8A]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Assurance-crédit
                   </Link>
                   <Link 
                     href="/packs/pack-tpe" 
