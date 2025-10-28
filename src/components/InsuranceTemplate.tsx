@@ -2,9 +2,12 @@ import Image from 'next/image';
 
 interface InsuranceTemplateProps {
   riskName: string;
+  pedagogyParagraph?: string;
+  examples?: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
-export default function InsuranceTemplate({ riskName }: InsuranceTemplateProps) {
+export default function InsuranceTemplate({ riskName, pedagogyParagraph, examples, faqs }: InsuranceTemplateProps) {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 md:py-20">
@@ -39,6 +42,37 @@ export default function InsuranceTemplate({ riskName }: InsuranceTemplateProps) 
             <p>Pour {riskName}, les garanties, exclusions et plafonds dépendent des contrats présentés par des professionnels indépendants.</p>
             <p>Les informations présentées n’ont pas de valeur contractuelle.</p>
           </div>
+
+          {pedagogyParagraph && (
+            <div className="mt-8 p-5 border rounded-xl bg-white">
+              <p className="text-gray-800 leading-relaxed">{pedagogyParagraph}</p>
+            </div>
+          )}
+
+          {Array.isArray(examples) && examples.length > 0 && (
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Exemples de situations couvertes</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-800">
+                {examples.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {Array.isArray(faqs) && faqs.length > 0 && (
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Questions fréquentes</h3>
+              <div className="divide-y rounded-xl border">
+                {faqs.map((f, idx) => (
+                  <details key={idx} className="p-4">
+                    <summary className="cursor-pointer font-medium text-gray-900">{f.question}</summary>
+                    <p className="mt-2 text-gray-700">{f.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
