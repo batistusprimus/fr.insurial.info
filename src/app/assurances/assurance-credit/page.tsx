@@ -199,7 +199,7 @@ export default function AssuranceCreditPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers.' },
+              { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers." },
               { q: 'Quel taux de couverture ?', a: 'Généralement 80-90% du montant impayé selon le contrat. Un courtier évaluera vos besoins et les conditions du marché.' },
               { q: 'Export: risque politique couvert ?', a: 'Oui, la plupart des contrats export incluent guerre, embargo, non-transfert de devises, confiscation. Conditions selon pays.' },
               { q: 'Coût de l'assurance-crédit ?', a: 'Typiquement 0,1% à 0,5% du CA assuré selon risque. Un courtier comparera les tarifs et négociera pour vous.' },

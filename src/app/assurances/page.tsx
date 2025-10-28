@@ -1,7 +1,7 @@
 export default function AssurancesIndexPage() {
   const items = [
     { title: 'RC Professionnelle', href: '/assurances/rc-pro', description: 'Responsabilité civile professionnelle' },
-    { title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', description: 'Locaux, biens et pertes d'exploitation' },
+    { title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', description: "Locaux, biens et pertes d'exploitation" },
     { title: 'Flotte Automobile', href: '/assurances/flotte-automobile', description: 'Véhicules professionnels et utilitaires' },
     { title: 'Accidents du Travail', href: '/assurances/at-mp', description: 'AT/MP et prévention des risques' },
     { title: 'Assurance-crédit', href: '/assurances/assurance-credit', description: 'Protection contre les impayés et risque export' },

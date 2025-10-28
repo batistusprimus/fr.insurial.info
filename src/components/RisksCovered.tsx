@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function RisksCovered() {
   const items = [
     { id: 1, title: 'RC Professionnelle', href: '/assurances/rc-pro', emoji: 'shield', description: 'Responsabilité civile professionnelle' },
-    { id: 2, title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', emoji: 'building', description: 'Locaux, biens et pertes d'exploitation' },
+    { id: 2, title: 'Multirisques Professionnelle', href: '/assurances/multirisque-professionnelle', emoji: 'building', description: "Locaux, biens et pertes d'exploitation" },
     { id: 3, title: 'Flotte Automobile', href: '/assurances/flotte-automobile', emoji: 'truck', description: 'Véhicules professionnels et utilitaires' },
     { id: 4, title: 'Accidents du Travail', href: '/assurances/at-mp', emoji: 'bandage', description: 'AT/MP et prévention des risques' },
     { id: 5, title: 'Assurance-crédit', href: '/assurances/assurance-credit', emoji: 'credit', description: 'Protection contre les impayés et risque export' },

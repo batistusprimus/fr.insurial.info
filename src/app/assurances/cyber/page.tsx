@@ -122,8 +122,8 @@ export default function CyberRisksPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { Icon: Icons.Support, color: 'text-blue-600', t: 'Assistance d'urgence 24/7', d: 'Cellule de crise dédiée dès la détection de l'incident: forensics, confinement immédiat, plan de remédiation.' },
-              { Icon: Icons.Currency, color: 'text-green-600', t: 'Pertes d'exploitation', d: 'Indemnisation du manque à gagner pendant l'arrêt d'activité (selon franchise et plafond contractuel).' },
+              { Icon: Icons.Support, color: 'text-blue-600', t: "Assistance d'urgence 24/7", d: "Cellule de crise dédiée dès la détection de l'incident: forensics, confinement immédiat, plan de remédiation." },
+              { Icon: Icons.Currency, color: 'text-green-600', t: "Pertes d'exploitation", d: "Indemnisation du manque à gagner pendant l'arrêt d'activité (selon franchise et plafond contractuel)." },
               { Icon: Icons.Scale, color: 'text-purple-600', t: 'Défense juridique & RC', d: 'Prise en charge des frais juridiques, gestion des réclamations de tiers lésés par la faille.' },
               { Icon: Icons.Clipboard, color: 'text-indigo-600', t: 'Conformité RGPD', d: 'Accompagnement notification CNIL sous 72h, information des personnes concernées, suivi réglementaire.' },
               { Icon: Icons.RefreshCw, color: 'text-cyan-600', t: 'Restauration des systèmes', d: 'Réinstallation, récupération de données, remise en service des infrastructures critiques.' },
@@ -211,12 +211,12 @@ export default function CyberRisksPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers/assureurs.' },
-              { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Ensuite, un spécialiste vous contacte sous 24-48h pour échanger sur vos besoins.' },
-              { q: 'Qui sont les partenaires ?', a: 'Des courtiers et assureurs certifiés ORIAS, spécialisés en cyber-risques. Ils comparent les offres du marché pour vous proposer la meilleure couverture.' },
-              { q: 'Quels prérequis techniques ?', a: 'Souvent requis: MFA, sauvegardes régulières, patching. Un courtier évaluera votre profil pour adapter les conditions.' },
-              { q: 'Obligations RGPD ?', a: 'Notification CNIL sous 72h en cas de violation de données. Les assurances cyber incluent généralement un accompagnement dédié.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers/assureurs." },
+              { q: "Combien de temps ça prend ?", a: "3 minutes pour le questionnaire. Ensuite, un spécialiste vous contacte sous 24-48h pour échanger sur vos besoins." },
+              { q: "Qui sont les partenaires ?", a: "Des courtiers et assureurs certifiés ORIAS, spécialisés en cyber-risques. Ils comparent les offres du marché pour vous proposer la meilleure couverture." },
+              { q: "Quels prérequis techniques ?", a: "Souvent requis: MFA, sauvegardes régulières, patching. Un courtier évaluera votre profil pour adapter les conditions." },
+              { q: "Obligations RGPD ?", a: "Notification CNIL sous 72h en cas de violation de données. Les assurances cyber incluent généralement un accompagnement dédié." },
+              { q: "Insurial est-il un courtier ?", a: "Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>

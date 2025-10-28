@@ -114,7 +114,7 @@ export default function MultirisqueProPage() {
               { Icon: Icons.Water, color: 'text-blue-600', t: 'Dégâts des eaux', d: 'Fuite, rupture de canalisation, inondation: prise en charge des dommages et remise en état.' },
               { Icon: Icons.Wind, color: 'text-cyan-600', t: 'Catastrophes naturelles', d: 'Tempête, grêle, inondation reconnue par arrêté Cat-Nat (franchise légale applicable).' },
               { Icon: Icons.Bell, color: 'text-orange-600', t: 'Vol & vandalisme', d: 'Remplacement du matériel volé, réparation des dégradations et des accès forcés.' },
-              { Icon: Icons.Currency, color: 'text-green-600', t: 'Perte d'exploitation', d: 'Indemnisation des frais fixes et de la marge manquée pendant l'arrêt (option, souvent essentielle).' },
+              { Icon: Icons.Currency, color: 'text-green-600', t: "Perte d'exploitation", d: "Indemnisation des frais fixes et de la marge manquée pendant l'arrêt (option, souvent essentielle)." },
               { Icon: Icons.Lightning, color: 'text-yellow-600', t: 'Dommages électriques', d: 'Surtension, foudre, court-circuit endommageant le matériel informatique et électronique.' },
             ].map((card) => (
               <div key={card.t} className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-white">
