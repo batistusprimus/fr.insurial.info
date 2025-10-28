@@ -202,9 +202,9 @@ export default function AssuranceCreditPage() {
               { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers." },
               { q: 'Quel taux de couverture ?', a: 'Généralement 80-90% du montant impayé selon le contrat. Un courtier évaluera vos besoins et les conditions du marché.' },
               { q: 'Export: risque politique couvert ?', a: 'Oui, la plupart des contrats export incluent guerre, embargo, non-transfert de devises, confiscation. Conditions selon pays.' },
-              { q: 'Coût de l'assurance-crédit ?', a: 'Typiquement 0,1% à 0,5% du CA assuré selon risque. Un courtier comparera les tarifs et négociera pour vous.' },
+              { q: "Coût de l'assurance-crédit ?", a: "Typiquement 0,1% à 0,5% du CA assuré selon risque. Un courtier comparera les tarifs et négociera pour vous." },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier spécialisé crédit vous contacte sous 24-48h pour analyser vos flux.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: "Insurial est-il un courtier ?", a: "Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>

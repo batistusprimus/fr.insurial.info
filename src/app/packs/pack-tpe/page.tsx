@@ -112,7 +112,7 @@ export default function PackTPEPage() {
             {[
               { Icon: Icons.Shield, color: 'text-blue-600', t: 'RC Professionnelle', d: 'Protection contre les erreurs, omissions et dommages causés à des tiers dans votre activité.' },
               { Icon: Icons.Building, color: 'text-green-600', t: 'Multirisque locaux', d: 'Incendie, dégâts des eaux, vol, catastrophe naturelle sur vos locaux et équipements.' },
-              { Icon: Icons.Currency, color: 'text-purple-600', t: 'Perte d'exploitation', d: 'Indemnisation des frais fixes et marge manquée pendant l'interruption d'activité.' },
+              { Icon: Icons.Currency, color: 'text-purple-600', t: "Perte d'exploitation", d: "Indemnisation des frais fixes et marge manquée pendant l'interruption d'activité." },
               { Icon: Icons.Lock, color: 'text-indigo-600', t: 'Cyber (option)', d: 'Ransomware, fuite de données, assistance 24/7, notification CNIL et restauration systèmes.' },
               { Icon: Icons.Scale, color: 'text-cyan-600', t: 'Protection juridique', d: 'Accompagnement et défense en cas de litige commercial, fiscal ou social.' },
               { Icon: Icons.BadgeCheck, color: 'text-red-600', t: 'Assistance & services', d: 'Hotline juridique, assistance en cas de sinistre, conseils prévention.' },
@@ -199,7 +199,7 @@ export default function PackTPEPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers.' },
+              { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers." },
               { q: 'Pack TPE: que contient-il ?', a: 'Un socle de garanties essentielles (RC Pro, Multirisque, Pertes d'exploitation), modulables selon votre activité. Un courtier composera le pack adapté.' },
               { q: 'Peut-on ajouter des options ?', a: 'Oui: cyber, flotte, protection juridique, bris de machine... Le courtier adapte selon vos besoins.' },
               { q: 'Avantage vs contrats séparés ?', a: 'Gestion simplifiée (un seul interlocuteur, une échéance), cohérence des garanties et tarif négocié groupé.' },

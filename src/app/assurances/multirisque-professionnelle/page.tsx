@@ -199,10 +199,10 @@ export default function MultirisqueProPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: 'C'est vraiment gratuit ?', a: 'Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation.' },
-              { q: 'Perte d'exploitation: incluse ou option ?', a: 'Souvent en option. Elle indemnise les frais fixes et la marge manquée pendant l'interruption. Un courtier évaluera vos besoins.' },
+              { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation." },
+              { q: "Perte d'exploitation: incluse ou option ?", a: "Souvent en option. Elle indemnise les frais fixes et la marge manquée pendant l'interruption. Un courtier évaluera vos besoins." },
               { q: 'Quels biens sont couverts ?', a: 'Locaux, aménagements, matériel, marchandises selon les options et plafonds établis. Le courtier adaptera selon votre profil.' },
-              { q: 'Catastrophe naturelle: comment ça marche ?', a: 'Couvert si arrêté de catastrophe naturelle. Une franchise légale s'applique (fixée par l'État).' },
+              { q: "Catastrophe naturelle: comment ça marche ?", a: "Couvert si arrêté de catastrophe naturelle. Une franchise légale s'applique (fixée par l'État)." },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier vous contacte sous 24-48h pour échanger sur votre situation.' },
               { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
             ].map((item, idx) => (
