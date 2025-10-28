@@ -38,7 +38,7 @@ export default function RenewalChecklistGuide() {
           </p>
 
           {/* Step 1 */}
-          <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
+          <div className="not-prose bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <ChartIcon /> Mise à jour des informations
@@ -48,29 +48,29 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Prévisions de chiffre d’affaires annuel</span>
+                <span className="text-sm text-gray-900">Prévisions de chiffre d’affaires annuel</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Mise à jour effectifs et masse salariale</span>
+                <span className="text-sm text-gray-900">Mise à jour effectifs et masse salariale</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Nouveaux sites, équipements ou véhicules acquis</span>
+                <span className="text-sm text-gray-900">Nouveaux sites, équipements ou véhicules acquis</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Évolutions des activités ou services proposés</span>
+                <span className="text-sm text-gray-900">Évolutions des activités ou services proposés</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-[#1E3A8A]" />
-                <span>Projets d’expansion ou achats majeurs</span>
+                <span className="text-sm text-gray-900">Projets d’expansion ou achats majeurs</span>
               </label>
             </div>
           </div>
 
           {/* Step 2 */}
-          <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
+          <div className="not-prose bg-green-50 border-l-4 border-green-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <TrendUpIcon /> Revue des sinistres
@@ -80,29 +80,29 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Passer en revue tous les sinistres de l’année</span>
+                <span className="text-sm text-gray-900">Passer en revue tous les sinistres de l’année</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Rassembler la documentation des dossiers ouverts</span>
+                <span className="text-sm text-gray-900">Rassembler la documentation des dossiers ouverts</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Préparer des explications pour sinistres importants/inhabituels</span>
+                <span className="text-sm text-gray-900">Préparer des explications pour sinistres importants/inhabituels</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Documenter les améliorations de gestion des risques</span>
+                <span className="text-sm text-gray-900">Documenter les améliorations de gestion des risques</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-green-500" />
-                <span>Lister les formations sécurité mises en place</span>
+                <span className="text-sm text-gray-900">Lister les formations sécurité mises en place</span>
               </label>
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
+          <div className="not-prose bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <BriefcaseIcon /> Documents financiers
@@ -112,29 +112,29 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Rassembler les états financiers récents</span>
+                <span className="text-sm text-gray-900">Rassembler les états financiers récents</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Mettre à jour l’évaluation pour la garantie Biens</span>
+                <span className="text-sm text-gray-900">Mettre à jour l’évaluation pour la garantie Biens</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Réviser la valeur des équipements et stocks</span>
+                <span className="text-sm text-gray-900">Réviser la valeur des équipements et stocks</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Collecter les justificatifs des achats/améliorations majeurs</span>
+                <span className="text-sm text-gray-900">Collecter les justificatifs des achats/améliorations majeurs</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-orange-500" />
-                <span>Préparer des prévisions de trésorerie</span>
+                <span className="text-sm text-gray-900">Préparer des prévisions de trésorerie</span>
               </label>
             </div>
           </div>
 
           {/* Step 4 */}
-          <div className="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
+          <div className="not-prose bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <SearchIcon /> Évaluation des garanties
@@ -144,29 +144,29 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Revoir limites et franchises actuelles</span>
+                <span className="text-sm text-gray-900">Revoir limites et franchises actuelles</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Identifier les manques ou doublons de garantie</span>
+                <span className="text-sm text-gray-900">Identifier les manques ou doublons de garantie</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Considérer les nouveaux risques à couvrir</span>
+                <span className="text-sm text-gray-900">Considérer les nouveaux risques à couvrir</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Évaluer si les limites doivent évoluer</span>
+                <span className="text-sm text-gray-900">Évaluer si les limites doivent évoluer</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-purple-500" />
-                <span>Revoir titulaires de certificats et assurés additionnels</span>
+                <span className="text-sm text-gray-900">Revoir titulaires de certificats et assurés additionnels</span>
               </label>
             </div>
           </div>
 
           {/* Step 5 */}
-          <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
+          <div className="not-prose bg-red-50 border-l-4 border-red-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <CartIcon /> Mise en concurrence
@@ -176,29 +176,29 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Demander des devis à 3–5 assureurs</span>
+                <span className="text-sm text-gray-900">Demander des devis à 3–5 assureurs</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Comparer les garanties, pas seulement les prix</span>
+                <span className="text-sm text-gray-900">Comparer les garanties, pas seulement les prix</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Vérifier la solidité financière des assureurs (A.M. Best, S&P)</span>
+                <span className="text-sm text-gray-900">Vérifier la solidité financière des assureurs (A.M. Best, S&P)</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Consulter les avis sur le service client</span>
+                <span className="text-sm text-gray-900">Consulter les avis sur le service client</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-red-500" />
-                <span>Négocier avec votre assureur via des devis concurrents</span>
+                <span className="text-sm text-gray-900">Négocier avec votre assureur via des devis concurrents</span>
               </label>
             </div>
           </div>
 
           {/* Step 6 */}
-          <div className="bg-gray-100 border-l-4 border-gray-400 p-6 mb-8">
+          <div className="not-prose bg-gray-100 border-l-4 border-gray-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               <span className="inline-flex items-center gap-2">
                 <NoteIcon /> Étapes finales
@@ -208,23 +208,23 @@ export default function RenewalChecklistGuide() {
             <div className="space-y-3">
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Relire attentivement les conditions finales</span>
+                <span className="text-sm text-gray-900">Relire attentivement les conditions finales</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Confirmer l’exactitude des informations</span>
+                <span className="text-sm text-gray-900">Confirmer l’exactitude des informations</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Comprendre les éventuelles évolutions de garantie</span>
+                <span className="text-sm text-gray-900">Comprendre les éventuelles évolutions de garantie</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Mettre en place les modalités de paiement</span>
+                <span className="text-sm text-gray-900">Mettre en place les modalités de paiement</span>
               </label>
               <label className="flex items-center space-x-3">
                 <input type="checkbox" className="w-5 h-5 text-gray-600" />
-                <span>Mettre à jour les certificats pour clients/fournisseurs</span>
+                <span className="text-sm text-gray-900">Mettre à jour les certificats pour clients/fournisseurs</span>
               </label>
             </div>
           </div>

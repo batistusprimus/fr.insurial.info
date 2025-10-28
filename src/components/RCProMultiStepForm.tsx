@@ -39,7 +39,7 @@ interface RCProLeadData {
 const initialData: RCProLeadData = {
   companySize: '',
   industry: '',
-  location: '',
+  location: 'FR',
   annualRevenue: '',
 
   mainActivity: '',
@@ -92,7 +92,6 @@ export default function RCProMultiStepForm() {
     if (step === 1) {
       if (!form.companySize) e.companySize = 'Requis';
       if (!form.industry) e.industry = 'Requis';
-      if (!form.location) e.location = 'Requis';
       if (!form.annualRevenue) e.annualRevenue = 'Requis';
     }
     if (step === 2) {
@@ -231,22 +230,6 @@ export default function RCProMultiStepForm() {
               <option value="Autre">Autre</option>
             </select>
             {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Localisation *</label>
-            <select
-              value={form.location}
-              onChange={e => update('location', e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-            >
-              <option value="">Sélectionner</option>
-              <option value="FR">France</option>
-              <option value="EU">Union européenne (hors FR)</option>
-              <option value="UK">Royaume‑Uni</option>
-              <option value="US">États‑Unis</option>
-              <option value="Other">Autre</option>
-            </select>
-            {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location}</p>}
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Chiffre d\'affaires annuel *</label>

@@ -2,31 +2,31 @@
 
 import { useMemo, useState } from 'react';
 
-interface FlotteAutoLeadData {
+interface PackTPELeadData {
   // Step 1 — Profil
   companySize: string;
   industry: string;
   location: string;
   annualRevenue: string;
 
-  // Step 2 — Parc véhicules
-  numberOfVehicles: string;
-  vehicleTypes: string[]; // VP, VUL, PL, Moto, Autre
-  vehicleUsage: string; // Livraison, Commercial, Transport passagers, Chantier
-  averageVehicleAge: string;
+  // Step 2 — Besoins
+  needsRCPro: string; // yes/no
+  needsMultirisque: string; // yes/no
+  needsCyber: string; // yes/no
+  needsFlotte: string; // yes/no
+  otherNeeds: string;
 
-  // Step 3 — Conducteurs
-  numberOfDrivers: string;
-  driverProfile: string; // Nommés, Tous conducteurs
-  youngestDriverAge: string;
-  hasDriverTraining: string; // yes/no
+  // Step 3 — Situation actuelle
+  hasPhysicalPremises: string; // yes/no
+  numberOfEmployees: string;
+  hasVehicles: string; // yes/no
+  numberOfVehicles?: string;
 
   // Step 4 — Couverture actuelle
-  hasCurrentFleetInsurance: string; // yes/no
+  hasCurrentInsurance: string; // yes/no
   currentProvider?: string;
-  currentCoverageLevel?: string; // RC seule, Tiers+, Tous risques
-  priorClaims: string; // yes/no
-  claimDetails?: string;
+  renewalDate?: string;
+  currentBudget?: string;
 
   // Step 5 — Contact
   fullName: string;
@@ -36,27 +36,27 @@ interface FlotteAutoLeadData {
   gdprConsent: boolean;
 }
 
-const initialData: FlotteAutoLeadData = {
+const initialData: PackTPELeadData = {
   companySize: '',
   industry: '',
-  location: 'FR',
+  location: '',
   annualRevenue: '',
 
+  needsRCPro: '',
+  needsMultirisque: '',
+  needsCyber: '',
+  needsFlotte: '',
+  otherNeeds: '',
+
+  hasPhysicalPremises: '',
+  numberOfEmployees: '',
+  hasVehicles: '',
   numberOfVehicles: '',
-  vehicleTypes: [],
-  vehicleUsage: '',
-  averageVehicleAge: '',
 
-  numberOfDrivers: '',
-  driverProfile: '',
-  youngestDriverAge: '',
-  hasDriverTraining: '',
-
-  hasCurrentFleetInsurance: '',
+  hasCurrentInsurance: '',
   currentProvider: '',
-  currentCoverageLevel: '',
-  priorClaims: '',
-  claimDetails: '',
+  renewalDate: '',
+  currentBudget: '',
 
   fullName: '',
   workEmail: '',
@@ -65,26 +65,20 @@ const initialData: FlotteAutoLeadData = {
   gdprConsent: false,
 };
 
-export default function FlotteAutoMultiStepForm() {
+export default function PackTPEMultiStepForm() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [form, setForm] = useState<FlotteAutoLeadData>(initialData);
+  const [form, setForm] = useState<PackTPELeadData>(initialData);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const totalSteps = 5;
   const progress = useMemo(() => Math.round((currentStep / totalSteps) * 100), [currentStep]);
 
-  const update = (field: keyof FlotteAutoLeadData, value: string | string[] | boolean) => {
-    setForm(prev => ({ ...prev, [field]: value as any }));
+  const update = (field: keyof PackTPELeadData, value: string | boolean) => {
+    setForm(prev => ({ ...prev, [field]: value }));
     if (errors[field as string]) {
       setErrors(prev => ({ ...prev, [field as string]: '' }));
     }
-  };
-
-  const toggleMulti = (field: keyof FlotteAutoLeadData, value: string) => {
-    const current = (form[field] as string[]) || [];
-    const updated = current.includes(value) ? current.filter(v => v !== value) : [...current, value];
-    update(field, updated);
   };
 
   const validateStep = (step: number): boolean => {
@@ -92,23 +86,22 @@ export default function FlotteAutoMultiStepForm() {
     if (step === 1) {
       if (!form.companySize) e.companySize = 'Requis';
       if (!form.industry) e.industry = 'Requis';
+      if (!form.location) e.location = 'Requis';
       if (!form.annualRevenue) e.annualRevenue = 'Requis';
     }
     if (step === 2) {
-      if (!form.numberOfVehicles) e.numberOfVehicles = 'Requis';
-      if (!form.vehicleTypes.length) e.vehicleTypes = 'Sélectionnez au moins un type';
-      if (!form.vehicleUsage) e.vehicleUsage = 'Requis';
-      if (!form.averageVehicleAge) e.averageVehicleAge = 'Requis';
+      if (!form.needsRCPro) e.needsRCPro = 'Requis';
+      if (!form.needsMultirisque) e.needsMultirisque = 'Requis';
+      if (!form.needsCyber) e.needsCyber = 'Requis';
+      if (!form.needsFlotte) e.needsFlotte = 'Requis';
     }
     if (step === 3) {
-      if (!form.numberOfDrivers) e.numberOfDrivers = 'Requis';
-      if (!form.driverProfile) e.driverProfile = 'Requis';
-      if (!form.youngestDriverAge) e.youngestDriverAge = 'Requis';
-      if (!form.hasDriverTraining) e.hasDriverTraining = 'Requis';
+      if (!form.hasPhysicalPremises) e.hasPhysicalPremises = 'Requis';
+      if (!form.numberOfEmployees) e.numberOfEmployees = 'Requis';
+      if (!form.hasVehicles) e.hasVehicles = 'Requis';
     }
     if (step === 4) {
-      if (!form.hasCurrentFleetInsurance) e.hasCurrentFleetInsurance = 'Requis';
-      if (!form.priorClaims) e.priorClaims = 'Requis';
+      if (!form.hasCurrentInsurance) e.hasCurrentInsurance = 'Requis';
     }
     if (step === 5) {
       if (!form.fullName) e.fullName = 'Requis';
@@ -151,8 +144,8 @@ export default function FlotteAutoMultiStepForm() {
 
       const payload = {
         ...form,
-        coverageType: ['Flotte automobile professionnelle'],
-        source: 'fr.insurial.info/flotte-automobile',
+        coverageType: ['Pack TPE / Multirisque Pro complète'],
+        source: 'fr.insurial.info/pack-tpe',
         ...utm,
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString(),
@@ -205,10 +198,9 @@ export default function FlotteAutoMultiStepForm() {
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="1-10">1-10 salariés</option>
-              <option value="11-50">11-50 salariés</option>
-              <option value="51-200">51-200 salariés</option>
-              <option value="200+">200+ salariés</option>
+              <option value="1-3">1-3 salariés</option>
+              <option value="4-9">4-9 salariés</option>
+              <option value="10-20">10-20 salariés</option>
             </select>
             {errors.companySize && <p className="text-red-600 text-sm mt-1">{errors.companySize}</p>}
           </div>
@@ -220,14 +212,29 @@ export default function FlotteAutoMultiStepForm() {
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="Transport">Transport / Logistique</option>
-              <option value="Livraison">Livraison / Coursiers</option>
-              <option value="Commercial">Commercial / VRP</option>
-              <option value="Services">Services / Intervention</option>
-              <option value="BTP">BTP / Chantiers</option>
+              <option value="Commerce">Commerce / Retail</option>
+              <option value="Services">Services professionnels</option>
+              <option value="Artisanat">Artisanat</option>
+              <option value="Restauration">Restauration</option>
+              <option value="Santé">Santé / Bien-être</option>
               <option value="Autre">Autre</option>
             </select>
             {errors.industry && <p className="text-red-600 text-sm mt-1">{errors.industry}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Localisation *</label>
+            <select
+              value={form.location}
+              onChange={e => update('location', e.target.value)}
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+            >
+              <option value="">Sélectionner</option>
+              <option value="FR">France</option>
+              <option value="EU">Union européenne (hors FR)</option>
+              <option value="UK">Royaume‑Uni</option>
+              <option value="Other">Autre</option>
+            </select>
+            {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location}</p>}
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Chiffre d\'affaires annuel *</label>
@@ -237,147 +244,145 @@ export default function FlotteAutoMultiStepForm() {
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="<500K">Moins de 500 K€</option>
-              <option value="500K-2M">500 K€ - 2 M€</option>
-              <option value="2M-10M">2 M€ - 10 M€</option>
-              <option value=">10M">Plus de 10 M€</option>
+              <option value="<100K">Moins de 100 K€</option>
+              <option value="100K-500K">100 K€ - 500 K€</option>
+              <option value="500K-1M">500 K€ - 1 M€</option>
+              <option value="1M-2M">1 M€ - 2 M€</option>
             </select>
             {errors.annualRevenue && <p className="text-red-600 text-sm mt-1">{errors.annualRevenue}</p>}
           </div>
         </div>
       )}
 
-      {/* Step 2 — Parc véhicules */}
+      {/* Step 2 — Besoins */}
       {currentStep === 2 && (
         <div className="space-y-6">
-          <h2 className="text-2xl font-archivo-black text-gray-900">Votre parc de véhicules</h2>
+          <h2 className="text-2xl font-archivo-black text-gray-900">Vos besoins de couverture</h2>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre de véhicules *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">RC Professionnelle *</label>
             <select
-              value={form.numberOfVehicles}
-              onChange={e => update('numberOfVehicles', e.target.value)}
+              value={form.needsRCPro}
+              onChange={e => update('needsRCPro', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="3-5">3-5 véhicules</option>
-              <option value="6-10">6-10 véhicules</option>
-              <option value="11-20">11-20 véhicules</option>
-              <option value="20+">Plus de 20 véhicules</option>
+              <option value="yes">Oui, essentiel</option>
+              <option value="no">Non nécessaire</option>
+              <option value="unsure">Je ne sais pas</option>
             </select>
-            {errors.numberOfVehicles && <p className="text-red-600 text-sm mt-1">{errors.numberOfVehicles}</p>}
+            {errors.needsRCPro && <p className="text-red-600 text-sm mt-1">{errors.needsRCPro}</p>}
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Types de véhicules *</label>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {['Voitures (VP)', 'Utilitaires (VUL)', 'Poids lourds (PL)', 'Motos / 2 roues', 'Engins de chantier'].map(opt => (
-                <label key={opt} className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                  <input
-                    type="checkbox"
-                    checked={form.vehicleTypes.includes(opt)}
-                    onChange={() => toggleMulti('vehicleTypes', opt)}
-                    className="mr-3 text-[#1E3A8A] focus:ring-[#1E3A8A]"
-                  />
-                  <span className="text-sm text-gray-900">{opt}</span>
-                </label>
-              ))}
-            </div>
-            {errors.vehicleTypes && <p className="text-red-600 text-sm mt-1">{errors.vehicleTypes}</p>}
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Usage principal *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Multirisque (locaux, biens) *</label>
             <select
-              value={form.vehicleUsage}
-              onChange={e => update('vehicleUsage', e.target.value)}
+              value={form.needsMultirisque}
+              onChange={e => update('needsMultirisque', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="Livraison">Livraison / Coursier</option>
-              <option value="Commercial">Commercial / VRP</option>
-              <option value="Transport">Transport de marchandises</option>
-              <option value="Passengers">Transport de passagers</option>
-              <option value="Chantier">Intervention chantiers</option>
-              <option value="Autre">Autre</option>
+              <option value="yes">Oui, essentiel</option>
+              <option value="no">Non nécessaire</option>
+              <option value="unsure">Je ne sais pas</option>
             </select>
-            {errors.vehicleUsage && <p className="text-red-600 text-sm mt-1">{errors.vehicleUsage}</p>}
+            {errors.needsMultirisque && <p className="text-red-600 text-sm mt-1">{errors.needsMultirisque}</p>}
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Âge moyen des véhicules *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Cyber-risques *</label>
             <select
-              value={form.averageVehicleAge}
-              onChange={e => update('averageVehicleAge', e.target.value)}
+              value={form.needsCyber}
+              onChange={e => update('needsCyber', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="<2ans">Moins de 2 ans</option>
-              <option value="2-5ans">2-5 ans</option>
-              <option value="5-10ans">5-10 ans</option>
-              <option value=">10ans">Plus de 10 ans</option>
+              <option value="yes">Oui, important</option>
+              <option value="no">Non nécessaire</option>
+              <option value="unsure">Je ne sais pas</option>
             </select>
-            {errors.averageVehicleAge && <p className="text-red-600 text-sm mt-1">{errors.averageVehicleAge}</p>}
+            {errors.needsCyber && <p className="text-red-600 text-sm mt-1">{errors.needsCyber}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Flotte automobile *</label>
+            <select
+              value={form.needsFlotte}
+              onChange={e => update('needsFlotte', e.target.value)}
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+            >
+              <option value="">Sélectionner</option>
+              <option value="yes">Oui, j\'ai des véhicules pros</option>
+              <option value="no">Non</option>
+            </select>
+            {errors.needsFlotte && <p className="text-red-600 text-sm mt-1">{errors.needsFlotte}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Autres besoins spécifiques (optionnel)</label>
+            <textarea
+              value={form.otherNeeds}
+              onChange={e => update('otherNeeds', e.target.value)}
+              placeholder="ex. Protection juridique, marchandises transportées..."
+              rows={2}
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+            />
           </div>
         </div>
       )}
 
-      {/* Step 3 — Conducteurs */}
+      {/* Step 3 — Situation actuelle */}
       {currentStep === 3 && (
         <div className="space-y-6">
-          <h2 className="text-2xl font-archivo-black text-gray-900">Conducteurs</h2>
+          <h2 className="text-2xl font-archivo-black text-gray-900">Votre situation</h2>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre de conducteurs *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Locaux physiques ? *</label>
             <select
-              value={form.numberOfDrivers}
-              onChange={e => update('numberOfDrivers', e.target.value)}
+              value={form.hasPhysicalPremises}
+              onChange={e => update('hasPhysicalPremises', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="1-5">1-5 conducteurs</option>
-              <option value="6-15">6-15 conducteurs</option>
-              <option value="16-50">16-50 conducteurs</option>
-              <option value="50+">Plus de 50 conducteurs</option>
+              <option value="yes">Oui</option>
+              <option value="no">Non (100% remote/domicile)</option>
             </select>
-            {errors.numberOfDrivers && <p className="text-red-600 text-sm mt-1">{errors.numberOfDrivers}</p>}
+            {errors.hasPhysicalPremises && <p className="text-red-600 text-sm mt-1">{errors.hasPhysicalPremises}</p>}
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Profil de conduite *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre de salariés *</label>
             <select
-              value={form.driverProfile}
-              onChange={e => update('driverProfile', e.target.value)}
+              value={form.numberOfEmployees}
+              onChange={e => update('numberOfEmployees', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
-              <option value="named">Conducteurs nommés (liste déclarée)</option>
-              <option value="all">Tous conducteurs</option>
+              <option value="0">0 (indépendant)</option>
+              <option value="1-3">1-3 salariés</option>
+              <option value="4-9">4-9 salariés</option>
+              <option value="10+">10+ salariés</option>
             </select>
-            {errors.driverProfile && <p className="text-red-600 text-sm mt-1">{errors.driverProfile}</p>}
+            {errors.numberOfEmployees && <p className="text-red-600 text-sm mt-1">{errors.numberOfEmployees}</p>}
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Âge du plus jeune conducteur *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Véhicules professionnels ? *</label>
             <select
-              value={form.youngestDriverAge}
-              onChange={e => update('youngestDriverAge', e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-            >
-              <option value="">Sélectionner</option>
-              <option value="18-21">18-21 ans</option>
-              <option value="22-25">22-25 ans</option>
-              <option value="26-30">26-30 ans</option>
-              <option value="30+">Plus de 30 ans</option>
-            </select>
-            {errors.youngestDriverAge && <p className="text-red-600 text-sm mt-1">{errors.youngestDriverAge}</p>}
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Formations à la conduite pro ? *</label>
-            <select
-              value={form.hasDriverTraining}
-              onChange={e => update('hasDriverTraining', e.target.value)}
+              value={form.hasVehicles}
+              onChange={e => update('hasVehicles', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
               <option value="yes">Oui</option>
               <option value="no">Non</option>
             </select>
-            {errors.hasDriverTraining && <p className="text-red-600 text-sm mt-1">{errors.hasDriverTraining}</p>}
+            {errors.hasVehicles && <p className="text-red-600 text-sm mt-1">{errors.hasVehicles}</p>}
           </div>
+          {form.hasVehicles === 'yes' && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre de véhicules (optionnel)</label>
+              <input
+                type="text"
+                value={form.numberOfVehicles || ''}
+                onChange={e => update('numberOfVehicles', e.target.value)}
+                placeholder="ex. 2"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+              />
+            </div>
+          )}
         </div>
       )}
 
@@ -386,69 +391,51 @@ export default function FlotteAutoMultiStepForm() {
         <div className="space-y-6">
           <h2 className="text-2xl font-archivo-black text-gray-900">Couverture actuelle</h2>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Assurance flotte actuelle ? *</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Assurance(s) actuelle(s) ? *</label>
             <select
-              value={form.hasCurrentFleetInsurance}
-              onChange={e => update('hasCurrentFleetInsurance', e.target.value)}
+              value={form.hasCurrentInsurance}
+              onChange={e => update('hasCurrentInsurance', e.target.value)}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
             >
               <option value="">Sélectionner</option>
               <option value="yes">Oui</option>
-              <option value="no">Non (contrats individuels ou rien)</option>
+              <option value="no">Non, première souscription</option>
             </select>
-            {errors.hasCurrentFleetInsurance && <p className="text-red-600 text-sm mt-1">{errors.hasCurrentFleetInsurance}</p>}
+            {errors.hasCurrentInsurance && <p className="text-red-600 text-sm mt-1">{errors.hasCurrentInsurance}</p>}
           </div>
-          {form.hasCurrentFleetInsurance === 'yes' && (
+          {form.hasCurrentInsurance === 'yes' && (
             <>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Assureur actuel (optionnel)</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Assureur(s) actuel(s) (optionnel)</label>
                 <input
                   type="text"
                   value={form.currentProvider || ''}
                   onChange={e => update('currentProvider', e.target.value)}
-                  placeholder="ex. MMA, Generali"
+                  placeholder="ex. AXA, Allianz"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Niveau de couverture actuel (optionnel)</label>
-                <select
-                  value={form.currentCoverageLevel || ''}
-                  onChange={e => update('currentCoverageLevel', e.target.value)}
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Date de renouvellement (optionnel)</label>
+                <input
+                  type="text"
+                  value={form.renewalDate || ''}
+                  onChange={e => update('renewalDate', e.target.value)}
+                  placeholder="ex. Mars 2025"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-                >
-                  <option value="">Sélectionner</option>
-                  <option value="RC">RC seule</option>
-                  <option value="Tiers+">Tiers étendu (vol, incendie, bris de glace)</option>
-                  <option value="AllRisks">Tous risques</option>
-                </select>
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Budget actuel total (optionnel)</label>
+                <input
+                  type="text"
+                  value={form.currentBudget || ''}
+                  onChange={e => update('currentBudget', e.target.value)}
+                  placeholder="ex. 3 000 € / an"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
+                />
               </div>
             </>
-          )}
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">Sinistres passés (3 dernières années) ? *</label>
-            <select
-              value={form.priorClaims}
-              onChange={e => update('priorClaims', e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-            >
-              <option value="">Sélectionner</option>
-              <option value="yes">Oui</option>
-              <option value="no">Non</option>
-            </select>
-            {errors.priorClaims && <p className="text-red-600 text-sm mt-1">{errors.priorClaims}</p>}
-          </div>
-          {form.priorClaims === 'yes' && (
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Détails (optionnel)</label>
-              <textarea
-                value={form.claimDetails || ''}
-                onChange={e => update('claimDetails', e.target.value)}
-                placeholder="Accident responsable, vol, bris de glace..."
-                rows={3}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-              />
-            </div>
           )}
         </div>
       )}

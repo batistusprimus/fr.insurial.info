@@ -38,7 +38,7 @@ export default function PremiumCalculationGuide() {
           </p>
 
           {/* Factor 1 */}
-          <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
+          <div className="not-prose bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Secteur & type d’activité</h2>
             <p className="text-gray-700 mb-4">
               Le profil de risque de votre secteur affecte fortement la tarification. Les secteurs à risque (construction, restauration) paient plus que les secteurs à faible risque (conseil, comptabilité).
@@ -56,7 +56,7 @@ export default function PremiumCalculationGuide() {
           </div>
 
           {/* Factor 2 */}
-          <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
+          <div className="not-prose bg-green-50 border-l-4 border-green-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Limites de garantie & franchises</h2>
             <p className="text-gray-700 mb-4">
               Des limites de garantie élevées augmentent les primes, tandis que des franchises plus hautes les réduisent.
@@ -78,7 +78,7 @@ export default function PremiumCalculationGuide() {
           </div>
 
           {/* Factor 3 */}
-          <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
+          <div className="not-prose bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Taille & chiffre d’affaires</h2>
             <p className="text-gray-700 mb-4">
               Les entreprises plus grandes paient généralement plus en raison d’une exposition accrue.
@@ -91,7 +91,7 @@ export default function PremiumCalculationGuide() {
           </div>
 
           {/* Factor 4 */}
-          <div className="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
+          <div className="not-prose bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Localisation & territoire</h2>
             <p className="text-gray-700 mb-4">
               Le lieu d’exploitation influe sur la prime via des facteurs locaux.
@@ -113,7 +113,7 @@ export default function PremiumCalculationGuide() {
           </div>
 
           {/* Factor 5 */}
-          <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
+          <div className="not-prose bg-red-50 border-l-4 border-red-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Historique de sinistres & gestion des risques</h2>
             <p className="text-gray-700 mb-4">
               Votre historique impacte fortement les primes futures.
@@ -144,21 +144,7 @@ export default function PremiumCalculationGuide() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 text-center bg-gray-50 rounded-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to get competitive rates?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Our platform compares quotes from multiple insurers to find you the best premium.
-          </p>
-          <Link 
-            href="/"
-            className="inline-block bg-[#1E3A8A] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors"
-          >
-            Compare Quotes Now
-          </Link>
-        </div>
+        {/* CTA supprimé */}
       </article>
     </div>
   );

@@ -28,7 +28,7 @@ interface FormData {
 
 const initialFormData: FormData = {
   coverageType: [],
-  location: '',
+  location: 'EU-France',
   budget: '',
   timeline: '',
   insuranceInterest: '',
@@ -62,9 +62,8 @@ export default function LeadForm() {
     switch (step) {
       case 1:
         if (formData.coverageType.length === 0) newErrors.coverageType = 'Veuillez sélectionner au moins un type de couverture';
-        if (!formData.location) newErrors.location = 'La localisation est requise';
         if (!formData.budget) newErrors.budget = 'La tranche de budget est requise';
-        if (!formData.timeline) newErrors.timeline = 'L’échéance est requise';
+        if (!formData.timeline) newErrors.timeline = 'L'échéance est requise';
         break;
       case 2:
         if (!formData.companySize) newErrors.companySize = 'La taille de l’entreprise est requise';
@@ -213,26 +212,6 @@ export default function LeadForm() {
                   <option value="pack_tpe">Pack TPE / Multirisque Pro complète</option>
                   <option value="autre">Autre / Je ne sais pas encore</option>
                 </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Localisation *</label>
-                <select
-                  value={formData.location}
-                  onChange={(e) => updateFormData('location', e.target.value)}
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent text-gray-900"
-                >
-                  <option value="">Sélectionnez votre localisation</option>
-                  <option value="US-Northeast">États‑Unis - Nord‑Est</option>
-                  <option value="US-Southeast">États‑Unis - Sud‑Est</option>
-                  <option value="US-Midwest">États‑Unis - Midwest</option>
-                  <option value="US-West">États‑Unis - Ouest</option>
-                  <option value="EU-UK">UE - Royaume‑Uni</option>
-                  <option value="EU-France">UE - France</option>
-                  <option value="EU-Germany">UE - Allemagne</option>
-                  <option value="EU-Other">UE - Autre</option>
-                </select>
-                {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location}</p>}
               </div>
 
               <div>
@@ -385,7 +364,6 @@ export default function LeadForm() {
                 <h3 className="font-semibold text-gray-900 mb-2">Vérifiez votre demande :</h3>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Couverture : {formData.coverageType.join(', ')}</li>
-                  <li>• Localisation : {formData.location}</li>
                   <li>• Budget : {formData.budget}</li>
                   <li>• Entreprise : {formData.companySize} en {formData.industry}</li>
                   <li>• Contact : {formData.workEmail}</li>

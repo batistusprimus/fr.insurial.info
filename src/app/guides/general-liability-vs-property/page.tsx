@@ -15,7 +15,11 @@ export default function GeneralLiabilityVsPropertyGuide() {
       {/* Article */}
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="mb-8">
-          <div className="text-4xl mb-4">🛡️</div>
+          <div className="text-4xl mb-4" aria-hidden>
+            <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">
             RC générale vs Biens — quelle différence ?
           </h1>
@@ -31,7 +35,7 @@ export default function GeneralLiabilityVsPropertyGuide() {
             Comprendre la différence entre RC générale et Assurance Biens est essentiel pour une protection complète.
           </p>
 
-          <div className="bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
+          <div className="not-prose bg-blue-50 border-l-4 border-[#1E3A8A] p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Responsabilité civile générale</h2>
             <p className="text-gray-700 mb-4">
               Protège contre les réclamations de tiers (corporel, matériel, atteinte) liées à vos activités.
@@ -46,14 +50,14 @@ export default function GeneralLiabilityVsPropertyGuide() {
             <li>Frais de défense et règlements</li>
           </ul>
 
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+          <div className="not-prose bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
             <h4 className="font-semibold text-green-800 mb-2">Exemple réel :</h4>
             <p className="text-green-700">
               Un client trébuche sur un câble et se fracture le poignet. La RC générale couvre ses frais médicaux et juridiques.
             </p>
           </div>
 
-          <div className="bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
+          <div className="not-prose bg-orange-50 border-l-4 border-orange-400 p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Assurance des biens</h2>
             <p className="text-gray-700 mb-4">
               Protège vos actifs matériels (bâtiments, équipements, stocks, mobilier) contre incendie, vol, vandalisme.
@@ -68,14 +72,14 @@ export default function GeneralLiabilityVsPropertyGuide() {
             <li>Frais pour opérer depuis un site temporaire</li>
           </ul>
 
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+          <div className="not-prose bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
             <h4 className="font-semibold text-green-800 mb-2">Exemple réel :</h4>
             <p className="text-green-700">
               Un incendie endommage vos bureaux et détruit du matériel. L’assurance Biens couvre les remplacements et la perte d’exploitation.
             </p>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-6 mb-8">
+          <div className="not-prose bg-gray-50 rounded-lg p-6 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Différences clés</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
