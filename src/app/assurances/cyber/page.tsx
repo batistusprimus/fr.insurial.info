@@ -1,4 +1,8 @@
 import CyberMultiStepForm from '@/components/CyberMultiStepForm';
+import PressLogos from '@/components/PressLogos';
+import SummitsLogos from '@/components/SummitsLogos';
+import TechLogos from '@/components/TechLogos';
+import Image from 'next/image';
 
 export default function CyberRisksPage() {
   return (
@@ -8,6 +12,15 @@ export default function CyberRisksPage() {
         <div className="container mx-auto px-4 max-w-6xl py-16 md:py-24">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
+              <div className="mb-4">
+                <Image
+                  src="/logo_insurial_cyber.png"
+                  alt="Insurial Cyber Risks"
+                  width={220}
+                  height={60}
+                  priority
+                />
+              </div>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
                 Insurial Cyber Risks
               </span>
@@ -23,43 +36,122 @@ export default function CyberRisksPage() {
                 <li className="flex items-center"><span className="mr-2 text-blue-700">✓</span> Notifications CNIL, défense et responsabilités</li>
                 <li className="flex items-center"><span className="mr-2 text-blue-700">✓</span> Couverture pertes d’exploitation</li>
               </ul>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="#devis" className="px-6 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors font-semibold">Commencer mon devis</a>
+                <a href="#garanties" className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg hover:bg-white/60 transition-colors">Voir les garanties</a>
+              </div>
+              <p className="mt-3 text-xs text-gray-600 max-w-2xl">
+                Insurial met en relation des entreprises ayant un besoin identifié avec des courtiers et assureurs spécialisés en cybersécurité. Nous ne sommes pas assureur. Pour en savoir plus, consultez nos
+                {' '}<a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>,
+                {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d’utilisation</a>
+                {' '}et notre <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
+              </p>
             </div>
             <div className="md:col-span-5">
-              <div className="bg-white/80 backdrop-blur border rounded-2xl shadow-xl p-4 md:p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-3">Obtenir un devis personnalisé</h2>
-                <CyberMultiStepForm />
+              <div className="bg-white/60 backdrop-blur border rounded-2xl shadow-xl p-6 md:p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">24/7</div>
+                    <div className="text-sm text-gray-600">Réponse à incident</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">72h</div>
+                    <div className="text-sm text-gray-600">Notification CNIL</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">€</div>
+                    <div className="text-sm text-gray-600">Pertes d’exploitation</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">+ Juridique</div>
+                    <div className="text-sm text-gray-600">Défense & RC</div>
+                  </div>
+                </div>
+                <a href="#devis" className="inline-block mt-6 px-5 py-2.5 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors">Obtenir un devis</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sections de crédibilité */}
+      {/* Logos confiance */}
+      <PressLogos />
+
+      {/* Garanties clés */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
+          <h2 id="garanties" className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Garanties principales</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 border rounded-xl">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Pourquoi essentiel</h3>
-              <p className="text-gray-700">
-                Les incidents cyber augmentent: ransomware, compromissions, fraudes. Une police dédiée mitige l’impact opérationnel, financier et réglementaire.
-              </p>
-            </div>
-            <div className="p-6 border rounded-xl">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Exemples couverts</h3>
-              <ul className="text-gray-700 list-disc pl-5 space-y-1">
-                <li>Chiffrement serveurs (rançongiciel)</li>
-                <li>Fuite de données et notification CNIL</li>
-                <li>Paralysie e‑commerce et perte de CA</li>
-              </ul>
-            </div>
-            <div className="p-6 border rounded-xl">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Prérequis typiques</h3>
-              <ul className="text-gray-700 list-disc pl-5 space-y-1">
-                <li>MFA, sauvegardes, patching régulier</li>
-                <li>Protection email et postes</li>
-                <li>Plan de réponse à incident</li>
-              </ul>
-            </div>
+            {[ 
+              { t: 'Réponse à incident 24/7', d: 'Forensics, confinement, restauration, communication de crise.' },
+              { t: 'Pertes d’exploitation', d: 'Indemnisation du manque à gagner lié à l’arrêt d’activité.' },
+              { t: 'Responsabilité et défense', d: 'Frais juridiques, gestion des réclamations de tiers.' },
+              { t: 'Gestion des données', d: 'Notification CNIL, information des personnes, monitoring.' },
+              { t: 'Fraude & phishing', d: 'Couverture de certains scénarios de fraude et transfert de fonds.' },
+              { t: 'Restauration systèmes', d: 'Réinstallation, récupération de données, accompagnement technique.' },
+            ].map((card) => (
+              <div key={card.t} className="p-6 border rounded-xl hover:shadow-md transition-shadow bg-white">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.t}</h3>
+                <p className="text-gray-700">{card.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Déroulé d’intervention */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Comment nous intervenons</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { n: '01', t: 'Signalement', d: 'Contact 24/7, prise en charge immédiate.' },
+              { n: '02', t: 'Confinement', d: 'Analyse forensics et limitation de l’impact.' },
+              { n: '03', t: 'Restauration', d: 'Remise en service, accompagnement technique & légal.' },
+              { n: '04', t: 'Indemnisation', d: 'Calcul des pertes et règlement des sinistres.' },
+            ].map(step => (
+              <div key={step.n} className="p-6 rounded-xl bg-white border">
+                <div className="text-sm font-semibold text-blue-800">{step.n}</div>
+                <div className="text-lg font-semibold text-gray-900">{step.t}</div>
+                <p className="text-gray-700 mt-2 text-sm">{step.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi Insurial */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Pourquoi choisir Insurial</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[ 
+              { t: 'Indépendant et pédagogique', d: 'Aucun démarchage. Informations claires et comparables.' },
+              { t: 'Réseau d’experts', d: 'Courtiers & assureurs spécialisés cyber, intervention 24/7.' },
+              { t: 'Simple et rapide', d: 'Questionnaire adapté, devis sous 24h.' },
+            ].map((v) => (
+              <div key={v.t} className="p-6 border rounded-xl bg-white">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{v.t}</h3>
+                <p className="text-gray-700">{v.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SummitsLogos />
+      <TechLogos />
+
+      {/* Formulaire déplacé */}
+      <section id="devis" className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Obtenir un devis personnalisé</h2>
+            <p className="text-gray-600 mt-2">Répondez à quelques questions: moins de 3 minutes.</p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-lg border p-4 md:p-6">
+            <CyberMultiStepForm />
           </div>
         </div>
       </section>
@@ -86,9 +178,15 @@ export default function CyberRisksPage() {
       </section>
 
       <footer className="py-10 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl text-center text-sm text-gray-600 space-y-1">
-          <p>Insurial est une plateforme d’information indépendante.</p>
-          <p>Aucun démarchage commercial.</p>
+        <div className="container mx-auto px-4 max-w-4xl text-center text-sm text-gray-600 space-y-2">
+          <p>Insurial est une plateforme d’information indépendante. Aucun démarchage commercial.</p>
+          <p>
+            <a href="/legal" className="underline text-gray-700 hover:text-gray-900">Mentions légales</a>
+            {' '}•{' '}
+            <a href="/terms" className="underline text-gray-700 hover:text-gray-900">Conditions d’utilisation</a>
+            {' '}•{' '}
+            <a href="/privacy" className="underline text-gray-700 hover:text-gray-900">Politique de confidentialité</a>
+          </p>
           <p>© 2025 Insurial – Tous droits réservés.</p>
         </div>
       </footer>
