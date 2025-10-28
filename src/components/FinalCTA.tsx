@@ -43,6 +43,12 @@ export default function FinalCTA({ onScrollToForm }: FinalCTAProps) {
             Annulable à tout moment
           </span>
         </div>
+
+        {/* Disclaimer discret */}
+        <p className="text-xs text-blue-100 mt-4">
+          Insurial est un service d’information et de mise en relation. Nous ne sommes pas assureur ni courtier et ne fournissons pas de conseil personnalisé.
+          Voir <a href="/legal" className="underline">mentions légales</a>, <a href="/terms" className="underline">conditions d’utilisation</a> et <a href="/privacy" className="underline">politique de confidentialité</a>.
+        </p>
       </div>
     </section>
   );

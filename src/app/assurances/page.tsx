@@ -18,6 +18,10 @@ export default function AssurancesIndexPage() {
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Sélectionnez la catégorie qui correspond à votre activité pour comprendre les garanties essentielles et compléter votre questionnaire en 2 minutes.
           </p>
+        <p className="text-xs text-gray-600 max-w-3xl mx-auto mt-2">
+          Insurial est un service d’information et de mise en relation. Nous ne sommes pas assureur ni courtier et ne fournissons pas de conseil personnalisé.
+          Voir <a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>, <a href="/terms" className="underline text-[#1E3A8A]">conditions d’utilisation</a> et <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
+        </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

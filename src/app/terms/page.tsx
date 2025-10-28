@@ -27,9 +27,10 @@ export default function TermsPage() {
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Description du Service</h2>
             <p className="mb-6">
-              Insurial fournit un service gratuit de demande de devis qui met en relation les entreprises avec des
-              partenaires assureurs pré‑sélectionnés. Nous facilitons le processus de devis, sans fournir directement
-              une couverture d’assurance ni agir en tant que courtier.
+              Insurial est un service d’information et de mise en relation. Nous aidons les entreprises à comprendre les
+              options de couverture disponibles et transmettons leurs coordonnées à des professionnels partenaires (courtiers,
+              assureurs) afin qu’ils puissent les contacter pour des propositions adaptées. Nous ne fournissons aucun conseil
+              personnalisé et n’agissons pas en tant que courtier.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Obligations de l’utilisateur</h2>
@@ -45,8 +46,8 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Nos engagements</h2>
             <p className="mb-4">Nous nous engageons à :</p>
             <ul className="list-disc pl-6 mb-6">
-              <li>Fournir des devis sous 24 heures (jours ouvrés)</li>
-              <li>Vous mettre en relation uniquement avec des partenaires assureurs vérifiés</li>
+              <li>Faciliter une mise en relation rapide (objectif : sous 24 heures ouvrées)</li>
+              <li>Vous mettre en relation uniquement avec des partenaires professionnels vérifiés</li>
               <li>Protéger vos données conformément à notre Politique de confidentialité</li>
               <li>Offrir un service gratuit sans obligation d’achat</li>
             </ul>

@@ -50,6 +50,14 @@ export default function InsuranceTemplate({
               </button>
             ))}
           </div>
+
+          <p className="mt-6 text-xs text-gray-600 max-w-3xl mx-auto">
+            Insurial est un service d’information et de mise en relation. Nous ne sommes pas assureur ni courtier et ne fournissons pas de conseil personnalisé.
+            Pour en savoir plus, consultez nos
+            {' '}<a href="/legal" className="underline text-[#1E3A8A]">mentions légales</a>,
+            {' '}<a href="/terms" className="underline text-[#1E3A8A]">conditions d’utilisation</a>
+            {' '}et notre <a href="/privacy" className="underline text-[#1E3A8A]">politique de confidentialité</a>.
+          </p>
         </div>
       </section>
 

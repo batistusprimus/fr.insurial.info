@@ -529,7 +529,10 @@ export default function CyberMultiStepForm() {
                     className="mt-1 text-[#1E3A8A] focus:ring-[#1E3A8A]"
                   />
                   <span className="text-sm text-gray-600">
-                    J’accepte la <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise Insurial à me contacter ainsi que ses partenaires (courtiers/assureurs) pour des offres adaptées.
+                    J’accepte la <a href="/privacy" className="text-[#1E3A8A] hover:underline">Politique de confidentialité</a> et j’autorise Insurial à :
+                    <br />• Me fournir des informations adaptées à mon profil
+                    <br />• Transmettre mes coordonnées à des partenaires (courtiers, assureurs) pour qu’ils me contactent avec des propositions commerciales
+                    <br />• M’envoyer des ressources pédagogiques par email *
                   </span>
                 </label>
                 {errors.gdprConsent && <p className="text-red-600 text-sm">{errors.gdprConsent}</p>}
@@ -538,7 +541,7 @@ export default function CyberMultiStepForm() {
                     <p className="text-red-600 text-sm">{errors.submit}</p>
                   </div>
                 )}
-                <p className="text-xs text-gray-500">Gratuit & sans obligation • Devis sous 24h • Conforme RGPD</p>
+                <p className="text-xs text-gray-500">Gratuit & sans obligation • Mise en relation sous 24h • Conforme RGPD</p>
               </div>
             </div>
           )}
@@ -561,7 +564,7 @@ export default function CyberMultiStepForm() {
                   disabled={isSubmitting}
                   className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
                 >
-                  {isSubmitting ? 'Envoi…' : 'Obtenir mon devis gratuit'}
+                  {isSubmitting ? 'Envoi…' : 'Envoyer mon questionnaire'}
                 </button>
               )}
             </div>

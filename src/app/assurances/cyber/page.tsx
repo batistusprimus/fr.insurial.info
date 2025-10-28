@@ -28,7 +28,7 @@ export default function CyberRisksPage() {
                 Protégez votre entreprise des cyber menaces
               </h1>
               <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
-                Assurance cyber complète: réponse à incident 24/7, restauration des systèmes, notification CNIL, défense juridique et pertes d’exploitation. Conçue pour les entreprises exposées.
+                Découvrez les garanties clés de l’assurance cyber: réponse à incident 24/7, restauration des systèmes, notification CNIL, défense juridique et couverture des pertes d’exploitation. Informations claires pour les entreprises exposées.
               </p>
               <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
                 <li className="flex items-center"><span className="mr-2 text-blue-700">✓</span> Assistance d’urgence 24/7</li>
@@ -38,8 +38,8 @@ export default function CyberRisksPage() {
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#devis" className="px-6 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors font-semibold">Commencer mon devis</a>
-                <a href="#garanties" className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg hover:bg-white/60 transition-colors">Voir les garanties</a>
+                <a href="#questionnaire" className="px-6 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors font-semibold">Commencer mon questionnaire</a>
+                <a href="#garanties" className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg hover:bg-white/60 transition-colors">Voir les garanties courantes</a>
               </div>
               <p className="mt-3 text-xs text-gray-600 max-w-2xl">
                 Insurial met en relation des entreprises ayant un besoin identifié avec des courtiers et assureurs spécialisés en cybersécurité. Nous ne sommes pas assureur. Pour en savoir plus, consultez nos
@@ -68,7 +68,7 @@ export default function CyberRisksPage() {
                     <div className="text-sm text-gray-600">Défense & RC</div>
                   </div>
                 </div>
-                <a href="#devis" className="inline-block mt-6 px-5 py-2.5 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors">Obtenir un devis</a>
+                <a href="#questionnaire" className="inline-block mt-6 px-5 py-2.5 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors">Commencer mon questionnaire</a>
               </div>
             </div>
           </div>
@@ -78,10 +78,10 @@ export default function CyberRisksPage() {
       {/* Logos confiance */}
       <PressLogos />
 
-      {/* Garanties clés */}
+      {/* Garanties courantes */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 id="garanties" className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Garanties principales</h2>
+          <h2 id="garanties" className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Garanties courantes</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[ 
               { t: 'Réponse à incident 24/7', d: 'Forensics, confinement, restauration, communication de crise.' },
@@ -100,16 +100,16 @@ export default function CyberRisksPage() {
         </div>
       </section>
 
-      {/* Déroulé d’intervention */}
+      {/* Déroulé type via partenaires */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Comment nous intervenons</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Déroulé type d’une prise en charge</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { n: '01', t: 'Signalement', d: 'Contact 24/7, prise en charge immédiate.' },
-              { n: '02', t: 'Confinement', d: 'Analyse forensics et limitation de l’impact.' },
-              { n: '03', t: 'Restauration', d: 'Remise en service, accompagnement technique & légal.' },
-              { n: '04', t: 'Indemnisation', d: 'Calcul des pertes et règlement des sinistres.' },
+              { n: '01', t: 'Signalement', d: 'Contact 24/7 auprès de l’assureur, prise en charge initiale.' },
+              { n: '02', t: 'Confinement', d: 'Forensics et limitation de l’impact par des équipes dédiées.' },
+              { n: '03', t: 'Restauration', d: 'Remise en service, accompagnement technique et légal.' },
+              { n: '04', t: 'Indemnisation', d: 'Évaluation des pertes et règlement selon contrat.' },
             ].map(step => (
               <div key={step.n} className="p-6 rounded-xl bg-white border">
                 <div className="text-sm font-semibold text-blue-800">{step.n}</div>
@@ -118,6 +118,7 @@ export default function CyberRisksPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-gray-500 mt-4">Exemple générique de parcours de prise en charge assuré par des partenaires (courtiers/assureurs). Les modalités dépendent des contrats.</p>
         </div>
       </section>
 
@@ -129,7 +130,7 @@ export default function CyberRisksPage() {
             {[ 
               { t: 'Indépendant et pédagogique', d: 'Aucun démarchage. Informations claires et comparables.' },
               { t: 'Réseau d’experts', d: 'Courtiers & assureurs spécialisés cyber, intervention 24/7.' },
-              { t: 'Simple et rapide', d: 'Questionnaire adapté, devis sous 24h.' },
+              { t: 'Simple et rapide', d: 'Questionnaire adapté, mise en relation sous 24h.' },
             ].map((v) => (
               <div key={v.t} className="p-6 border rounded-xl bg-white">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{v.t}</h3>
@@ -144,11 +145,11 @@ export default function CyberRisksPage() {
       <TechLogos />
 
       {/* Formulaire déplacé */}
-      <section id="devis" className="py-12 md:py-16 bg-white">
+      <section id="questionnaire" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Obtenir un devis personnalisé</h2>
-            <p className="text-gray-600 mt-2">Répondez à quelques questions: moins de 3 minutes.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Compléter votre questionnaire gratuit</h2>
+            <p className="text-gray-600 mt-2">Répondez à quelques questions (moins de 3 minutes). Mise en relation rapide — contact sous 24h.</p>
           </div>
           <div className="bg-white rounded-2xl shadow-lg border p-4 md:p-6">
             <CyberMultiStepForm />

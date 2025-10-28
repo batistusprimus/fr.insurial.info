@@ -448,7 +448,7 @@ export default function LeadForm() {
                   disabled={isSubmitting}
                   className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
                 >
-                  {isSubmitting ? 'Envoi…' : 'Obtenir mon devis gratuit'}
+                  {isSubmitting ? 'Envoi…' : 'Envoyer mon questionnaire'}
                 </button>
               )}
             </div>
@@ -457,7 +457,7 @@ export default function LeadForm() {
 
         {/* Microcopy sous le formulaire */}
         <p className="text-center text-sm text-gray-500 mt-4">
-          Gratuit & sans obligation • Devis sous 24h • Conforme RGPD
+          Gratuit & sans obligation • Mise en relation sous 24h • Conforme RGPD
         </p>
       </div>
     </section>
