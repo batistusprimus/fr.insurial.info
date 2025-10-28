@@ -204,7 +204,7 @@ export default function PackTPEPage() {
               { q: 'Peut-on ajouter des options ?', a: 'Oui: cyber, flotte, protection juridique, bris de machine... Le courtier adapte selon vos besoins.' },
               { q: 'Avantage vs contrats séparés ?', a: 'Gestion simplifiée (un seul interlocuteur, une échéance), cohérence des garanties et tarif négocié groupé.' },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier spécialisé TPE vous contacte sous 24-48h pour composer votre pack.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: "Insurial est-il un courtier ?", a: "Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>
