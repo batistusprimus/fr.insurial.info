@@ -63,7 +63,7 @@ export default function LeadForm() {
       case 1:
         if (formData.coverageType.length === 0) newErrors.coverageType = 'Veuillez sélectionner au moins un type de couverture';
         if (!formData.budget) newErrors.budget = 'La tranche de budget est requise';
-        if (!formData.timeline) newErrors.timeline = 'L'échéance est requise';
+        if (!formData.timeline) newErrors.timeline = "L’échéance est requise";
         break;
       case 2:
         if (!formData.companySize) newErrors.companySize = 'La taille de l’entreprise est requise';
