@@ -200,7 +200,7 @@ export default function PackTPEPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { q: "C'est vraiment gratuit ?", a: "Oui. Le questionnaire Insurial est 100% gratuit et sans engagement. Vous ne payez rien pour être mis en relation avec des courtiers." },
-              { q: 'Pack TPE: que contient-il ?', a: 'Un socle de garanties essentielles (RC Pro, Multirisque, Pertes d'exploitation), modulables selon votre activité. Un courtier composera le pack adapté.' },
+              { q: 'Pack TPE: que contient-il ?', a: "Un socle de garanties essentielles (RC Pro, Multirisque, Pertes d'exploitation), modulables selon votre activité. Un courtier composera le pack adapté." },
               { q: 'Peut-on ajouter des options ?', a: 'Oui: cyber, flotte, protection juridique, bris de machine... Le courtier adapte selon vos besoins.' },
               { q: 'Avantage vs contrats séparés ?', a: 'Gestion simplifiée (un seul interlocuteur, une échéance), cohérence des garanties et tarif négocié groupé.' },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier spécialisé TPE vous contacte sous 24-48h pour composer votre pack.' },

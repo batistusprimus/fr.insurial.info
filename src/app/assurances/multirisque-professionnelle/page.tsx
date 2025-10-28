@@ -204,7 +204,7 @@ export default function MultirisqueProPage() {
               { q: 'Quels biens sont couverts ?', a: 'Locaux, aménagements, matériel, marchandises selon les options et plafonds établis. Le courtier adaptera selon votre profil.' },
               { q: "Catastrophe naturelle: comment ça marche ?", a: "Couvert si arrêté de catastrophe naturelle. Une franchise légale s'applique (fixée par l'État)." },
               { q: 'Combien de temps ça prend ?', a: '3 minutes pour le questionnaire. Un courtier vous contacte sous 24-48h pour échanger sur votre situation.' },
-              { q: 'Insurial est-il un courtier ?', a: 'Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé.' },
+              { q: "Insurial est-il un courtier ?", a: "Non. Insurial est un service d'information et de mise en relation. Nous ne sommes pas courtier et ne fournissons pas de conseil personnalisé." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border">
                 <div className="font-semibold text-gray-900 mb-2">{item.q}</div>
