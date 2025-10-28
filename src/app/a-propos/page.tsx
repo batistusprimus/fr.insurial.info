@@ -62,7 +62,7 @@ export default function AboutPage() {
               'Clarté, pragmatisme et transparence',
             ].map((item) => (
               <div key={item} className="bg-white rounded-lg shadow-sm p-6 text-gray-700">
-                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#1E3A8A]/10 text-[#1E3A8A]">✓</div>
+                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#1E3A8A]/10 text-[#1E3A8A]"><Check /></div>
                 <p>{item}</p>
               </div>
             ))}
@@ -100,7 +100,11 @@ export default function AboutPage() {
               'Nous n’effectuons pas de démarchage commercial à partir de vos lectures',
             ].map((item) => (
               <div key={item} className="bg-white rounded-lg shadow-sm p-6 text-gray-700">
-                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-500/10 text-red-600">!</div>
+                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-500/10 text-red-600" aria-hidden>
+                  <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.72-1.36 3.485 0l6.518 11.59A2 2 0 0 1 16.518 18H3.482a2 2 0 0 1-1.742-3.31L8.257 3.1zM11 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1-2a1 1 0 0 1-1-1V8a1 1 0 1 1 2 0v3a1 1 0 0 1-1 1z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>{item}</p>
               </div>
             ))}
@@ -120,7 +124,7 @@ export default function AboutPage() {
               'Priorité donnée aux exemples pratiques et aux checklists actionnables',
             ].map((item) => (
               <div key={item} className="bg-white rounded-lg shadow-sm p-6 text-gray-700">
-                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">✓</div>
+                <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600"><Check /></div>
                 <p>{item}</p>
               </div>
             ))}
@@ -149,6 +153,14 @@ export default function AboutPage() {
         </section>
       </div>
     </main>
+  );
+}
+
+function Check() {
+  return (
+    <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
   );
 }
 

@@ -15,7 +15,13 @@ export default function PremiumCalculationGuide() {
       {/* Article */}
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="mb-8">
-          <div className="text-4xl mb-4">💰</div>
+          <div className="text-4xl mb-4" aria-hidden>
+            <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2" ry="2" />
+              <circle cx="12" cy="12" r="3" />
+              <path d="M18 12h.01M6 12h.01" />
+            </svg>
+          </div>
           <h1 className="text-4xl md:text-5xl font-archivo-black text-gray-900 mb-4">
             Comment les primes sont calculées (5 facteurs clés)
           </h1>
@@ -122,7 +128,7 @@ export default function PremiumCalculationGuide() {
 
           {/* Pro Tips */}
           <div className="bg-[#1E3A8A] text-white rounded-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4">💡 Astuces pour réduire vos primes</h2>
+            <h2 className="text-2xl font-bold mb-4 inline-flex items-center gap-2"><LightbulbIcon /> Astuces pour réduire vos primes</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <ul className="space-y-2">
                 <li>• Mettre en place des formations sécurité</li>
@@ -155,5 +161,15 @@ export default function PremiumCalculationGuide() {
         </div>
       </article>
     </div>
+  );
+}
+
+function LightbulbIcon() {
+  return (
+    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M9 18h6" />
+      <path d="M10 22h4" />
+      <path d="M2 10a8 8 0 1 1 16 0c0 3-2 5-4 6H6c-2-1-4-3-4-6z" />
+    </svg>
   );
 }

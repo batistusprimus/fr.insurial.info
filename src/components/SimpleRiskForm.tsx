@@ -334,8 +334,11 @@ export default function SimpleRiskForm() {
               {isSubmitting ? 'Envoi…' : 'Envoyer mon questionnaire'}
             </button>
 
-            <p className="text-center text-sm text-gray-500">
-              🔒 Gratuit & sans obligation • Conforme RGPD • Vous contrôlez l’usage de vos données
+            <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-2">
+              <svg className="w-4 h-4 text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>
+              Gratuit & sans obligation • Conforme RGPD • Vous contrôlez l’usage de vos données
             </p>
           </form>
         </div>
@@ -343,17 +346,17 @@ export default function SimpleRiskForm() {
         {/* Benefits below form */}
         <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
           <div className="bg-white rounded-lg p-4 shadow-sm">
-            <div className="text-2xl mb-2">📊</div>
+            <div className="text-2xl mb-2">{renderIcon('chart')}</div>
             <h4 className="font-semibold text-gray-900 text-sm">Questionnaire adapté</h4>
             <p className="text-xs text-gray-600">Selon votre secteur et votre profil</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
-            <div className="text-2xl mb-2">🎯</div>
+            <div className="text-2xl mb-2">{renderIcon('target')}</div>
             <h4 className="font-semibold text-gray-900 text-sm">Partenaires qualifiés</h4>
             <p className="text-xs text-gray-600">Partenaires d’assurance pré‑qualifiés</p>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm">
-            <div className="text-2xl mb-2">⚡</div>
+            <div className="text-2xl mb-2">{renderIcon('bolt')}</div>
             <h4 className="font-semibold text-gray-900 text-sm">Mise en relation rapide</h4>
             <p className="text-xs text-gray-600">Contact sous 24 h garanti</p>
           </div>
@@ -361,4 +364,35 @@ export default function SimpleRiskForm() {
       </div>
     </section>
   );
+}
+
+function renderIcon(name: string) {
+  switch (name) {
+    case 'chart':
+      return (
+        <svg className="w-6 h-6 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M3 3v18h18" />
+          <rect x="7" y="10" width="3" height="7" />
+          <rect x="12" y="6" width="3" height="11" />
+          <rect x="17" y="12" width="3" height="5" />
+        </svg>
+      );
+    case 'target':
+      return (
+        <svg className="w-6 h-6 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="7" x2="12" y2="12" />
+          <line x1="12" y1="12" x2="15" y2="12" />
+        </svg>
+      );
+    case 'bolt':
+      return (
+        <svg className="w-6 h-6 text-[#1E3A8A]" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+          <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
 }

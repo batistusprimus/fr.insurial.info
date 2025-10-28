@@ -1,9 +1,44 @@
 'use client';
 
 export default function KeyBenefits() {
+  const renderIcon = (name: string) => {
+    switch (name) {
+      case 'target':
+        return (
+          <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="7" x2="12" y2="12" />
+            <line x1="12" y1="12" x2="15" y2="12" />
+          </svg>
+        );
+      case 'book':
+        return (
+          <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M4 4v15.5A2.5 2.5 0 0 1 6.5 22H20V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z" />
+          </svg>
+        );
+      case 'compass':
+        return (
+          <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <circle cx="12" cy="12" r="10" />
+            <polygon points="16 8 14 14 8 16 10 10 16 8" />
+          </svg>
+        );
+      case 'bolt':
+        return (
+          <svg className="w-10 h-10 text-[#1E3A8A]" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
   const benefits = [
     {
-      icon: "🎯",
+      icon: "target",
       title: "Évaluation personnalisée",
       description: "Notre questionnaire vous aide à identifier vos besoins selon votre secteur, taille et localisation.",
       features: [
@@ -13,7 +48,7 @@ export default function KeyBenefits() {
       ]
     },
     {
-      icon: "📚",
+      icon: "book",
       title: "Centre de ressources pédagogiques",
       description: "Des guides clairs et sans jargon pour comprendre l’assurance entreprise.",
       features: [
@@ -23,7 +58,7 @@ export default function KeyBenefits() {
       ]
     },
     {
-      icon: "🧭",
+      icon: "compass",
       title: "Informations indépendantes",
       description: "Nous ne vendons pas d’assurances. Utilisez votre évaluation avec les professionnels qui vous contacteront.",
       features: [
@@ -33,7 +68,7 @@ export default function KeyBenefits() {
       ]
     },
     {
-      icon: "⚡",
+      icon: "bolt",
       title: "Expérience simple et rapide",
       description: "Quelques questions pour compléter votre questionnaire en minutes.",
       features: [
@@ -61,7 +96,7 @@ export default function KeyBenefits() {
             <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-start mb-4">
                 <div className="text-4xl mr-4 flex-shrink-0">
-                  {benefit.icon}
+                  {renderIcon(benefit.icon)}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">

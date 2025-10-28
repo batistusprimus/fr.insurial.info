@@ -49,6 +49,12 @@ export default function Header() {
             >
               À propos
             </Link>
+            <Link 
+              href="/assurances/cyber" 
+              className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
+            >
+              @cyber/
+            </Link>
             
             {/* Dropdown Insurance */}
             <div className="relative group">
@@ -157,6 +163,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 À propos
+              </Link>
+              <Link 
+                href="/assurances/cyber" 
+                className="text-gray-700 hover:text-[#1E3A8A] transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                @cyber/
               </Link>
               
               {/* Insurance Mobile */}
