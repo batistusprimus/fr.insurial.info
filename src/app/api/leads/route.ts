@@ -24,6 +24,21 @@ interface LeadData {
   // Step 4 - Consent
   gdprConsent: boolean;
   
+  // Champs spécifiques Cyber (facultatifs selon formulaire)
+  annualRevenue?: string;
+  infraCriticalSystems?: string[];
+  infraCloud?: string[];
+  emailProvider?: string;
+  securityMfa?: string;
+  securityBackupFrequency?: string;
+  securityEndpointProtection?: string;
+  securityEmailProtection?: string;
+  priorIncidents?: string;
+  incidentYear?: string;
+  incidentDetails?: string;
+  hasIncidentResponsePlan?: string;
+  currentCoverageCyber?: string;
+
   // UTM & tracking
   utm_source?: string;
   utm_medium?: string;
@@ -73,6 +88,26 @@ export async function POST(request: NextRequest) {
       coverage: enrichedData.coverageType,
       location: enrichedData.location,
       timestamp: enrichedData.timestamp,
+      cyber: {
+        annualRevenue: enrichedData.annualRevenue,
+        infraCriticalSystems: enrichedData.infraCriticalSystems,
+        infraCloud: enrichedData.infraCloud,
+        emailProvider: enrichedData.emailProvider,
+        security: {
+          mfa: enrichedData.securityMfa,
+          backup: enrichedData.securityBackupFrequency,
+          endpoint: enrichedData.securityEndpointProtection,
+          email: enrichedData.securityEmailProtection,
+        },
+        history: {
+          priorIncidents: enrichedData.priorIncidents,
+          incidentYear: enrichedData.incidentYear,
+          incidentDetails: enrichedData.incidentDetails,
+        },
+        preparedness: enrichedData.hasIncidentResponsePlan,
+        currentCoverageCyber: enrichedData.currentCoverageCyber,
+        currentProvider: enrichedData.currentProvider,
+      },
       utm: {
         source: enrichedData.utm_source,
         medium: enrichedData.utm_medium,
